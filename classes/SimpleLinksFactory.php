@@ -129,7 +129,11 @@ class SimpleLinksFactory {
 				if( is_numeric( $cat ) ){
 					$cat = get_term_by( 'id', $cat, Simple_Links_Categories::TAXONOMY );
 				} else {
-					$cat = get_term_by( 'name', $cat, Simple_Links_Categories::TAXONOMY );
+					if ( !empty( get_term_by( 'name', $cat, Simple_Links_Categories::TAXONOMY ) ) ) {
+						$cat = get_term_by( 'name', $cat, Simple_Links_Categories::TAXONOMY );
+					} else {
+						$cat = get_term_by( 'slug', $cat, Simple_Links_Categories::TAXONOMY );
+					}
 				}
 				if( ! empty( $cat->term_id ) ){
 					$all_cats[] = $cat->term_id;
