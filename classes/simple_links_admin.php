@@ -418,7 +418,7 @@ class simple_links_admin {
 
 					//The element to point to
 					$('#menu-posts-simple_link').pointer({
-						content: ' <?php echo esc_js( $pointer_content ); ?>',
+						content: ' <?php echo $pointer_content; ?>',
 						position: {
 							edge: 'left',
 							align: 'center'
