@@ -26,6 +26,7 @@
 		<exclude name="WordPress.Arrays.MultipleStatementAlignment.LongIndexSpaceBeforeDoubleArrow" />
 		<exclude name="WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned" />
 		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores" />
+		<exclude name="WordPress.VIP.RestrictedFunctions.user_meta_get_user_meta" />
 		<exclude name="Generic" />
 		<exclude name="Squiz" />
 		<exclude name="PEAR" />

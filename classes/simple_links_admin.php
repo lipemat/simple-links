@@ -15,6 +15,8 @@ if ( class_exists( 'simple_links_admin' ) ) {
 }
 
 class simple_links_admin {
+	const POINTER = 'simple-links/admin/pointer';
+
 
 	/**
 	 * Constructor
@@ -186,7 +188,7 @@ class simple_links_admin {
 				'taxonomy'        => 'simple_link_category',
 				'name'            => 'simple_link_category',
 				'orderby'         => 'name',
-				'selected'        => sanitize_text_field( $_GET['simple_link_category'] ),
+				'selected'        => sanitize_text_field( wp_unslash( $_GET['simple_link_category'] ) ),
 				'hierarchical'    => true,
 				'depth'           => 3,
 				'show_count'      => true,
@@ -245,7 +247,7 @@ class simple_links_admin {
 			'content' => '<h5>' . __( 'You May Add as Many Simple Links Widgets as You Would Like to Your Widget Areas', 'simple-links' ) . '</h5>
                                     <strong>' . __( 'Widget Options', 'simple-links' ) . ':</strong><br>
                                 ' . __( 'Categories', 'simple-links' ) . ' = "' . __( 'Select with link categories to pull from', 'simple-links' ) . '"<br>
-3                               ' . __( 'Include Child Categories Of Selected Categories', 'simple-links' ) . ' = "' . __( "If checked, links from your selected categories' child categories will display as well as links from your selected categories", 'simple-links') . '"<br>
+3                               ' . __( 'Include Child Categories Of Selected Categories', 'simple-links' ) . ' = "' . __( "If checked, links from your selected categories' child categories will display as well as links from your selected categories", 'simple-links' ) . '"<br>
                                 ' . __( 'Order Links By', 'simple-links' ) . '   = "' . __( 'The Order in Which the Links will Display - defaults to link order', 'simple-links' ) . '"<br>
                                 ' . __( 'Order', 'simple-links' ) . ' = "' . __( 'The Order in which the links will Display', 'simple-links' ) . '"<br>
                                 ' . __( 'Show Description', 'simple-links' ) . ' = "' . __( "Display the Link's Description", 'simple-links' ) . '<br>
@@ -381,7 +383,6 @@ class simple_links_admin {
 	 * @return array
 	 */
 	public function button( $buttons ) {
-
 		array_push( $buttons, '|', 'simpleLinks' ); //Add the button to the array with a separator first
 
 		return $buttons;
@@ -390,42 +391,30 @@ class simple_links_admin {
 
 
 	/**
-	 * Creates an Admin Flag to let new uses know where the menu is
+	 * Admin flag to let users know where the links are
 	 *
-	 * @since 2.10.14
-	 *
-	 * @uses  called in the admin_scripts function
+	 * @action admin_print_footer_scripts 10 0
 	 *
 	 * @return void
 	 */
 	public function pointer_flag() {
-
-		// Get the list of dismissed pointers for the user
 		$dismissed = explode( ',', (string) get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
 
 		// Check whether our pointer has been dismissed
-		if ( ! in_array( 'simple-links-flag', $dismissed ) ) {
-
-			//This is the content that will be displayed
-			$pointer_content = '<h3>Simple Links</h3>';
-			$pointer_content .= '<p>' . __( 'Manage your Links Here. Enjoy', 'simple-links' ) . '! </p>';
-
-
+		if ( ! in_array( self::POINTER, $dismissed, true ) ) {
 			?>
 			<script type="text/javascript">
 				//<![CDATA[
 				jQuery(document).ready(function ($) {
-
-					//The element to point to
 					$('#menu-posts-simple_link').pointer({
-						content: ' <?php echo esc_js( $pointer_content ); ?>',
+						content: '<h3>Simple Links</h3><p><?php echo esc_js( __( 'Manage your Links here.', 'simple-links' ) ); ?></p><p><?php echo esc_js( __( 'Settings, categories, and ordering may also be found under this menu.', 'simple-links' ) ); ?></p>',
 						position: {
 							edge: 'left',
 							align: 'center'
 						},
 						close: function () {
 							jQuery.post(ajaxurl, {
-								pointer: 'simple-links-flag',
+								pointer: '<?php echo esc_js( self::POINTER ); ?>',
 								action: 'dismiss-wp-pointer'
 							});
 						}
