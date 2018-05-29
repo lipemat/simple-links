@@ -15,7 +15,7 @@ if ( class_exists( 'simple_links_admin' ) ) {
 }
 
 class simple_links_admin {
-	const POINTER = 'simple-links/admin/pointer';
+	const POINTER = 'simple-links-admin-pointer';
 
 
 	/**
