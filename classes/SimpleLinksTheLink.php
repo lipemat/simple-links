@@ -152,16 +152,7 @@ class SimpleLinksTheLink {
 			$this,
 		);
 
-		$link_output = apply_filters_ref_array( 'simple_links_link_output', $_filter_params );
-
-		//backward compatibility
-		$_filter_params[0] = $link_output;
-		$link_output       = apply_filters_ref_array( 'simple_links_' . $this->args['type'] . '_link_output', $_filter_params );
-		$_filter_params[0] = $link_output;
-		$link_output       = apply_filters_ref_array( 'simple_links_' . $this->args['type'] . '_link_output_' . $this->args['id'], $_filter_params );
-
-
-		$output .= $link_output;
+		$output .= apply_filters_ref_array( 'simple_links_link_output', $_filter_params );
 
 		//The description
 		if ( $this->args['description'] ) {
