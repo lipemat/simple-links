@@ -26,6 +26,9 @@
 		<exclude name="WordPress.Arrays.MultipleStatementAlignment.LongIndexSpaceBeforeDoubleArrow" />
 		<exclude name="WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned" />
 		<exclude name="WordPress.NamingConventions.ValidHookName.UseUnderscores" />
+
+		<exclude name="Squiz.Commenting" />
+		<exclude name="Generic.Commenting" />
 	</rule>
 	<rule ref="WordPress.XSS.EscapeOutput.OutputNotEscaped">
 		<exclude-pattern>*/Widgets/Simple_Links\.php</exclude-pattern>
