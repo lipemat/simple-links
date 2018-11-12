@@ -3,11 +3,26 @@
  * @author Mat Lipe <mat@matlipe.com>
  */
 
-(function(){
+/**
+ * Use the global "translated" version when available.
+ * Some plugins e.g. Elementor load the editor plugins later and therefore do not
+ * honor `wp_localize_script` and need these defaults to prevent errors.
+ *
+ * @fixes 4022
+ * @link https://matlipe.com/plugin-support/elementor/
+ *
+ */
+var SL_locale = window.SL_locale || {
+	add_links : "Add Simple Links",
+	shortcode : "Simple Links Shortcode",
+	shortcode_generator : "Simple Links Shortcode Generator"
+};
+
+(function( i18n ){
 	tinymce.create( 'tinymce.plugins.simpleLinks', {
 		init : function( ed, url ){
 			ed.addButton( 'simpleLinks', {    //The buttons name and title and icon
-				title : SL_locale.add_links,
+				title : i18n.add_links,
 				image : url + '/../img/mce-icon.png',
 				cmd : 'mceHighlight' //Match the addCommand
 			} );
@@ -19,7 +34,7 @@
 					width : 550 + parseInt( ed.getLang( 'highlight.delta_width', 0 ) ),
 					height : 650 + parseInt( ed.getLang( 'highlight.delta_height', 0 ) ),
 					inline : 1,
-					title : SL_locale.shortcode
+					title : i18n.shortcode
 				}, {
 
 					plugin_url : url
@@ -33,7 +48,7 @@
 
 		}, getInfo : function(){  //The plugin Buttons Details
 			return {
-				longname : SL_locale.shortcode_generator,
+				longname : i18n.shortcode_generator,
 				author : 'Mat Lipe',
 				authorurl : 'https://matlipe.com',
 				inforurl : 'https://matlipe.com',
@@ -42,4 +57,4 @@
 		}
 	} );
 	tinymce.PluginManager.add( 'simpleLinks', tinymce.plugins.simpleLinks );  //Name it the same as above
-})();
+})( SL_locale );
