@@ -5,7 +5,7 @@ Tags: Link Manager, Links List, Link Organization
 Requires at least: 4.6.0
 Tested up to: 4.9.8
 Requires PHP: 5.2.4
-Stable tag: 4.4.7
+Stable tag: 4.4.8
 License: GPLv2
 
 Links Manager with many features. Makes managing links simple and robust.
@@ -16,7 +16,7 @@ A rebooted concept of the original WordPress Links Manager with many great enhan
 
 <strong>Check out <a href="https://matlipe.com/product/simple-links-pro/">Simple Links Pro</a> for more features including priority support, display links by category, Display links assigned to all categories, import/export ability via csv, links in search results and so much more!</strong>
 
-<blockquote><a href="https://matlipe.com/product/simple-links-pro/" target="_blank">Pro version 1.2.0</a> just dropped with lots of great new stuff!</blockquote>
+<blockquote><a href="https://matlipe.com/product/simple-links-pro/" target="_blank">Pro version 1.3.0</a> just dropped with lots of great new stuff!</blockquote>
 
 
 <h4>Features</h4>
@@ -33,6 +33,7 @@ A rebooted concept of the original WordPress Links Manager with many great enhan
 * Priority support.
 * Links will show up in search results.
 * Links in search results point to the link's url.
+* Use the Simple Links posts as a public post type.
 * Ability to import/export links via a csv file.
 * Available csv template for adding new links.
 * Ability to display the links in sections by category.
