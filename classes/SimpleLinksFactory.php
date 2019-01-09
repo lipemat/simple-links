@@ -62,20 +62,9 @@ class SimpleLinksFactory {
 	 * @param string $type - used mostly for css classes
 	 */
 	public function __construct( $args, $type = '' ) {
-		$factory = apply_filters( 'simple_links_factory_class', 'SimpleLinksFactory', $args, $this );
-
-		If ( 'SimpleLinksFactory' !== $factory ) {
-			//No to be used this way (super old ability)
-			_deprecated_constructor( esc_attr( $factory ), '4.4.2', __CLASS__ );
-			return new $factory( $args, $type );
-		}
-
 		$this->type = $type;
-
 		$this->parse_args( $args );
-
 		$this->get_links();
-
 	}
 
 
