@@ -195,7 +195,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 		<select id="<?php echo esc_attr( $this->get_field_id( 'numberposts' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'numberposts' ) ); ?>">
 			<option value="-1">All</option>
 			<?php
-			for ( $i = 1; $i < 50; $i ++ ) {
+			for ( $i = 1; $i < 200; $i ++ ) {
 				printf( '<option value="%s" %s>%s</option>', (int ) $i, selected( $instance['numberposts'], $i ), (int) $i );
 			}
 			?>

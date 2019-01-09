@@ -104,8 +104,8 @@ wp_head();
 			<select id="count">
 				<option value=""><?php esc_html_e( 'All', 'simple-links' ); ?></option>
 				<?php
-				for ( $i = 1; $i < 30; $i ++ ) {
-					printf( '<option value="%s">%s</option>', (int) $i, (int) $i );
+				for ( $i = 1; $i < 200; $i ++ ) {
+					printf( '<option value="%s">%s</option>', $i, $i );
 				}
 				?>
 			</select>
