@@ -13,7 +13,7 @@
  */
 class Simple_Links_Categories {
 
-	const TAXONOMY = 'simple_link_category';
+	const TAXONOMY      = 'simple_link_category';
 	const SORTED_OPTION = 'simple_links_terms_sorted';
 
 	/**
@@ -21,7 +21,7 @@ class Simple_Links_Categories {
 	 */
 	private static $instance;
 
-	public function __construct(){
+	public function __construct() {
 		$this->hooks();
 	}
 
@@ -32,7 +32,7 @@ class Simple_Links_Categories {
 	 *
 	 * @return void
 	 */
-	private function hooks(){
+	private function hooks() {
 		add_action( 'init', array( $this, 'link_categories' ) );
 	}
 
@@ -43,11 +43,11 @@ class Simple_Links_Categories {
 	 *
 	 * @return array
 	 */
-	public static function get_category_names(){
+	public static function get_category_names() {
 
 		$args = array(
 			'hide_empty' => false,
-			'fields'     => 'names'
+			'fields'     => 'names',
 		);
 
 		return get_terms( self::TAXONOMY, $args );
@@ -61,24 +61,23 @@ class Simple_Links_Categories {
 	 * @return array( $term->children = array( $terms ) )
 	 *
 	 */
-	public static function get_categories(){
+	public static function get_categories() {
 
 		$terms = get_terms( self::TAXONOMY, 'hide_empty=0' );
 
 		$clean = array();
 
-		foreach( $terms as $k => $term ){
-			if( $term->parent == 0 ){
+		foreach ( $terms as $k => $term ) {
+			if ( $term->parent == 0 ) {
 				$clean[ $term->term_id ] = $term;
-			} elseif( empty( $clean[ $term->parent ] ) ) {
-				if( sizeof( $terms ) == 1 ){
+			} elseif ( empty( $clean[ $term->parent ] ) ) {
+				if ( sizeof( $terms ) == 1 ) {
 					$clean[ $term->term_id ] = $term;
 				} else {
-					$terms[ ] = $term;
+					$terms[] = $term;
 				}
-
 			} else {
-				$clean[ $term->parent ]->children[ ] = $term;
+				$clean[ $term->parent ]->children[] = $term;
 			}
 
 			unset( $terms[ $k ] );
@@ -97,13 +96,15 @@ class Simple_Links_Categories {
 	 * If a link has not been sorted there yet by this category but is still
 	 * in the category, it will be appended to the bottom of the list by menu_order.
 	 *
+	 * @since 4.6.1 (Allow up to 1000 links instead of 200)
+	 *
 	 *
 	 * @param $category_id
 	 *
 	 * @return array
 	 */
-	public function get_links_by_category( $category_id, $count = 200, $include_children = false ){
-		$args                  = array(
+	public function get_links_by_category( $category_id, $count = 1000, $include_children = false ) {
+		$args                = array(
 			'post_type'   => Simple_Link::POST_TYPE,
 			'numberposts' => $count,
 			'posts_per_page' => $count,
@@ -112,32 +113,30 @@ class Simple_Links_Categories {
 			'meta_key'    => sprintf( Simple_Links_Sort::META_KEY, $category_id ),
 			'orderby'     => 'meta_value_num menu_order',
 		);
-		$args[ 'tax_query' ][ ] = array(
+		$args['tax_query'][] = array(
 			'taxonomy' => self::TAXONOMY,
 			'fields'   => 'id',
 			'include_children' => $include_children,
-			'terms'    => array( (int) $category_id )
+			'terms'    => array( (int) $category_id ),
 		);
 
 		$args = apply_filters( 'simple-links-links-by-category-args', $args, $category_id );
 
 		$links = get_posts( $args );
 
-		if( count( $links ) != $count ){
+		if ( count( $links ) != $count ) {
 			$count = $count - count( $links );
 			//add the ones which do not have the order set
-			$args[ 'meta_compare' ] = 'NOT EXISTS';
-			$args[ 'orderby' ] = 'menu_order';
-			$args[ 'numberposts' ] = $count;
-			$args[ 'posts_per_page' ] = $count;
-			$args[ 'posts_per_archive_page' ] = $count;
+			$args['meta_compare']           = 'NOT EXISTS';
+			$args['orderby']                = 'menu_order';
+			$args['numberposts']            = $count;
+			$args['posts_per_page']         = $count;
+			$args['posts_per_archive_page'] = $count;
 
 			$extra_links = get_posts( $args );
 
 			$links = array_merge( $links, $extra_links );
 		}
-
-
 
 		return $links;
 	}
@@ -147,7 +146,7 @@ class Simple_Links_Categories {
 	 * Adds the link categories taxonomy
 	 *
 	 */
-	function link_categories(){
+	function link_categories() {
 
 		$single = __( 'Link Category', 'simple-links' );
 		$plural = __( 'Link Categories', 'simple-links' );
@@ -176,7 +175,7 @@ class Simple_Links_Categories {
 			'show_in_nav_menus' => false,
 			'show_ui'           => true,
 			'show_tagcloud'     => false,
-			'hierarchical'      => true
+			'hierarchical'      => true,
 
 		);
 
@@ -195,8 +194,8 @@ class Simple_Links_Categories {
 	 * @static
 	 * @return $this
 	 */
-	public static function get_instance(){
-		if( ! is_a( self::$instance, __CLASS__ ) ){
+	public static function get_instance() {
+		if ( ! is_a( self::$instance, __CLASS__ ) ) {
 			self::$instance = new self();
 		}
 
