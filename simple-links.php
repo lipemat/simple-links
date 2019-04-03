@@ -59,6 +59,10 @@ $simple_links = simple_links();
  * Load the plugin
  */
 function simple_links_load() {
+	// Because front-end builders like "Beaver Builder" won't load the required classes.
+	require_once ABSPATH . 'wp-admin/includes/class-walker-category-checklist.php';
+	require_once ABSPATH . 'wp-admin/includes/template.php';
+
 	Simple_Links_Categories::get_instance();
 	Simple_Links_WP_Links::init();
 
