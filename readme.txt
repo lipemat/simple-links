@@ -5,7 +5,7 @@ Tags: Link Manager, Links List, Link Organization
 Requires at least: 4.7.0
 Tested up to: 5.1.1
 Requires PHP: 5.4.4
-Stable tag: 4.5.1
+Stable tag: 4.6.0
 License: GPLv2
 
 Links Manager with many features. Makes managing links simple and robust.
@@ -16,7 +16,7 @@ A rebooted concept of the original WordPress Links Manager with many great enhan
 
 <strong>Check out <a href="https://matlipe.com/product/simple-links-pro/">Simple Links Pro</a> for more features including priority support, display links by category, Display links assigned to all categories, import/export ability via csv, links in search results and so much more!</strong>
 
-<blockquote><a href="https://matlipe.com/product/simple-links-pro/" target="_blank">Pro version 1.3.0</a> just dropped with lots of great new stuff!</blockquote>
+<blockquote><a href="https://matlipe.com/product/simple-links-pro/" target="_blank">Pro version 1.3.0</a> is now available with support for Beaver Builder!</blockquote>
 
 
 <h4>Features</h4>
@@ -104,6 +104,9 @@ Start a support thread and myself or someone from the community can probably hel
 2. The short-code generating form
 
 == Changelog ==
+= 4.6.0 = 
+* Add support for Beaver Builder.
+
 = 4.5.0 =
 * Drop support for PHP 5.2 in favor of PHP 5.4
 
