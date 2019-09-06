@@ -30,9 +30,6 @@
 		<exclude name="Squiz.Commenting" />
 		<exclude name="Generic.Commenting" />
 	</rule>
-	<rule ref="WordPress.CSRF.NonceVerification.NoNonceVerification">
-		<exclude-pattern>*/classes/simple_links_admin\.php</exclude-pattern>
-	</rule>
     <rule ref="WordPress.WP.I18n">
         <properties>
             <property name="text_domain" type="array" value="simple-links" />
