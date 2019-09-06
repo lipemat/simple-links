@@ -30,10 +30,6 @@
 		<exclude name="Squiz.Commenting" />
 		<exclude name="Generic.Commenting" />
 	</rule>
-	<rule ref="WordPress.XSS.EscapeOutput.OutputNotEscaped">
-		<exclude-pattern>*/Widgets/Simple_Links\.php</exclude-pattern>
-		<exclude-pattern>*/classes/SimpleLinksTheLink\.php</exclude-pattern>
-	</rule>
 	<rule ref="WordPress.CSRF.NonceVerification.NoNonceVerification">
 		<exclude-pattern>*/classes/simple_links_admin\.php</exclude-pattern>
 	</rule>
