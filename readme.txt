@@ -16,7 +16,7 @@ A rebooted concept of the original WordPress Links Manager with many great enhan
 
 <strong>Check out <a href="https://matlipe.com/product/simple-links-pro/">Simple Links Pro</a> for more features including priority support, display links by category, Display links assigned to all categories, import/export ability via csv, links in search results and so much more!</strong>
 
-<blockquote><a href="https://matlipe.com/product/simple-links-pro/" target="_blank">Pro version 1.3.0</a> is now available with support for Beaver Builder!</blockquote>
+<blockquote><a href="https://matlipe.com/product/simple-links-pro/" target="_blank">Pro version 1.4.0</a> is now available with support for Beaver Builder!</blockquote>
 
 
 <h4>Features</h4>
