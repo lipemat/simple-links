@@ -67,22 +67,25 @@ class simple_links_admin {
 		global $post;
 
 		$messages['simple_link'] =
-			apply_filters( 'simple-links-updated-messages', array(
-				0  => '',
-				1  => __( 'Link updated.', 'simple-links' ),
-				2  => __( 'Custom field updated.', 'simple-links' ),
-				3  => __( 'Custom field deleted.', 'simple-links' ),
-				4  => __( 'Link updated.', 'simple-links' ),
-				/* translators: %s: date and time of the revision */
-				5  => isset( $_GET['revision'] ) ? sprintf( __( 'Link restored to revision from %s.', 'simple-links' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-				6  => __( 'Link published.', 'simple-links' ),
-				7  => __( 'Link saved.', 'simple-links' ),
-				8  => __( 'Link submitted.', 'simple-links' ),
-				/* Translators: Date from $post->post_date */
-				9  => sprintf( __( 'Link scheduled for: <strong>%1$s</strong>.', 'simple-links' ), date_i18n( __( 'M j, Y @ G:i', 'simple-links' ), strtotime( $post->post_date ) ) ),
-				10 => __( 'Link draft updated.', 'simple-links' ),
+			apply_filters(
+				'simple-links-updated-messages',
+				array(
+					0  => '',
+					1  => __( 'Link updated.', 'simple-links' ),
+					2  => __( 'Custom field updated.', 'simple-links' ),
+					3  => __( 'Custom field deleted.', 'simple-links' ),
+					4  => __( 'Link updated.', 'simple-links' ),
+					/* translators: %s: date and time of the revision */
+					5  => isset( $_GET['revision'] ) ? sprintf( __( 'Link restored to revision from %s.', 'simple-links' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+					6  => __( 'Link published.', 'simple-links' ),
+					7  => __( 'Link saved.', 'simple-links' ),
+					8  => __( 'Link submitted.', 'simple-links' ),
+					/* Translators: Date from $post->post_date */
+					9  => sprintf( __( 'Link scheduled for: <strong>%1$s</strong>.', 'simple-links' ), date_i18n( __( 'M j, Y @ G:i', 'simple-links' ), strtotime( $post->post_date ) ) ),
+					10 => __( 'Link draft updated.', 'simple-links' ),
 
-			) );
+				)
+			);
 
 		return $messages;
 
@@ -182,18 +185,20 @@ class simple_links_admin {
 				$_GET['simple_link_category'] = null;
 			}
 
-			wp_dropdown_categories( array(
-				/* translators: Taxonomy label of Simple Links Category */
-				'show_option_all' => sprintf( __( 'Show All %s', 'simple-links' ), $taxonomy_obj->label ),
-				'taxonomy'        => 'simple_link_category',
-				'name'            => 'simple_link_category',
-				'orderby'         => 'name',
-				'selected'        => sanitize_text_field( wp_unslash( $_GET['simple_link_category'] ) ),
-				'hierarchical'    => true,
-				'depth'           => 3,
-				'show_count'      => true,
-				'hide_empty'      => true,
-			) );
+			wp_dropdown_categories(
+				array(
+					/* translators: Taxonomy label of Simple Links Category */
+					'show_option_all' => sprintf( __( 'Show All %s', 'simple-links' ), $taxonomy_obj->label ),
+					'taxonomy'        => 'simple_link_category',
+					'name'            => 'simple_link_category',
+					'orderby'         => 'name',
+					'selected'        => sanitize_text_field( wp_unslash( $_GET['simple_link_category'] ) ),
+					'hierarchical'    => true,
+					'depth'           => 3,
+					'show_count'      => true,
+					'hide_empty'      => true,
+				)
+			);
 		}
 
 	}
@@ -228,7 +233,7 @@ class simple_links_admin {
                         show_image = "' . __( "true or false - to show the link's image or not", 'simple-links' ) . '"<br>
                         show_image_only = "' . __( "true or false - to show the link's image without the title under it. If show image is not true this does nothing", 'simple-links' ) . '"<br>
                         image_size = "' . __( 'Any size built into WordPress or your theme" - default to thumbnail', 'simple-links' ) . '"<br>
-                        remove_line_break =  ' . __( "true or false - Remove Line Break Between Images and Links - default to false", 'simple-links' ) . ' <br>
+                        remove_line_break =  ' . __( 'true or false - Remove Line Break Between Images and Links - default to false', 'simple-links' ) . ' <br>
                         fields     = "' . __( "Comma separated list of the Link's Additional Fields to show", 'simple-links' ) . '"<br>
                         description = "' . __( 'true or false" - to show the description - defaults to false', 'simple-links' ) . '"<br>
                         show_description_formatting = "' . __( 'true or false - to display paragraphs format to match the editor content - defaults to false', 'simple-links' ) . '"<br>
@@ -282,41 +287,48 @@ class simple_links_admin {
 
 			//The settings page
 			case 'simple_link_page_simple-link-settings':
-				$screen->add_help_tab( array(
-					'id'      => 'wordpress-links',
-					'title'   => 'WordPress Links',
-					'content' => '<p>' . __( 'WordPress has deprecated the built in links functionality', 'simple-links' ) . '.<br>
+				$screen->add_help_tab(
+					array(
+						'id'      => 'wordpress-links',
+						'title'   => 'WordPress Links',
+						'content' => '<p>' . __( 'WordPress has deprecated the built in links functionality', 'simple-links' ) . '.<br>
                                         ' . __( 'These settings take care of cleaning up the old WordPress links', 'simple-links' ) . '<br>
                                         ' . __( 'By Checking "Remove WordPress Built in Links", the old Links menu will disappear along with the add new admin bar link', 'simple-links' ) . '. <br>
                                         ' . __( ' Pressing the "Import Links" button will automatically copy the WordPress Links into Simple Links. Keep in mind if you press this button twice it will copy the links twice and you will have duplicates', 'simple-links' ) . '.</p>',
 
-				) );
+					)
+				);
 
-				$screen->add_help_tab( array(
-					'id'      => 'additional_fields',
-					'title'   => __( 'Additional Fields', 'simple-links' ),
-					'content' => '<p>' . __( 'You have the ability to add an unlimited number of additional fields to the links by click the "Add Another" button', 'simple-links' ) . '. <br>
+				$screen->add_help_tab(
+					array(
+						'id'      => 'additional_fields',
+						'title'   => __( 'Additional Fields', 'simple-links' ),
+						'content' => '<p>' . __( 'You have the ability to add an unlimited number of additional fields to the links by click the "Add Another" button', 'simple-links' ) . '. <br>
                                             ' . __( "Once you save your changes, these fields will show up on a each link's editing page", 'simple-links' ) . '. <br>
                                             ' . __( 'You will have the ability to select any of these fields to display using the Simple Links widgets', 'simple-links' ) . '. <br>
                                             ' . __( "Each widget gets it's own list of ALL the additional fields, so you may display different fields in different widget areas", 'simple-links' ) . '. <br>
                                             ' . __( 'These fields will also be available by using the shortcode. For instance, if you wanted to display a field titled "author" and a field titled "notes" you shortcode would look something like this', 'simple-links' ) . '
                                             <br>[simple-links fields="' . __( 'author,notes', 'simple-links' ) . '" ]</p>',
-				) );
+					)
+				);
 
-				$screen->add_help_tab( array(
-					'id'      => 'permissions',
-					'title'   => __( 'Permissions', 'simple-links' ),
-					'content' => '<p><strong>' . __( 'This is where you decide how much access editors will have', 'simple-links' ) . '</strong><br>
+				$screen->add_help_tab(
+					array(
+						'id'      => 'permissions',
+						'title'   => __( 'Permissions', 'simple-links' ),
+						'content' => '<p><strong>' . __( 'This is where you decide how much access editors will have', 'simple-links' ) . '</strong><br>
                         ' . __( '"Hide Link Ordering from Editors", will prevent editors from using the drag and drop ordering page. They will still be able to change the order on the individual link editing Pages', 'simple-links' ) . '.<br>
                         ' . __( '"Show Simple Link Settings to Editors" will allow editors to access the screen you are on right now without restriction', 'simple-links' ) . '.</p>',
-				) );
+					)
+				);
 
 				$screen->add_help_tab( $shortcode_help );
 
-				$screen->add_help_tab( array(
-					'id'      => 'crockpot-recipe',
-					'title'   => 'Crock-Pot Recipe',
-					'content' => '<p>For folks out the like me that rarely have time to leave the computer and cook, a Crock-Pot meal is a great way
+				$screen->add_help_tab(
+					array(
+						'id'      => 'crockpot-recipe',
+						'title'   => 'Crock-Pot Recipe',
+						'content' => '<p>For folks out the like me that rarely have time to leave the computer and cook, a Crock-Pot meal is a great way
                         to have food hot and ready to eat.
                         </p>
                         <p><strong>Here is one of my favorites recipes "Carne Rellenos"</strong><br>
@@ -328,11 +340,12 @@ class simple_links_admin {
                         steak and turn over. Lay stuffed chiles across unscored side of steak. Roll up and tie with kitchen string. Place steak in Crock Pot
                         ;pour in salsa. Cover; cook on LOW 6 to 8 hours or on HIGH 3 to 4 hours or until done. Remove stead and cut into 6 pieces. Serve
                         with sauce.</p>',
-				) );
-
+					)
+				);
 
 				$screen->set_help_sidebar(
-					'<p>' . __( 'These Sections will give your a brief description of what each group of settings does. Feel free to start a thread on the support forums if you would like additional help items covered in this section', 'simple-links' ) . '</p>' );
+					'<p>' . __( 'These Sections will give your a brief description of what each group of settings does. Feel free to start a thread on the support forums if you would like additional help items covered in this section', 'simple-links' ) . '</p>'
+				);
 
 				break;
 		}
@@ -428,7 +441,7 @@ class simple_links_admin {
 		if ( ! in_array( 'simple-links-shortcode-flag', $dismissed, true ) ) {
 
 			//This is the content that will be displayed
-			$pointer_content = '<h3>' . __( 'Simple Links Shortcode Form', 'simple-links' ) . '</h3>';
+			$pointer_content  = '<h3>' . __( 'Simple Links Shortcode Form', 'simple-links' ) . '</h3>';
 			$pointer_content .= '<p>' . __( 'Use this icon to generate a Simple Links shortcode', 'simple-links' ) . '! </p>';
 
 			?>
@@ -471,7 +484,6 @@ class simple_links_admin {
 			SIMPLE_LINKS_CSS_DIR . 'simple.links.admin.css'
 		);
 
-
 		//Add the sortable script
 		wp_enqueue_script( 'jquery-ui-sortable' );
 
@@ -503,7 +515,7 @@ class simple_links_admin {
 				'show_settings'       => __( 'This will allow editors access to this Settings Page.', 'simple-links' ),
 				'remove_links'        => __( 'This will remove all traces of the Default WordPress Links.', 'simple-links' ),
 				'import_links'        => __( 'This will import all existing WordPress Links into the Simple Links', 'simple-links' ),
-				'default_target'      => __( "This will the the link's target when a new link is created.", 'simple-links' ),
+				'default_target'      => __( "This will be the link's target when a new link is created.", 'simple-links' ),
 				'add_links'           => __( 'Add Simple Links', 'simple-links' ),
 				'shortcode'           => __( 'Simple Links Shortcode', 'simple-links' ),
 				'shortcode_generator' => __( 'Simple Links Shortcode Generator', 'simple-links' ),
