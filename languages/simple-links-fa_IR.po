@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple Links\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-22 11:33-0500\n"
-"PO-Revision-Date: 2018-01-22 11:59-0500\n"
+"POT-Creation-Date: 2019-09-10 11:05-0400\n"
+"PO-Revision-Date: 2019-09-10 11:12-0400\n"
 "Last-Translator: Mat Lipe <mat@matlipe.com>\n"
 "Language-Team: Amir MP and Sheyda Darouei <me@ameer.ir>\n"
 "Language: fa_IR\n"
@@ -12,22 +12,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.2.3\n"
 "X-Loco-Source-Locale: en_US\n"
 "X-Loco-Target-Locale: fa_IR\n"
 "X-Loco-Project-Id: 3532\n"
 "X-Loco-Api-Version: 1.0.8\n"
 
-#: admin-views/link-ordering.php:3
+#: admin-views/link-ordering.php:6
 msgid "Keeping Your Links In Order"
 msgstr "پیوندهای شما را به ترتیب نگه می دارد"
 
-#: admin-views/link-ordering.php:10
+#: admin-views/link-ordering.php:13
 msgid "Select a link category to sort links in that category only ( optional )"
 msgstr ""
 "یک دسته پیوند انتخاب کنید تا پیوند ها را فقط در آن دسته مرتب کنید. (اختیاری)"
 
-#: admin-views/link-ordering.php:13
+#: admin-views/link-ordering.php:16
 msgid ""
 "When setting up your short-codes and/or widgets, selecting a single category "
 "and Order By: \"Link Order\" will allow the links to display in the order they "
@@ -36,17 +36,17 @@ msgstr ""
 "هنگام تنظیم کد کوتاه و یا ویدجت خود، انتخاب یک دسته و سفارش توسط: \"سفارش لینک"
 "\" به لینک ها اجازه می دهد تا به ترتیب آنها در آن دسته طبقه بندی شده است."
 
-#: admin-views/link-ordering.php:20
+#: admin-views/link-ordering.php:23
 msgid "All Categories"
 msgstr "تمام دسته ها"
 
-#: admin-views/link-ordering.php:34
+#: admin-views/link-ordering.php:37
 msgid "To sort by link categories, you must add some links to them"
 msgstr ""
 "برای مرتب کردن از طریق دسته های پیوند، شما باید چند پیوند را به آن ها اضافه "
 "کنید"
 
-#: admin-views/link-ordering.php:36
+#: admin-views/link-ordering.php:39
 msgid "Follow Me"
 msgstr "مرا دنبال کن"
 
@@ -74,14 +74,17 @@ msgstr "ارتباط (rel) به این پیوند"
 msgid "Checkout Simple Links Pro!"
 msgstr "پیوندهای آسان!"
 
-#: admin-views/pro-notice.php:6
+#. translators: <a> link created by placeholders
+#: admin-views/pro-notice.php:8
 #, php-format
 msgid ""
-"Upgrade to %sSimple Links Pro%s for Priority Support, Display By Category, "
-"Import/Export Ability, Links In Search Results, and so much more!"
+"Upgrade to %1$sSimple Links Pro%2$s for Priority Support, Display links "
+"assigned to all categories, Display By Category, Import/Export Ability, Links "
+"In Search Results, and so much more!"
 msgstr ""
-"%sارتقا به نرم افزار لینک ساده برای پشتیبانی اولویت، نمایش بر اساس طبقه بندی، "
-"قابلیت واردات / صادرات، لینک ها در نتایج جستجو، و خیلی بیشتر%s!"
+"ارتقا به%1$sSimples لینک های طرفدار%2$s برای پشتیبانی اولویت, لینک های نمایش "
+"اختصاص داده شده به همه دسته بندی ها, نمایش بر اساس طبقه بندی, توانایی واردات/"
+"صادرات, لینک در نتایج جستجو, و خیلی بیشتر!"
 
 #: admin-views/settings-wordpress-links.php:1
 msgid "These settings will effect the default WordPress Links Manager"
@@ -120,86 +123,86 @@ msgstr "دسته ها (اختیاری)"
 msgid "No link categories have been created yet."
 msgstr "هنوز برای پیوندها دسته‌بندی ایجاد نشده است."
 
-#: admin-views/shortcode-form.php:90 classes/simple_links_admin.php:248
-#: src/Widgets/Simple_Links.php:182
-msgid "Include Child Categories Of Selected Categories"
-msgstr "شامل دسته های دسته ای از دسته های انتخاب شده"
+#: admin-views/shortcode-form.php:90 src/Widgets/Simple_Links.php:183
+msgid "Include links assigned to child categories of selected categories."
+msgstr ""
+"شامل پیوندهایی است که به دسته های کودک از دسته های انتخاب شده اختصاص یافته اند."
 
-#: admin-views/shortcode-form.php:101 src/Widgets/Simple_Links.php:190
+#: admin-views/shortcode-form.php:103 src/Widgets/Simple_Links.php:194
 msgid "Number Of Links"
 msgstr "تعداد پیوندها"
 
-#: admin-views/shortcode-form.php:103
+#: admin-views/shortcode-form.php:105
 msgid "All"
 msgstr "همه"
 
-#: admin-views/shortcode-form.php:115
+#: admin-views/shortcode-form.php:117
 msgid "Order By"
 msgstr "مرتب‌سازی بر اساس"
 
-#: admin-views/shortcode-form.php:117
+#: admin-views/shortcode-form.php:119
 msgid "- select an order by - "
-msgstr "-یک شیوه مرتب‌سازی را انتخاب کنید-"
+msgstr "-یک شیوه مرتب‌سازی را انتخاب کنی-"
 
-#: admin-views/shortcode-form.php:126 classes/simple_links_admin.php:250
+#: admin-views/shortcode-form.php:128 classes/simple_links_admin.php:257
 #: src/Widgets/Simple_Links.php:145
 msgid "Order"
 msgstr "ترتیب"
 
-#: admin-views/shortcode-form.php:128
+#: admin-views/shortcode-form.php:130
 msgid "- select an order -"
 msgstr "-یک ترتیب را انتخاب کنید-"
 
-#: admin-views/shortcode-form.php:129 src/Widgets/Simple_Links.php:149
+#: admin-views/shortcode-form.php:131 src/Widgets/Simple_Links.php:149
 msgid "Ascending"
 msgstr "افزایشی"
 
-#: admin-views/shortcode-form.php:130 src/Widgets/Simple_Links.php:152
+#: admin-views/shortcode-form.php:132 src/Widgets/Simple_Links.php:152
 msgid "Descending"
 msgstr "کاهشی"
 
-#: admin-views/shortcode-form.php:138 classes/simple_links_admin.php:251
-#: src/Widgets/Simple_Links.php:201
+#: admin-views/shortcode-form.php:140 classes/simple_links_admin.php:258
+#: src/Widgets/Simple_Links.php:205
 msgid "Show Description"
 msgstr "نمایش توضیحات"
 
-#: admin-views/shortcode-form.php:144 src/Widgets/Simple_Links.php:211
+#: admin-views/shortcode-form.php:146 src/Widgets/Simple_Links.php:215
 msgid "Include Description Paragraph Format"
 msgstr "همراه با قالب‌بندی توضیحات (پاراگراف و سطرها)"
 
-#: admin-views/shortcode-form.php:154 classes/simple_links_admin.php:254
-#: src/Widgets/Simple_Links.php:223
+#: admin-views/shortcode-form.php:156 classes/simple_links_admin.php:261
+#: src/Widgets/Simple_Links.php:227
 msgid "Show Image"
 msgstr "نمایش تصویر"
 
-#: admin-views/shortcode-form.php:161 classes/simple_links_admin.php:255
-#: src/Widgets/Simple_Links.php:241
+#: admin-views/shortcode-form.php:163 classes/simple_links_admin.php:262
+#: src/Widgets/Simple_Links.php:245
 msgid "Display Image Without Title"
 msgstr "نمایش تصویر بدون عنوان"
 
-#: admin-views/shortcode-form.php:170 classes/simple_links_admin.php:256
-#: src/Widgets/Simple_Links.php:247
+#: admin-views/shortcode-form.php:172 classes/simple_links_admin.php:263
+#: src/Widgets/Simple_Links.php:251
 msgid "Image Size"
 msgstr "اندازه تصویر"
 
-#: admin-views/shortcode-form.php:182
+#: admin-views/shortcode-form.php:184
 msgid "Remove Line Break Between Image And Link"
 msgstr "حذف شکستگی خط بین تصویر و پیوند"
 
-#: admin-views/shortcode-form.php:190 classes/simple_links_admin.php:257
+#: admin-views/shortcode-form.php:192 classes/simple_links_admin.php:264
 msgid "Include Additional Fields"
 msgstr "همراه با زمینه‌های اضافه"
 
-#: admin-views/shortcode-form.php:194
+#: admin-views/shortcode-form.php:196
 msgid "There have been no additional fields added"
 msgstr "هیچ زمینه اضافه‌ای ایجاد نشده است"
 
-#: admin-views/shortcode-form.php:209 classes/simple_links_admin.php:258
-#: src/Widgets/Simple_Links.php:282
+#: admin-views/shortcode-form.php:211 classes/simple_links_admin.php:265
+#: src/Widgets/Simple_Links.php:286
 msgid "Field Separator"
 msgstr "جدا کننده زمینه"
 
-#: admin-views/shortcode-form.php:212
+#: admin-views/shortcode-form.php:214
 msgid "HTML is allowed and will show up formatted in the editor"
 msgstr ""
 "استفاده از HTML مجاز است و در ویرایشگر به صورت قالب‌بندی شده نمایش داده می‌شود"
@@ -217,37 +220,37 @@ msgstr "پیوندها"
 msgid "Simple Links"
 msgstr "پیوندهای آسان"
 
-#: classes/Simple_Link.php:47 classes/Simple_Links_Categories.php:159
+#: classes/Simple_Link.php:47 classes/Simple_Links_Categories.php:158
 #, php-format
 msgid "Search %s"
 msgstr "جستجوی %s"
 
-#: classes/Simple_Link.php:48 classes/Simple_Links_Categories.php:160
+#: classes/Simple_Link.php:48 classes/Simple_Links_Categories.php:159
 #, php-format
 msgid "Popular %s"
 msgstr "%s محبوب"
 
-#: classes/Simple_Link.php:49 classes/Simple_Links_Categories.php:161
+#: classes/Simple_Link.php:49 classes/Simple_Links_Categories.php:160
 #, php-format
 msgid "All %s"
 msgstr "همه %s"
 
-#: classes/Simple_Link.php:50 classes/Simple_Links_Categories.php:162
+#: classes/Simple_Link.php:50 classes/Simple_Links_Categories.php:161
 #, php-format
 msgid "Parent %s"
 msgstr "مادر %s"
 
-#: classes/Simple_Link.php:51 classes/Simple_Links_Categories.php:163
+#: classes/Simple_Link.php:51 classes/Simple_Links_Categories.php:162
 #, php-format
 msgid "Parent %s:"
 msgstr "مادر %s :"
 
-#: classes/Simple_Link.php:52 classes/Simple_Links_Categories.php:164
+#: classes/Simple_Link.php:52 classes/Simple_Links_Categories.php:163
 #, php-format
 msgid "Edit %s"
 msgstr "ویرایش %s"
 
-#: classes/Simple_Link.php:53 classes/Simple_Links_Categories.php:165
+#: classes/Simple_Link.php:53 classes/Simple_Links_Categories.php:164
 #, php-format
 msgid "Update %s"
 msgstr "به‌روز رسانی %s"
@@ -257,7 +260,7 @@ msgstr "به‌روز رسانی %s"
 msgid "Add New %s"
 msgstr "افزودن %s تازه"
 
-#: classes/Simple_Link.php:55 classes/Simple_Links_Categories.php:167
+#: classes/Simple_Link.php:55 classes/Simple_Links_Categories.php:166
 #, php-format
 msgid "New %s Name"
 msgstr "نام %s تازه"
@@ -267,12 +270,12 @@ msgstr "نام %s تازه"
 msgid "Separate %s with commas"
 msgstr "جداسازی %s با کاما انگلیسی (شیفت و حرف ع فارسی)"
 
-#: classes/Simple_Link.php:57 classes/Simple_Links_Categories.php:169
+#: classes/Simple_Link.php:57 classes/Simple_Links_Categories.php:168
 #, php-format
 msgid "Add or remove %s"
 msgstr "افزودن یا پاک‌کردن %s"
 
-#: classes/Simple_Link.php:58 classes/Simple_Links_Categories.php:170
+#: classes/Simple_Link.php:58 classes/Simple_Links_Categories.php:169
 #, php-format
 msgid "Choose from the most used %s"
 msgstr "استفاده از %s بیشتر استفاده شده"
@@ -297,32 +300,49 @@ msgstr "هیچ %s پیدا نشد."
 msgid "No %s found in Trash."
 msgstr "هیچ %s در زباله دان یافت نشد."
 
-#: classes/Simple_Links_Categories.php:152
+#: classes/Simple_Links_Categories.php:151
 msgid "Link Category"
 msgstr "دسته‌بندی پیوند"
 
-#: classes/Simple_Links_Categories.php:153 classes/simple_links_admin.php:130
+#: classes/Simple_Links_Categories.php:152 classes/simple_links_admin.php:135
 msgid "Link Categories"
 msgstr "دسته‌بندی‌های پیوند"
 
-#: classes/Simple_Links_Categories.php:166
+#: classes/Simple_Links_Categories.php:165
 msgid "Add New Category"
 msgstr "افزودن دسته‌بندی تازه"
 
-#: classes/Simple_Links_Categories.php:168
+#: classes/Simple_Links_Categories.php:167
 #, php-format
 msgid "Seperate %s with commas"
 msgstr "جداسازی %s با کاما انگلیسی (شیفت و حرف ع فارسی)"
 
-#: classes/Simple_Links_Meta_Boxes.php:62
+#: classes/Simple_Links_Meta_Boxes.php:44 classes/simple_links_admin.php:134
+msgid "Web Address"
+msgstr "آدرس وب"
+
+#: classes/Simple_Links_Meta_Boxes.php:45
+msgid "Description"
+msgstr "توضیحات"
+
+#: classes/Simple_Links_Meta_Boxes.php:46 classes/Simple_Links_Meta_Boxes.php:177
+msgid "Link Target"
+msgstr "هدف لینک"
+
+#: classes/Simple_Links_Meta_Boxes.php:47 classes/Simple_Links_Meta_Boxes.php:183
+#: classes/Simple_Links_Settings.php:98 classes/simple_links_admin.php:305
+msgid "Additional Fields"
+msgstr "زمینه‌های اضافه"
+
+#: classes/Simple_Links_Meta_Boxes.php:80
 msgid "Example"
 msgstr "نمونه"
 
-#: classes/Simple_Links_Meta_Boxes.php:62
+#: classes/Simple_Links_Meta_Boxes.php:80
 msgid "DO NOT forget the"
 msgstr "فراموش نکنید"
 
-#: classes/Simple_Links_Meta_Boxes.php:63
+#: classes/Simple_Links_Meta_Boxes.php:81
 msgid ""
 "This will be shown when someone hovers over the link, or optionally below the "
 "link"
@@ -330,24 +350,24 @@ msgstr ""
 "این وقتی نمایش داده می‌شود که کاربر موس را روی پیوند ببرد؛ یا شما می‌توانید به "
 "دلخواه آن را زیر پیوند نمایش دهید"
 
-#: classes/Simple_Links_Meta_Boxes.php:64
+#: classes/Simple_Links_Meta_Boxes.php:82
 msgid "Choose the target frame for your link"
 msgstr "قاب موردنظر برای پیوند خود را انتخاب کنید"
 
-#: classes/Simple_Links_Meta_Boxes.php:65
+#: classes/Simple_Links_Meta_Boxes.php:83
 msgid ""
 "Values entered in these fields will be available for shortcodes and widgets"
 msgstr ""
 "مقدارهای وارد شده در این زمینه‌ها برای کدهای کوتاه و ابزارک‌ها در دسترس است"
 
-#: classes/Simple_Links_Meta_Boxes.php:222
+#: classes/Simple_Links_Meta_Boxes.php:248
 msgid ""
 "You may add additional fields which will be available for all links in the "
 msgstr ""
 "شما ممکن است زمینه‌های اضافه‌ای ایجاد کنید که برای همه پیوندها قابل دسترس خواهد  "
 "بود در "
 
-#: classes/Simple_Links_Meta_Boxes.php:224
+#: classes/Simple_Links_Meta_Boxes.php:250
 msgid "settings"
 msgstr "تنظیمات"
 
@@ -355,15 +375,11 @@ msgstr "تنظیمات"
 msgid "Settings"
 msgstr "تنظیمات"
 
-#: classes/Simple_Links_Settings.php:98 classes/simple_links_admin.php:295
-msgid "Additional Fields"
-msgstr "زمینه‌های اضافه"
-
 #: classes/Simple_Links_Settings.php:107
 msgid "WordPress Links"
 msgstr "پیوندهای وردپرس"
 
-#: classes/Simple_Links_Settings.php:116 classes/simple_links_admin.php:306
+#: classes/Simple_Links_Settings.php:116 classes/simple_links_admin.php:318
 msgid "Permissions"
 msgstr "مجوزها"
 
@@ -416,7 +432,7 @@ msgstr "تنظیمات پیوندهای آسان"
 msgid "Be sure to see the help menu for descriptions"
 msgstr "مطمئن شوید که قسمت راهنمایی را برای توضیحات مطالعه کرده‌اید"
 
-#: classes/Simple_Links_Sort.php:101
+#: classes/Simple_Links_Sort.php:97
 msgid "Link Ordering"
 msgstr "ترتیب لینک ها"
 
@@ -440,72 +456,68 @@ msgstr "تصادفی"
 msgid "Date"
 msgstr "تاریخ"
 
-#: classes/simple_links_admin.php:70 classes/simple_links_admin.php:73
+#: classes/simple_links_admin.php:74 classes/simple_links_admin.php:77
 msgid "Link updated."
 msgstr "پیوند به روز شد."
 
-#: classes/simple_links_admin.php:71
+#: classes/simple_links_admin.php:75
 msgid "Custom field updated."
 msgstr "زمینه دلخواه به روز شد."
 
-#: classes/simple_links_admin.php:72
+#: classes/simple_links_admin.php:76
 msgid "Custom field deleted."
 msgstr "زمینه دلخواه پاک شد."
 
 #. translators: %s: date and time of the revision
-#: classes/simple_links_admin.php:75
+#: classes/simple_links_admin.php:79
 #, php-format
 msgid "Link restored to revision from %s."
 msgstr "پیوند به بازبینی از %s بازگشته است."
 
-#: classes/simple_links_admin.php:76
+#: classes/simple_links_admin.php:80
 msgid "Link published."
 msgstr "پیوند منتشر شد."
 
-#: classes/simple_links_admin.php:77
+#: classes/simple_links_admin.php:81
 msgid "Link saved."
 msgstr "پیوند ذخیره شد."
 
-#: classes/simple_links_admin.php:78
+#: classes/simple_links_admin.php:82
 msgid "Link submitted."
 msgstr "پیوند ثبت شد."
 
-#: classes/simple_links_admin.php:80
+#: classes/simple_links_admin.php:84
 #, php-format
 msgid "Link scheduled for: <strong>%1$s</strong>."
 msgstr "پیوند زمان‌بندی شده برای <strong>%1$s</strong>."
 
-#: classes/simple_links_admin.php:80
+#: classes/simple_links_admin.php:84
 msgid "M j, Y @ G:i"
 msgstr "M j, Y @ G:i"
 
-#: classes/simple_links_admin.php:81
+#: classes/simple_links_admin.php:85
 msgid "Link draft updated."
 msgstr "پیش‌نویس پیوند به روز شد."
 
-#: classes/simple_links_admin.php:129
-msgid "Web Address"
-msgstr "آدرس وب"
-
 #. translators: Taxonomy label of Simple Links Category
-#: classes/simple_links_admin.php:185
+#: classes/simple_links_admin.php:191
 #, php-format
 msgid "Show All %s"
 msgstr "نمایش همه %s"
 
-#: classes/simple_links_admin.php:213
+#: classes/simple_links_admin.php:220
 msgid "You Can add a Simple Links List  to content using the shortcode"
 msgstr ""
 "در هرجایی از سایت، شما می‌توانید فهرستی از پیوندهای آسان را با استفاده از این ک "
 "کوتاه نمایش دهید"
 
-#: classes/simple_links_admin.php:215
+#: classes/simple_links_admin.php:222
 msgid ""
 "Look for the puzzle button on the content editors for a form that generates "
 "the shortcode for you"
 msgstr "برای درست کردن کد کوتاه، در ویرایشگرهای محتوا دنبال دکمه پازل بگردید"
 
-#: classes/simple_links_admin.php:218
+#: classes/simple_links_admin.php:225
 msgid ""
 "You may use a few or many of the options as you would like. To use all "
 "defaults just enter [simple-links]"
@@ -513,15 +525,15 @@ msgstr ""
 "شما ممکن است چند یا چند گزینه را که مایلید استفاده کنید. برای استفاده از تمام "
 "پیش فرض فقط [لینک ساده] را وارد کنید"
 
-#: classes/simple_links_admin.php:220
+#: classes/simple_links_admin.php:227
 msgid "Supported Options"
 msgstr "گزینه‌های بیشتری می خواهید"
 
-#: classes/simple_links_admin.php:221
+#: classes/simple_links_admin.php:228
 msgid "Comma separated list of Link Category Names or Ids - defaults to all"
 msgstr "\"فهرست جدا شده با کاما برای نام دسته‌بندی‌ها\" - پیش‌‍فرض: همه"
 
-#: classes/simple_links_admin.php:222
+#: classes/simple_links_admin.php:229
 msgid ""
 "true of false - to include links from your selected categories' child "
 "categories as well as links from your selected categories - defaults to false"
@@ -529,23 +541,23 @@ msgstr ""
 "درست از اشتباه - شامل لینک هایی از دسته های دسته های انتخاب شده شما به عنوان "
 "دسته های کودک و همچنین لینک ها از دسته های انتخاب شده شما - پیش فرض به اشتباه"
 
-#: classes/simple_links_admin.php:223
+#: classes/simple_links_admin.php:230
 msgid "title, random, or date - defaults to link order"
 msgstr "عنوان، تصادفی، یا تاریخ - پیش فرض برای پیوند سفارش"
 
-#: classes/simple_links_admin.php:224
+#: classes/simple_links_admin.php:231
 msgid "DESC or ASC - defaults to ASC"
 msgstr "\"افزایشی یا کاهشی\" - پیش‌فرض : افزایشی"
 
-#: classes/simple_links_admin.php:225 classes/simple_links_admin.php:253
+#: classes/simple_links_admin.php:232 classes/simple_links_admin.php:260
 msgid "Number of links to show"
 msgstr "تعداد پیوندهایی که باید نمایش داده شوند"
 
-#: classes/simple_links_admin.php:226
+#: classes/simple_links_admin.php:233
 msgid "true or false - to show the link's image or not"
 msgstr "\" بله یا نه \" - برای نمایش تصویر پیوندها"
 
-#: classes/simple_links_admin.php:227
+#: classes/simple_links_admin.php:234
 msgid ""
 "true or false - to show the link's image without the title under it. If show "
 "image is not true this does nothing"
@@ -553,25 +565,25 @@ msgstr ""
 "\" بله یا نه \" - برای نمایش تصویر پیوند بدون درج عنوان در زیر آن - اگر نمایش "
 "تصویر روی \"نه\" تنظیم شده باشد این گزینه کاری انجام نمی‌دهد"
 
-#: classes/simple_links_admin.php:228
+#: classes/simple_links_admin.php:235
 msgid "Any size built into WordPress or your theme\" - default to thumbnail"
 msgstr "هر اندازه ساخته شده به وردپرس یا موضوع شما \"- به طور پیش فرض به ریز عکس"
 
-#: classes/simple_links_admin.php:229
+#: classes/simple_links_admin.php:236
 msgid ""
 "true or false - Remove Line Break Between Images and Links - default to false"
 msgstr ""
 "درست یا غلط - حذف شکست خط بین تصاویر و لینک ها - به طور پیش فرض به اشتباه"
 
-#: classes/simple_links_admin.php:230
+#: classes/simple_links_admin.php:237
 msgid "Comma separated list of the Link's Additional Fields to show"
 msgstr "فهرست جدا شده با کاما برای نمایش زمینه‌های اضافی پیوندها"
 
-#: classes/simple_links_admin.php:231
+#: classes/simple_links_admin.php:238
 msgid "true or false\" - to show the description - defaults to false"
 msgstr "درست یا غلط \"- برای نشان دادن توضیحات - پیش فرض به اشتباه است"
 
-#: classes/simple_links_admin.php:232
+#: classes/simple_links_admin.php:239
 msgid ""
 "true or false - to display paragraphs format to match the editor content - "
 "defaults to false"
@@ -579,35 +591,39 @@ msgstr ""
 "درست یا غلط - برای نمایش پاراگراف فرمت برای مطابقت با محتوای ویرایشگر - پیش "
 "فرض به اشتباه است"
 
-#: classes/simple_links_admin.php:233
+#: classes/simple_links_admin.php:240
 msgid "Any characters to display between fields and description - defaults to "
 msgstr ""
 "و کاراکترهایی که باید بین زمینه‌ها و توضیحات نمایش داده شوند. پیش‌فرض \"-\" است "
 
-#: classes/simple_links_admin.php:234
+#: classes/simple_links_admin.php:241
 msgid "An optional id for the list"
 msgstr "یک شناسه یکتا یا ID برای لیست خروجی"
 
-#: classes/simple_links_admin.php:245
+#: classes/simple_links_admin.php:252
 msgid ""
 "You May Add as Many Simple Links Widgets as You Would Like to Your Widget Areas"
 msgstr ""
 "شما میتوانید هر تعداد که می‌خواهید ابزارک پیوندهای آسان به ناحیه ابزارک خود "
 "اضافه کنید"
 
-#: classes/simple_links_admin.php:246
+#: classes/simple_links_admin.php:253
 msgid "Widget Options"
 msgstr "تنظیمات ابزارک"
 
-#: classes/simple_links_admin.php:247
+#: classes/simple_links_admin.php:254
 msgid "Categories"
 msgstr "تمام دسته ها"
 
-#: classes/simple_links_admin.php:247
+#: classes/simple_links_admin.php:254
 msgid "Select with link categories to pull from"
 msgstr "انتخاب دسته‌بندی‌های پیوند از جلو"
 
-#: classes/simple_links_admin.php:248
+#: classes/simple_links_admin.php:255
+msgid "Include Child Categories Of Selected Categories"
+msgstr "شامل دسته های دسته ای از دسته های انتخاب شده"
+
+#: classes/simple_links_admin.php:255
 msgid ""
 "If checked, links from your selected categories' child categories will display "
 "as well as links from your selected categories"
@@ -615,39 +631,39 @@ msgstr ""
 "در صورت انتخاب، پیوندهایی از دسته های انتخاب شده گروه \"دسته های کودک شما "
 "نمایش داده خواهد شد و همچنین لینک ها از دسته های انتخاب شده خود را نشان می دهد"
 
-#: classes/simple_links_admin.php:249 src/Widgets/Simple_Links.php:136
+#: classes/simple_links_admin.php:256 src/Widgets/Simple_Links.php:136
 msgid "Order Links By"
 msgstr "مرتب کردن پیوندها با توجه به"
 
-#: classes/simple_links_admin.php:249
+#: classes/simple_links_admin.php:256
 msgid "The Order in Which the Links will Display - defaults to link order"
 msgstr "ترتیبی که پیوندها نمایش داده می شوند - پیش‌فرض ترتیب پیوند است"
 
-#: classes/simple_links_admin.php:250
+#: classes/simple_links_admin.php:257
 msgid "The Order in which the links will Display"
 msgstr "ترتیبی که پیوندها نمایش داده می‌شوند"
 
-#: classes/simple_links_admin.php:251
+#: classes/simple_links_admin.php:258
 msgid "Display the Link's Description"
 msgstr "نمایش توضیحات پیوند"
 
-#: classes/simple_links_admin.php:252
+#: classes/simple_links_admin.php:259
 msgid "Show Description Formatting"
 msgstr "نمایش فرمت نمایش"
 
-#: classes/simple_links_admin.php:252
+#: classes/simple_links_admin.php:259
 msgid "Display paragraphs to match the editor content"
 msgstr "نمایش پاراگراف‌ها درست همان‌طور که در ویرایشگر دیده می‌شوند"
 
-#: classes/simple_links_admin.php:253
+#: classes/simple_links_admin.php:260
 msgid "Number of LInks"
 msgstr "تعداد پیوندها"
 
-#: classes/simple_links_admin.php:254
+#: classes/simple_links_admin.php:261
 msgid "Check the box to display the Link's Image"
 msgstr "برای نمایش تصویر لینک این گزینه را تیک بزنید"
 
-#: classes/simple_links_admin.php:255
+#: classes/simple_links_admin.php:262
 msgid ""
 "Check this box display the Link's Image without the Link's title under it. If "
 "Show Image is not checked, this will do nothing"
@@ -655,29 +671,29 @@ msgstr ""
 "این گزینه را برای نمایش تصویر بدون درج عنوان پیوند در زیر آن، تیک بزنید. اگر "
 "نمایش تصویر انتخاب نشده باشد، این گزینه کاری انجام نمی‌دهد"
 
-#: classes/simple_links_admin.php:256
+#: classes/simple_links_admin.php:263
 msgid "The Size of Image to Show if the previous box is checked"
 msgstr "چنانچه گزینه قبلی را تیک زده اید؛ در اینجا اندازه تصویر را وارد کنید"
 
-#: classes/simple_links_admin.php:257
+#: classes/simple_links_admin.php:264
 msgid "Display values from the Link's Additional Fields"
 msgstr "نمایش مقدارها از زمینه‌های اضافی پیوند"
 
-#: classes/simple_links_admin.php:258
+#: classes/simple_links_admin.php:265
 msgid "Characters to display between fields and description - defaults to "
 msgstr ""
 "و کاراکترهایی که باید بین زمینه‌ها و توضیحات نمایش داده شوند. پیش‌فرض \"-\" است "
 
-#: classes/simple_links_admin.php:286
+#: classes/simple_links_admin.php:294
 msgid "WordPress has deprecated the built in links functionality"
 msgstr ""
 "اگر آنها در حال حاضر ندارند، وردپرس کاربرد درونی پیوندها را نادیده می گیرد"
 
-#: classes/simple_links_admin.php:287
+#: classes/simple_links_admin.php:295
 msgid "These settings take care of cleaning up the old WordPress links"
 msgstr "این تنظیمات مراقب پاک‌سازی پیوندهای درونی هستند"
 
-#: classes/simple_links_admin.php:288
+#: classes/simple_links_admin.php:296
 msgid ""
 "By Checking \"Remove WordPress Built in Links\", the old Links menu will "
 "disappear along with the add new admin bar link"
@@ -685,7 +701,7 @@ msgstr ""
 "با چک کردن «حذف وردپرس ساخته شده در لینکها»، منوی قدیمی لینکها همراه با نوار "
 "افزودن نوار مدیریت جدید ناپدید می شود"
 
-#: classes/simple_links_admin.php:289
+#: classes/simple_links_admin.php:297
 msgid ""
 " Pressing the \"Import Links\" button will automatically copy the WordPress "
 "Links into Simple Links. Keep in mind if you press this button twice it will "
@@ -695,7 +711,7 @@ msgstr ""
 "داخل افزونه کپی می‌کند. توجه کنید اگر بیش از یک بار روی این دکمه کلیک کنید، "
 "پیوندها دوباره کپی می‌شوند و تکرار به وجود می‌آید"
 
-#: classes/simple_links_admin.php:296
+#: classes/simple_links_admin.php:306
 msgid ""
 "You have the ability to add an unlimited number of additional fields to the "
 "links by click the \"Add Another\" button"
@@ -703,7 +719,7 @@ msgstr ""
 "شما می‌توانید با کلیک روی گزینه \"افزودن یکی دیگر\" بی نهایت زمینه اضافی برای "
 "پیوندها تولید کنید"
 
-#: classes/simple_links_admin.php:297
+#: classes/simple_links_admin.php:307
 msgid ""
 "Once you save your changes, these fields will show up on a each link's editing "
 "page"
@@ -711,7 +727,7 @@ msgstr ""
 "وقتی شما تغییرات را ذخیره کنید، این زمینه‌ها در هر صفحه مربوط به ویرایش پیوند "
 "ظاهر خواهند شد"
 
-#: classes/simple_links_admin.php:298
+#: classes/simple_links_admin.php:308
 msgid ""
 "You will have the ability to select any of these fields to display using the "
 "Simple Links widgets"
@@ -719,7 +735,7 @@ msgstr ""
 "از طریق ابزارک پیوندهای آسان، شما می‌توانید هرکدام از این زمینه‌ها را که "
 "خواستید، نمایش بدهید"
 
-#: classes/simple_links_admin.php:299
+#: classes/simple_links_admin.php:309
 msgid ""
 "Each widget gets it's own list of ALL the additional fields, so you may "
 "display different fields in different widget areas"
@@ -727,7 +743,7 @@ msgstr ""
 "هر ابزارک فهرست منحصر به فردی برای نمایش زمینه‌ها دارد. شما ممکن است در هر "
 "ابزارک زمینه متفاوتی را نمایش بدهید"
 
-#: classes/simple_links_admin.php:300
+#: classes/simple_links_admin.php:310
 msgid ""
 "These fields will also be available by using the shortcode. For instance, if "
 "you wanted to display a field titled \"author\" and a field titled \"notes\" "
@@ -737,15 +753,15 @@ msgstr ""
 "یک زمینه به نام \"author\" و یک زمینه به نام \"notes\" ایجاد کنید، کد کوتاه آن "
 "به این شکل خواهد بود"
 
-#: classes/simple_links_admin.php:301
+#: classes/simple_links_admin.php:311
 msgid "author,notes"
 msgstr "نویسنده، یادداشت می کند"
 
-#: classes/simple_links_admin.php:307
+#: classes/simple_links_admin.php:319
 msgid "This is where you decide how much access editors will have"
 msgstr "در اینجا شما می‌توانید سطح دسترسی کاربران ویرایشگر را تنظیم کنید"
 
-#: classes/simple_links_admin.php:308
+#: classes/simple_links_admin.php:320
 msgid ""
 "\"Hide Link Ordering from Editors\", will prevent editors from using the drag "
 "and drop ordering page. They will still be able to change the order on the "
@@ -755,7 +771,7 @@ msgstr ""
 "استفاده از drag and drop را می گیرد. البته ویرایشگرها همچنان می‌توانند از صفحه "
 "اختصاصی هر پیوند ترتیب آن را تغییر دهند"
 
-#: classes/simple_links_admin.php:309
+#: classes/simple_links_admin.php:321
 msgid ""
 "\"Show Simple Link Settings to Editors\" will allow editors to access the "
 "screen you are on right now without restriction"
@@ -763,7 +779,7 @@ msgstr ""
 "“نمایش تنظیمات پیوندهای آسان به کاربران ویرایشگر” اجازه دسترسی به همین صفحه "
 "فعلی را به کاربران ویرایشگر می‌دهد"
 
-#: classes/simple_links_admin.php:333
+#: classes/simple_links_admin.php:347
 msgid ""
 "These Sections will give your a brief description of what each group of "
 "settings does. Feel free to start a thread on the support forums if you would "
@@ -773,43 +789,51 @@ msgstr ""
 "خواهد داد. اگر خواستید می‌توانید در فروم پشتیبانی سوال خود را پیرامون این "
 "افزونه مطرح کنید"
 
-#: classes/simple_links_admin.php:411
-msgid "Manage your Links Here. Enjoy"
-msgstr "پیوند های خود را اینجا مدیریت کنید. لذت ببرید"
+#: classes/simple_links_admin.php:423
+msgid "Manage your Links here."
+msgstr "لینک های خود را در اینجا مدیریت کنید."
 
-#: classes/simple_links_admin.php:442
+#: classes/simple_links_admin.php:423
+msgid "Settings, categories, and ordering may also be found under this menu."
+msgstr "تنظیمات ، دسته ها ، و سفارش نیز ممکن است در این منو پیدا شود."
+
+#: classes/simple_links_admin.php:444
 msgid "Simple Links Shortcode Form"
 msgstr "لینک کوتاه ساده فرم"
 
-#: classes/simple_links_admin.php:513
+#: classes/simple_links_admin.php:445
+msgid "Use this icon to generate a Simple Links shortcode"
+msgstr "استفاده از این آیکون برای تولید ساده لینک کوتاه"
+
+#: classes/simple_links_admin.php:514
 msgid "This will prevent editors from using the drag and drop ordering."
 msgstr "این باعث می شود که ویراستاران از دستور کشیدن و رها کردن استفاده نکنند."
 
-#: classes/simple_links_admin.php:514
+#: classes/simple_links_admin.php:515
 msgid "This will allow editors access to this Settings Page."
 msgstr "این به ویرایشگران اجازه می دهد به این صفحه تنظیمات دسترسی پیدا کنند."
 
-#: classes/simple_links_admin.php:515
+#: classes/simple_links_admin.php:516
 msgid "This will remove all traces of the Default WordPress Links."
 msgstr "این همه آثار لینک پیش فرض وردپرس را حذف می کند."
 
-#: classes/simple_links_admin.php:516
+#: classes/simple_links_admin.php:517
 msgid "This will import all existing WordPress Links into the Simple Links"
 msgstr "این همه لینک های موجود وردپرس را به لینک های ساده وارد می کند"
 
-#: classes/simple_links_admin.php:517
-msgid "This will the the link's target when a new link is created."
-msgstr "این هدف لینک هنگامی که یک لینک جدید ایجاد می شود."
-
 #: classes/simple_links_admin.php:518
+msgid "This will be the link's target when a new link is created."
+msgstr "این خواهد بود که هدف لینک زمانی که یک لینک جدید ایجاد شده است."
+
+#: classes/simple_links_admin.php:519
 msgid "Add Simple Links"
 msgstr "لینک های ساده اضافه کنید"
 
-#: classes/simple_links_admin.php:519
+#: classes/simple_links_admin.php:520
 msgid "Simple Links Shortcode"
 msgstr "لینک کوتاه ساده"
 
-#: classes/simple_links_admin.php:520
+#: classes/simple_links_admin.php:521
 msgid "Simple Links Shortcode Generator"
 msgstr "لینک های ساده لینک کوتاه ژنراتور"
 
@@ -829,19 +853,19 @@ msgstr ""
 msgid "Links Title"
 msgstr "عنوان پیوند ها"
 
-#: src/Widgets/Simple_Links.php:233
+#: src/Widgets/Simple_Links.php:237
 msgid "Remove Line Break Between Image and Link"
 msgstr "حذف شکستگی خط بین تصویر و پیوند"
 
-#: src/Widgets/Simple_Links.php:262
+#: src/Widgets/Simple_Links.php:266
 msgid "Display Additional Fields"
 msgstr "نمایش زمینه های اضافی"
 
-#: src/Widgets/Simple_Links.php:268
+#: src/Widgets/Simple_Links.php:272
 msgid "There have been no additional fields added."
 msgstr "هیچ فیلدی اضافه نشده است."
 
-#: src/Widgets/Simple_Links.php:284
+#: src/Widgets/Simple_Links.php:288
 msgid "HTML is allowed"
 msgstr "HTML مجاز است"
 
