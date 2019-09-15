@@ -1,6 +1,6 @@
 /**
  * The MCE plugin to add Simple LInks Shortcodes
- * @author Mat Lipe <mat@matlipe.com>
+ * @author Mat Lipe <support@onpointplugins.com>
  */
 
 /**
@@ -9,7 +9,7 @@
  * honor `wp_localize_script` and need these defaults to prevent errors.
  *
  * @fixes 4022
- * @link https://matlipe.com/plugin-support/elementor/
+ * @link https://onpointplugins.com/plugin-support/elementor/
  *
  */
 var SL_locale = window.SL_locale || {
@@ -50,8 +50,8 @@ var SL_locale = window.SL_locale || {
 			return {
 				longname : i18n.shortcode_generator,
 				author : 'Mat Lipe',
-				authorurl : 'https://matlipe.com',
-				inforurl : 'https://matlipe.com',
+				authorurl : 'https://onpointplugins.com',
+				inforurl : 'https://onpointplugins.com',
 				version : '2.0.1'
 			};
 		}

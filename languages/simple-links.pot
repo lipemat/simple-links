@@ -812,7 +812,7 @@ msgid "HTML is allowed"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://matlipe.com/simple-links/"
+msgid "https://onpointplugins.com/simple-links/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -825,5 +825,5 @@ msgid "Mat Lipe"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://matlipe.com/"
+msgid "https://onpointplugins.com/"
 msgstr ""

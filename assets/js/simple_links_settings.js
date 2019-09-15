@@ -1,7 +1,7 @@
 /**
  * The js for the Settings page on the Simple Links
  *
- * @author mat lipe <mat@matlipe.com>
+ * @author mat lipe <support@onpointplugins.com>
  *
  * @TODO Merge with simple_links_admin
  * Remove Qtip and write my own lighter version see

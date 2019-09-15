@@ -1,7 +1,7 @@
 /**
  * Admin js for Simple Links Plugin
  *
- * @author Mat Lipe <mat@matlipe.com>
+ * @author Mat Lipe <support@onpointplugins.com>
  * @type {Simple_Links|*|{}}
  */
 var Simple_Links = window.Simple_Links || {};
@@ -9,7 +9,7 @@ var Simple_Links = window.Simple_Links || {};
 (function( $, s, i18n, config ){
 	/**
 	 * Simple Links Link Ordering
-	 * 
+	 *
 	 */
 	s.link_ordering = {
 		wrap : {},

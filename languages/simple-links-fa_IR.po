@@ -4,7 +4,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-10 11:05-0400\n"
 "PO-Revision-Date: 2019-09-10 11:12-0400\n"
-"Last-Translator: Mat Lipe <mat@matlipe.com>\n"
+"Last-Translator: Mat Lipe <support@onpointplugins.com>\n"
 "Language-Team: Amir MP and Sheyda Darouei <me@ameer.ir>\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
@@ -870,7 +870,7 @@ msgid "HTML is allowed"
 msgstr "HTML مجاز است"
 
 #. Plugin URI of the plugin/theme
-msgid "https://matlipe.com/simple-links/"
+msgid "https://onpointplugins.com/simple-links/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -883,5 +883,5 @@ msgid "Mat Lipe"
 msgstr "Mat Lipe"
 
 #. Author URI of the plugin/theme
-msgid "https://matlipe.com/"
+msgid "https://onpointplugins.com/"
 msgstr ""
