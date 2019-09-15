@@ -3,7 +3,7 @@
 /**
  * Factory class for generating the links list for the widget and shortcode
  *
- * @author  Mat Lipe <mat@matlipe.com>
+ * @author  OnPoint Plugins <mat@onpointplugins.com>
  * @since   2.0
  *
  *

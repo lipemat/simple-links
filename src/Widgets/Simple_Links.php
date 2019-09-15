@@ -3,7 +3,7 @@
 /**
  * Creates the main widget for the simple links plugin
  *
- * @author mat lipe
+ * @author OnPoint Plugins
  * @uses   registered by init
  * @uses   the output can be filtered by using the 'simple_links_widget_output' filter
  *         *   apply_filters( 'simple_links_widget_output', $output, $args );

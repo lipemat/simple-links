@@ -2,7 +2,7 @@
 /**
  * Methods for the Simple Links Plugin
  *
- * @author Mat Lipe <mat@matlipe.com>
+ * @author OnPoint Plugins <mat@onpointplugins.com>
  *
  *
  * @uses   These methods are used in both the admin output of the site

@@ -3,7 +3,7 @@
 /**
  * Simple_Links_Meta_Boxes
  *
- * @author Mat Lipe
+ * @author OnPoint Plugins
  * @since  3.0.1
  *
  */
@@ -165,7 +165,7 @@ class Simple_Links_Meta_Boxes {
 					'link_meta_box_output',
 				), $post->type, 'advanced', 'high', array(
 					//fixes issue where Gutenberg converts to Array
-					//@link https://matlipe.com/plugin-support/web-address-description-replaced-by-array
+					//@link https://onpointplugins.com/plugin-support/web-address-description-replaced-by-array
 					'__block_editor_compatible_meta_box' => false,
 					'box'                                => $box,
 				) );

@@ -6,7 +6,7 @@
  * @see    simple_links->load_shortcode_form();
  * @see    js/editor_plugin.js
  *
- * @author Mat Lipe <mat@matlipe.com>
+ * @author OnPoint Plugins <mat@onpointplugins.com>
  *
  */
 

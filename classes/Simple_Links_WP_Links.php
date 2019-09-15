@@ -2,7 +2,7 @@
 /**
  * Simple_Links_WP_Links
  *
- * @author Mat Lipe
+ * @author OnPoint Plugins
  * @since 4.0.3
  *
  */

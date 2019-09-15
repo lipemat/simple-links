@@ -3,7 +3,7 @@
 /**
  * Misc Functions for the Simple Links Plugin
  *
- * @author Mat Lipe <mat@matlipe.com>
+ * @author OnPoint Plugins <mat@onpointplugins.com>
  *
  */
 

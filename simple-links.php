@@ -1,12 +1,12 @@
 <?php
 /*
 Plugin Name: Simple Links
-Plugin URI: https://matlipe.com/simple-links/
+Plugin URI: https://onpointplugins.com/simple-links/
 Description: Replacement for the old WordPress Links Manager with many added features.
 Version: 4.6.4
-Author: Mat Lipe
-Author URI: https://matlipe.com/
-Contributors: Mat Lipe
+Author: OnPoint Plugins
+Author URI: https://onpointplugins.com/
+Contributors: OnPoint Plugins
 Text Domain: simple-links
 */
 

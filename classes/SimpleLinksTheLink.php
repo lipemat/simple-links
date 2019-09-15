@@ -6,7 +6,7 @@
  * Class for generating and interacting with each individual link
  * Each link should be a new instance of the class
  *
- * @author  Mat Lipe <mat@matlipe.com>
+ * @author  OnPoint Plugins <mat@onpointplugins.com>
  *
  * @since   2.0
  *

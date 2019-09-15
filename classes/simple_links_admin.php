@@ -3,7 +3,7 @@
  * Methods for the Admin Area of Simple Links
  *
  *
- * @author Mat Lipe <mat@matlipe.com>
+ * @author OnPoint Plugins <mat@onpointplugins.com>
  *
  * @uses   called by simple-links.php
  *

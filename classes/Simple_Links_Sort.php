@@ -4,7 +4,7 @@
  *
  * Handle all the link sorting requirements
  *
- * @author Mat Lipe
+ * @author OnPoint Plugins
  *
  * @since 4/15/2015 - ( 4.0 maybe )
  *
@@ -42,7 +42,7 @@ class Simple_Links_Sort {
 			'post_type'   => Simple_Link::POST_TYPE,
 			'orderby'     => 'menu_order',
 			'order'       => 'ASC',
-			// @link https://matlipe.com/plugin-support/maximum-number-of-links-in-a-category/
+			// @link https://onpointplugins.com/plugin-support/maximum-number-of-links-in-a-category/
 			'numberposts' => 1000, //phpcs:ignore WordPress.WP.PostsPerPage.posts_per_page_numberposts
 		);
 		$links = get_posts( $args );
