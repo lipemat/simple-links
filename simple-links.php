@@ -3,7 +3,7 @@
 Plugin Name: Simple Links
 Plugin URI: https://onpointplugins.com/simple-links/
 Description: Replacement for the old WordPress Links Manager with many added features.
-Version: 4.6.4
+Version: 4.6.5
 Author: OnPoint Plugins
 Author URI: https://onpointplugins.com/
 Contributors: OnPoint Plugins
@@ -13,7 +13,7 @@ Text Domain: simple-links
 if ( defined( 'SIMPLE_LINKS_VERSION' ) ) {
 	return;
 }
-define( 'SIMPLE_LINKS_VERSION', '4.6.4' );
+define( 'SIMPLE_LINKS_VERSION', '4.6.5' );
 
 define( 'SIMPLE_LINKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SIMPLE_LINKS_URL', plugin_dir_url( __FILE__ ) );
