@@ -105,22 +105,23 @@ class Simple_Links_Meta_Boxes {
 			return;
 		}
 
-
-		$meta_fields = $this->get_meta_fields();
-
-		//Go through the options extra fields
-		foreach ( $meta_fields as $field ) {
-			if ( self::FIELDS !== $field ) {
-				if ( empty( $_POST[ $field ] ) ) {
-					$_POST[ $field ] = null;
-				}
-				if ( self::DESCRIPTION === $field ) {
-					update_post_meta( $post_id, $field, wp_kses_post( $_POST[ $field ] ) );
-
-				} else {
-					update_post_meta( $post_id, $field, sanitize_text_field( $_POST[ $field ] ) );
-				}
+		foreach ( array_diff( $this->get_meta_fields(), [ self::FIELDS ] ) as $field ) {
+			if ( empty( $_POST[ $field ] ) ) {
+				$_POST[ $field ] = null;
 			}
+			switch ( $field ) {
+				case self::DESCRIPTION:
+					$value = wp_kses_post( wp_unslash( $_POST[ $field ] ) );
+					break;
+				case self::WEB_ADDRESS:
+					$value = esc_url_raw( wp_unslash( $_POST[ $field ] ) );
+					break;
+				default:
+					$value = sanitize_text_field( wp_unslash( $_POST[ $field ] ) );
+			}
+
+			// @since 4.6.6
+			update_post_meta( $post_id, $field, apply_filters( 'simple-links/meta-boxes/meta-save/value', $value, $field, $post_id, $this ) );
 		}
 
 		//for the no follow checkbox
