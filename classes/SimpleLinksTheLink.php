@@ -90,26 +90,16 @@ class SimpleLinksTheLink {
 
 
 	/**
-	 * Output
+	 * A single link output
 	 *
-	 * A single links output
-	 *
-	 * @param bool $echo - defaults to false;
+	 * @param bool $echo - Echo instead of return (defaults to false).
 	 *
 	 * @return string
-	 *
 	 */
 	public function output( $echo = false ) {
-		if ( ! class_exists( 'WP_Post' ) ) {
-			if ( ! is_object( $this->link ) ) {
-				return '';
-			}
-		} else {
-			if ( ! is_a( $this->link, 'WP_Post' ) ) {
-				return;
-			}
+		if ( ! $this->link instanceof \WP_Post ) {
+			return '';
 		}
-
 
 		if ( $this->args['show_image'] ) {
 			$image = $this->get_image();
@@ -117,9 +107,8 @@ class SimpleLinksTheLink {
 			$image = '';
 		}
 
-		//do not display empty links
 		if ( $this->args['show_image_only'] && empty( $image ) ) {
-			return;
+			return '';
 		}
 
 
@@ -128,33 +117,31 @@ class SimpleLinksTheLink {
 			$class .= ' simple-links-' . $this->args['type'] . '-item';
 		}
 
-
 		$markup = apply_filters( 'simple_links_link_markup', '<li class="%s" id="link-%s">', $this->link, $this );
-
 		$output = sprintf( $markup, $class, $this->link->ID );
+		$target = $this->get_data( Simple_Links_Meta_Boxes::TARGET );
+		$no_follow = $this->get_data( Simple_Links_Meta_Boxes::NO_FOLLOW );
 
-		//Main link output
-		$link_output = sprintf( '<a href="%s" target="%s" title="%s" %s>%s%s</a>',
+		// Main link output.
+		$link_output = sprintf( '<a href="%s" title="%s"%s%s>%s%s</a>',
 			esc_attr( $this->get_data( 'web_address' ) ),
-			esc_attr( $this->get_data( 'target' ) ),
-			esc_attr( strip_tags( $this->get_data( 'description' ) ) ),
-			empty( $this->meta_data['link_target_nofollow'][0] ) ? '' : 'rel="nofollow"',
+			esc_attr( wp_strip_all_tags( $this->get_data( 'description' ) ) ),
+			$target ? ' target="' . esc_attr( $target ) . '" ' : '',
+			$no_follow ? ' rel="nofollow" ' : '',
 			$image,
 			$this->link->post_title
 		);
 
-		$_filter_params = array(
+		$output .= apply_filters_ref_array( 'simple_links_link_output', [
 			$link_output,
 			$this->get_data(),
 			$this->link,
 			$image,
 			$this->args,
 			$this,
-		);
+		] );
 
-		$output .= apply_filters_ref_array( 'simple_links_link_output', $_filter_params );
-
-		//The description
+		// The description.
 		if ( $this->args['description'] ) {
 			$description = $this->get_data( 'description' );
 			if ( ! empty( $description ) ) {
@@ -165,7 +152,7 @@ class SimpleLinksTheLink {
 			}
 		}
 
-		//The additional fields
+		// The additional fields.
 		if ( is_array( $this->args['fields'] ) ) {
 			$additional_fields = null;
 			foreach ( $this->args['fields'] as $field ) {
@@ -183,8 +170,6 @@ class SimpleLinksTheLink {
 
 		}
 
-
-		//done this way to allow for filtering
 		if ( has_filter( 'simple_links_link_markup' ) ) {
 			$output = force_balance_tags( $output );
 		} else {
@@ -193,9 +178,8 @@ class SimpleLinksTheLink {
 
 		$output = apply_filters( 'simple_links_list_item', $output, $this->link, $this );
 
-		//handle the output
 		if ( $echo ) {
-			echo $output;
+			echo $output; // phpcs:ignore
 		} else {
 			return $output;
 		}
