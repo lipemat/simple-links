@@ -5,7 +5,7 @@ Tags: link manager, link organizations, links
 Requires at least: 5.1.0
 Tested up to: 5.3.0
 Requires PHP: 5.6.0
-Stable tag: 4.6.7
+Stable tag: 4.6.8
 License: GPLv2
 
 Links Manager with many features. Makes managing links simple and robust.
@@ -104,6 +104,11 @@ Start a support thread and myself or someone from the community can probably hel
 2. The short-code generating form
 
 == Changelog ==
+= 4.6.8 =
+* Remove legacy errors for no block editor support.
+* Prevent links from having a target when set to none.
+* General code style improvements.
+
 = 4.6.7 =
 * Support WordPress Core version 5.3.0
 
