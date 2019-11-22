@@ -5,17 +5,16 @@
  *
  * @author OnPoint Plugins
  * @since  3.0.1
- *
  */
 class Simple_Links_Meta_Boxes {
 	const ADDITIONAL_FIELDS = 'link_additional_value';
 	const NONCE = 'simple-links/meta-box/nonce';
 
-
 	const DESCRIPTION = 'description';
 	const FIELDS = 'additional_fields';
-	const WEB_ADDRESS = 'web_address';
+	const NO_FOLLOW = 'link_target_nofollow';
 	const TARGET = 'target';
+	const WEB_ADDRESS = 'web_address';
 
 
 	protected $meta_box_descriptions = array();
@@ -124,19 +123,19 @@ class Simple_Links_Meta_Boxes {
 			update_post_meta( $post_id, $field, apply_filters( 'simple-links/meta-boxes/meta-save/value', $value, $field, $post_id, $this ) );
 		}
 
-		//for the no follow checkbox
-		if ( isset( $_POST['link_target_nofollow'] ) ) {
-			update_post_meta( $post_id, 'link_target_nofollow', sanitize_text_field( $_POST['link_target_nofollow'] ) );
+		if ( isset( $_POST[ self::NO_FOLLOW ] ) ) {
+			update_post_meta( $post_id, self::NO_FOLLOW, (bool) $_POST[ self::NO_FOLLOW ] );
 		} else {
-			update_post_meta( $post_id, 'link_target_nofollow', 0 );
+			update_post_meta( $post_id, self::NO_FOLLOW, 0 );
 		}
 
 		if ( empty( $_POST[ self::ADDITIONAL_FIELDS ] ) ) {
-			$_POST[ self::ADDITIONAL_FIELDS ] = array();
+			$additional_fields = [];
+		} else {
+			$additional_fields = array_map( 'sanitize_text_field', wp_unslash( $_POST[ self::ADDITIONAL_FIELDS ] ) );
 		}
-		$additional_fields = array_map( 'sanitize_text_field', $_POST[ self::ADDITIONAL_FIELDS ] );
-		update_post_meta( $post_id, self::ADDITIONAL_FIELDS, $additional_fields );
 
+		update_post_meta( $post_id, self::ADDITIONAL_FIELDS, $additional_fields );
 	}
 
 
@@ -153,12 +152,12 @@ class Simple_Links_Meta_Boxes {
 	 * @since 8/13/12
 	 */
 	public function meta_box( $post ) {
-		//Apply Filters to Change Descriptions of the Meta Boxes
+		// Apply Filters to Change Descriptions of the Meta Boxes.
 		$this->meta_box_descriptions = apply_filters( 'simple_links_meta_descriptions', $this->meta_box_descriptions );
 
 		$meta_fields = $this->get_meta_fields();
 
-		//Go through each meta box in the filtered array
+		// Go through each meta box in the filtered array.
 		foreach ( $meta_fields as $label => $box ) {
 			if ( ( self::FIELDS !== $box ) && ( self::TARGET !== $box ) ) {
 				add_meta_box( $box . '_links_meta_box', $label, [
@@ -170,7 +169,7 @@ class Simple_Links_Meta_Boxes {
 			}
 		}
 
-		//The link Target meta box
+		// The link Target meta box.
 		if ( in_array( self::TARGET, $meta_fields, true ) ) {
 			add_meta_box( 'target_links_meta_box', __( 'Link Target', 'simple-links' ), array(
 				$this,
