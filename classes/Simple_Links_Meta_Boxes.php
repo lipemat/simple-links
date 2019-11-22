@@ -161,15 +161,12 @@ class Simple_Links_Meta_Boxes {
 		//Go through each meta box in the filtered array
 		foreach ( $meta_fields as $label => $box ) {
 			if ( ( self::FIELDS !== $box ) && ( self::TARGET !== $box ) ) {
-				add_meta_box( $box . '_links_meta_box', $label, array(
+				add_meta_box( $box . '_links_meta_box', $label, [
 					$this,
 					'link_meta_box_output',
-				), $post->type, 'advanced', 'high', array(
-					//fixes issue where Gutenberg converts to Array
-					//@link https://onpointplugins.com/plugin-support/web-address-description-replaced-by-array
-					'__block_editor_compatible_meta_box' => false,
-					'box'                                => $box,
-				) );
+				], $post->type, 'advanced', 'high', [
+					'box' => $box,
+				] );
 			}
 		}
 
