@@ -129,7 +129,6 @@ class Simple_Links_Settings {
 			'core'
 		);
 
-
 	}
 
 
@@ -158,7 +157,7 @@ class Simple_Links_Settings {
 				<p>
 					<label for="link_target_blank" class="selectit">
 						<input type="radio" name="simple-links-default-target"
-						       value="_blank" <?php checked( $target, '_blank' ); ?>>
+							   value="_blank" <?php checked( $target, '_blank' ); ?>>
 						<code>
 							_blank</code> &minus; <?php esc_html_e( 'new window or tab', 'simple-links' ); ?>.
 					</label>
@@ -166,7 +165,7 @@ class Simple_Links_Settings {
 				<p>
 					<label for="link_target_top" class="selectit">
 						<input type="radio" name="simple-links-default-target"
-						       value="_top" <?php checked( $target, '_top' ); ?>>
+							   value="_top" <?php checked( $target, '_top' ); ?>>
 						<code>
 							_top</code>
 						&minus; <?php esc_html_e( 'current window or tab, with no frames', 'simple-links' ); ?>.
@@ -175,7 +174,7 @@ class Simple_Links_Settings {
 				<p>
 					<label for="link_target_none" class="selectit">
 						<input type="radio" name="simple-links-default-target"
-						       value="" <?php checked( $target, "" ); ?>>
+							   value="" <?php checked( $target, '' ); ?>>
 						<code>
 							_none</code> &minus; <?php esc_html_e( 'same window or tab', 'simple-links' ); ?>.
 					</label>
@@ -199,7 +198,7 @@ class Simple_Links_Settings {
 		<ul>
 			<li><?php esc_html_e( 'Hide Link Ordering from editors', 'simple-links' ); ?>:
 				<input type="checkbox" name="sl-hide-ordering" <?php checked( get_option( 'sl-hide-ordering' ) ); ?>
-				       value="1"/>
+					   value="1"/>
 				<?php simple_links_questions( 'SL-hide-ordering' ); ?>
 			</li>
 			<li><?php esc_html_e( 'Show Simple Link Settings to editors', 'simple-links' ); ?>:
@@ -234,7 +233,7 @@ class Simple_Links_Settings {
 				<p>
 					<?php esc_html_e( 'Field Name', 'simple-links' ); ?>:
 					<input type="text" name="link_additional_fields[]"
-					       value="<?php echo esc_attr( trim( $field ) ); ?>"/>
+						   value="<?php echo esc_attr( trim( $field ) ); ?>"/>
 					<span class="link_delete_additional"> X </span>
 				</p>
 				<?php
@@ -250,12 +249,12 @@ class Simple_Links_Settings {
 
 		<!-- Placeholder for JQuery -->
 		<span id="link-extra-field" style="display:none">
-    		<p>
-			    <?php esc_html_e( 'Field Name', 'simple-links' ); ?>:
-			    <input type="text" name="link_additional_fields[] value="
-			    "> <span class="link_delete_additional"> X </span>
-		    </p>
-    	</span>
+			<p>
+				<?php esc_html_e( 'Field Name', 'simple-links' ); ?>:
+				<input type="text" name="link_additional_fields[] value="
+				"> <span class="link_delete_additional"> X </span>
+			</p>
+		</span>
 
 		<span id="link-additional-placeholder"></span>
 
@@ -279,7 +278,6 @@ class Simple_Links_Settings {
 		wp_enqueue_script( 'wp-lists' );
 		wp_enqueue_script( 'postbox' );
 		wp_enqueue_script( 'simple_links_settings_script', SIMPLE_LINKS_JS_DIR . 'simple_links_settings.js', array( 'jquery' ), '1.0.0' );
-
 
 		?>
 		<div class="wrap">

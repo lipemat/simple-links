@@ -20,31 +20,34 @@ var Simple_Links = window.Simple_Links || {};
 
 		init : function(){
 			this.wrap = $( "#simple-links-ordering-wrap" );
-			if( this.wrap.length < 1 ){
+			if ( this.wrap.length < 1 ) {
 				return;
 			}
 
 			_.bindAll( this, '_save_order', '_filter_by_cat' );
 
-			this.list = this.wrap.find( 'ul' );
+			this.list          = this.wrap.find( 'ul' );
 			this.original_list = this.list.clone();
-			this.category = $( '#simple-links-sort-cat' );
+			this.category      = $( '#simple-links-sort-cat' );
 
 			//Setup the Draggable list
-			this.list.sortable( {
-				placeholder : 'sortable-placeholder menu-item-depth-1',
-				stop : function(){
-					s.link_ordering._save_order( $( this ).attr( 'id' ) );
+			this.list.sortable(
+				{
+					placeholder : 'sortable-placeholder menu-item-depth-1',
+					stop : function(){
+						s.link_ordering._save_order( $( this ).attr( 'id' ) );
+					}
 				}
-			} );
-
+			);
 
 			//the filter by Categories
-			this.category.on( 'change', function(){
-				s.link_ordering._filter_by_cat(  $( this ).val() );
-			} );
+			this.category.on(
+				'change',
+				function(){
+					s.link_ordering._filter_by_cat( $( this ).val() );
+				}
+			);
 		},
-
 
 		/**
 		 * Save order
@@ -54,11 +57,10 @@ var Simple_Links = window.Simple_Links || {};
 		 */
 		_save_order : function(){
 			var data = this.list.sortable( "serialize" );
-			data += '&category_id=' + this.category.find( 'option:selected' ).val();
-			$.post( config.sort_url, data, function( response ){});
+			data    += '&category_id=' + this.category.find( 'option:selected' ).val();
+			$.post( config.sort_url, data, function( response ){} );
 
 		},
-
 
 		/**
 		 * Filter by Cat
@@ -71,7 +73,7 @@ var Simple_Links = window.Simple_Links || {};
 		 * @param int cat_id
 		 */
 		_filter_by_cat : function( cat_id ){
-			if( cat_id == 0 ){
+			if ( cat_id == 0 ) {
 				this.list.html( this.original_list.html() );
 				return;
 			}
@@ -80,19 +82,24 @@ var Simple_Links = window.Simple_Links || {};
 				'category_id' : cat_id
 			};
 
-			$.post( config.get_by_category_url, data, function( response ){
-				s.link_ordering.wrap.html( response );
-				s.link_ordering.list = s.link_ordering.wrap.find( 'ul' );
-				s.link_ordering.list.sortable( {
-					placeholder : 'sortable-placeholder menu-item-depth-1',
-					stop : function(){
-						s.link_ordering._save_order( $( this ).attr( 'id' ) );
-					}
-				} );
-			});
+			$.post(
+				config.get_by_category_url,
+				data,
+				function( response ){
+					s.link_ordering.wrap.html( response );
+					s.link_ordering.list = s.link_ordering.wrap.find( 'ul' );
+					s.link_ordering.list.sortable(
+						{
+							placeholder : 'sortable-placeholder menu-item-depth-1',
+							stop : function(){
+								s.link_ordering._save_order( $( this ).attr( 'id' ) );
+							}
+						}
+					);
+				}
+			);
 		}
 	};
-
 
 	/**
 	 * Easter Egg
@@ -101,22 +108,24 @@ var Simple_Links = window.Simple_Links || {};
 	 */
 	s.easter = {
 		init : function(){
-			$( '.simple-links-title' ).change( function(){
-				if( $( this ).val() == "Simple Links" ){
-					for( var i = 0; i < 10; i++ ){
-						$( this ).css( {'box-shadow' : '0px 0px 10px ' + i + 'px yellow'} );
+			$( '.simple-links-title' ).change(
+				function(){
+					if ( $( this ).val() == "Simple Links" ) {
+						for ( var i = 0; i < 10; i++ ) {
+							$( this ).css( {'box-shadow' : '0px 0px 10px ' + i + 'px yellow'} );
+						}
+							$( this ).after( '<h2><center>HALLELUJAH!!</center></h2>' );
 					}
-					$( this ).after( '<h2><center>HALLELUJAH!!</center></h2>' );
 				}
-			} );
+			);
 		}
 	};
 
-
-	$( function(){
-		s.link_ordering.init();
-		s.easter.init();
-	} );
-
+	$(
+		function(){
+				s.link_ordering.init();
+				s.easter.init();
+		}
+	);
 
 })( jQuery, Simple_Links, SL_locale, simple_links_sort );

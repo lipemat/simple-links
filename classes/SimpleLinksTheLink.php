@@ -111,19 +111,19 @@ class SimpleLinksTheLink {
 			return '';
 		}
 
-
 		$class = 'simple-links-item';
 		if ( $this->args['type'] ) {
 			$class .= ' simple-links-' . $this->args['type'] . '-item';
 		}
 
-		$markup = apply_filters( 'simple_links_link_markup', '<li class="%s" id="link-%s">', $this->link, $this );
-		$output = sprintf( $markup, $class, $this->link->ID );
-		$target = $this->get_data( Simple_Links_Meta_Boxes::TARGET );
+		$markup    = apply_filters( 'simple_links_link_markup', '<li class="%s" id="link-%s">', $this->link, $this );
+		$output    = sprintf( $markup, $class, $this->link->ID );
+		$target    = $this->get_data( Simple_Links_Meta_Boxes::TARGET );
 		$no_follow = $this->get_data( Simple_Links_Meta_Boxes::NO_FOLLOW );
 
 		// Main link output.
-		$link_output = sprintf( '<a href="%s" title="%s"%s%s>%s%s</a>',
+		$link_output = sprintf(
+			'<a href="%s" title="%s"%s%s>%s%s</a>',
 			esc_attr( $this->get_data( 'web_address' ) ),
 			esc_attr( wp_strip_all_tags( $this->get_data( 'description' ) ) ),
 			$target ? ' target="' . esc_attr( $target ) . '" ' : '',
@@ -132,14 +132,17 @@ class SimpleLinksTheLink {
 			$this->link->post_title
 		);
 
-		$output .= apply_filters_ref_array( 'simple_links_link_output', [
-			$link_output,
-			$this->get_data(),
-			$this->link,
-			$image,
-			$this->args,
-			$this,
-		] );
+		$output .= apply_filters_ref_array(
+			'simple_links_link_output',
+			[
+				$link_output,
+				$this->get_data(),
+				$this->link,
+				$image,
+				$this->args,
+				$this,
+			]
+		);
 
 		// The description.
 		if ( $this->args['description'] ) {
@@ -158,7 +161,8 @@ class SimpleLinksTheLink {
 			foreach ( $this->args['fields'] as $field ) {
 				$data = $this->get_additional_field( $field );
 				if ( ! empty( $data ) ) {
-					$additional_fields .= sprintf( '%s <span class="%s additional-field">%s</span>',
+					$additional_fields .= sprintf(
+						'%s <span class="%s additional-field">%s</span>',
 						$this->args['separator'],
 						str_replace( ' ', '-', strtolower( $field ) ),
 						$data

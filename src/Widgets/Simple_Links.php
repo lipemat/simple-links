@@ -54,12 +54,11 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 	 * Setup the Widget
 	 *
 	 */
-	public function __construct(){
+	public function __construct() {
 		$widget_ops = array(
 			'classname'   => 'sl-links-main',
 			'description' => __( 'Displays a list of your Simple Links with options.', 'simple-links' ),
 		);
-
 
 		$control_ops = array(
 			'id_base' => 'simple-links',
@@ -86,7 +85,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 	public static function twoColumns( $links_object ) {
 		$per_row = floor( count( $links_object ) / 2 );
 		$count   = 0;
-		$first = $second = $new = array();
+		$first   = $second = $new = array();
 
 		foreach ( $links_object as $key => $l ) {
 			$count ++;
@@ -128,9 +127,9 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 		<em><?php esc_html_e( 'Be sure the see the Help section in the top right corner of the screen for questions!', 'simple-links' ); ?></em>
 
 
-        <p>
-		    <strong><?php esc_html_e( 'Links Title', 'simple-links' ); ?>:</strong>
-		    <input class="simple-links-title widefat" type="text" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" />
+		<p>
+			<strong><?php esc_html_e( 'Links Title', 'simple-links' ); ?>:</strong>
+			<input class="simple-links-title widefat" type="text" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 		</p>
 
 		<strong><?php esc_html_e( 'Order Links By', 'simple-links' ); ?></strong>
@@ -142,14 +141,14 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 
 		<p>
 		<strong>
-		    <?php esc_html_e( 'Order', 'simple-links' ); ?>:
+			<?php esc_html_e( 'Order', 'simple-links' ); ?>:
 		</strong>
 		<select id="<?php echo esc_attr( $this->get_field_id( 'order' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'order' ) ); ?>">
 			<option value="ASC" <?php selected( $instance['order'], 'ASC' ); ?>>
-			    <?php esc_html_e( 'Ascending', 'simple-links' ); ?>
+				<?php esc_html_e( 'Ascending', 'simple-links' ); ?>
 			</option>
 			<option value="DESC" <?php selected( $instance['order'], 'DESC' ); ?>>
-			    <?php esc_html_e( 'Descending', 'simple-links' ); ?>
+				<?php esc_html_e( 'Descending', 'simple-links' ); ?>
 			</option>
 		</select>
 
@@ -157,7 +156,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 
 		<p>
 			<strong>
-			    <?php esc_html_e( 'Categories (optional)', 'simple-links' ); ?>:
+				<?php esc_html_e( 'Categories (optional)', 'simple-links' ); ?>:
 			</strong>
 			<?php
 			$cats = Simple_Links_Categories::get_category_names();
@@ -169,9 +168,9 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 				);
 				?>
 				<ul class="sl-categories">
-				    <?php wp_terms_checklist( 0, $term_args ); ?>
+					<?php wp_terms_checklist( 0, $term_args ); ?>
 				</ul>
-			<?php
+				<?php
 			} else {
 				esc_html_e( 'No link categories have been created yet.', 'simple-links' );
 			}
@@ -196,7 +195,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 			<option value="-1">All</option>
 			<?php
 			for ( $i = 1; $i < 200; $i ++ ) {
-				printf( '<option value="%s" %s>%s</option>', (int ) $i, selected( $instance['numberposts'], $i ), (int) $i );
+				printf( '<option value="%s" %s>%s</option>', (int) $i, selected( $instance['numberposts'], $i ), (int) $i );
 			}
 			?>
 		</select>
@@ -205,7 +204,9 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 		<strong><?php esc_html_e( 'Show Description', 'simple-links' ); ?></strong>
 		<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>"
 			<?php
-			checked( $instance['description'] ); ?> value="1"/>
+			checked( $instance['description'] );
+			?>
+			 value="1"/>
 
 
 		<br>
@@ -215,7 +216,9 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 			<strong><?php esc_html_e( 'Include Description Paragraph Format', 'simple-links' ); ?></strong>
 			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'show_description_formatting' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_description_formatting' ) ); ?>"
 				<?php
-				checked( $instance['show_description_formatting'] ); ?> value="1"/>
+				checked( $instance['show_description_formatting'] );
+				?>
+				 value="1"/>
 
 
 		</p>
@@ -227,7 +230,9 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 			<strong><?php esc_html_e( 'Show Image', 'simple-links' ); ?></strong>
 			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'show_image' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_image' ) ); ?>"
 				<?php
-				checked( $instance['show_image'] ); ?> value="1"/>
+				checked( $instance['show_image'] );
+				?>
+				 value="1"/>
 
 
 		</p>
@@ -237,7 +242,9 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 			<strong><?php esc_html_e( 'Remove Line Break Between Image and Link', 'simple-links' ); ?></strong>
 			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'remove_line_break' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'remove_line_break' ) ); ?>"
 				<?php
-				checked( $instance['remove_line_break'] ); ?> value="1"/>
+				checked( $instance['remove_line_break'] );
+				?>
+				 value="1"/>
 
 
 		</p>
@@ -245,7 +252,9 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 		<strong><?php esc_html_e( 'Display Image Without Title', 'simple-links' ); ?></strong>
 		<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'show_image_only' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_image_only' ) ); ?>"
 			<?php
-			checked( $instance['show_image_only'] ); ?> value="1"/>
+			checked( $instance['show_image_only'] );
+			?>
+			 value="1"/>
 		<br>
 		<p>
 			<strong><?php esc_html_e( 'Image Size', 'simple-links' ); ?>:</strong>
@@ -279,7 +288,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 
 				printf( '&nbsp; &nbsp; <input type="checkbox" style="margin: 3px 0" value="%s" name="%s[%s]" %s/> %s <br>', esc_attr( $field ), esc_attr( $this->get_field_name( 'fields' ) ), esc_attr( $field ), checked( $instance['fields'][ $field ], esc_attr( $field ), false ), esc_html( $field ) );
 			}
-}
+		}
 		?>
 
 		<p>
@@ -288,13 +297,13 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 		<em><?php esc_html_e( 'HTML is allowed', 'simple-links' ); ?>: - e.g. '&lt;br&gt;'</em>
 		<br>
 		<input type="text" id="<?php echo esc_attr( $this->get_field_id( 'separator' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'separator' ) ); ?>" value="<?php echo esc_attr( $instance['separator'] ); ?>" class="widefat"/>
-        </p>
+		</p>
 		<?php
 
 		do_action( 'simple_links_widget_form', $instance, $this );
 		?>
-        <p>&nbsp;</p>
-        <?php
+		<p>&nbsp;</p>
+		<?php
 
 	}
 
@@ -339,12 +348,11 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 		$args = apply_filters( 'simple_links_widget_args', $args );
 		$args = apply_filters( 'simple_links_widget_args_' . $args['widget_id'], $args );
 
-        $instance['id'] = $args['widget_id'] . '-list';
+		$instance['id'] = $args['widget_id'] . '-list';
 
 		//Call this filter to change the Widgets Settings Pre Compile
 		$instance = apply_filters( 'simple_links_widget_settings', $instance, $args );
-		$instance = apply_filters( 'simple_links_widget_settings_' . $args['widget_id'] , $instance );
-
+		$instance = apply_filters( 'simple_links_widget_settings_' . $args['widget_id'], $instance );
 
 		//--------------- Starts the Output --------------------------------------
 
@@ -352,7 +360,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 		//Add the title
 		if ( ! empty( $instance['title'] ) ) {
 			$instance['title'] = apply_filters( 'widget_title', $instance['title'], $instance, $args );
-			$output .= $args['before_title'] . $instance['title'] . $args['after_title'];
+			$output           .= $args['before_title'] . $instance['title'] . $args['after_title'];
 		};
 
 		$links = new SimpleLinksFactory( $instance, 'widget' );

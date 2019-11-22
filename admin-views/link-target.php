@@ -14,15 +14,15 @@
 </p>
 <p>
 	<label for="link_target_none" class="selectit">
-		<input id="link_target_none" type="radio" name="target" value="" <?php checked( $target, "" ); ?>>
+		<input id="link_target_none" type="radio" name="target" value="" <?php checked( $target, '' ); ?>>
 		<code>
 			_none</code> &minus; <?php _e( 'same window or tab', 'simple-links' ); ?>.
 	</label>
 </p>
 
 <?php
-if( isset( $this->meta_box_descriptions[ 'target' ] ) ){
-	echo '<p>' . $this->meta_box_descriptions[ 'target' ] . '</p>';
+if ( isset( $this->meta_box_descriptions['target'] ) ) {
+	echo '<p>' . $this->meta_box_descriptions['target'] . '</p>';
 }
 ?>
 <p>

@@ -21,7 +21,7 @@ class Simple_Link {
 	 */
 	static $current;
 
-	public function __construct( $id ){
+	public function __construct( $id ) {
 		$this->post_id = $id;
 		self::$current = $this;
 	}
@@ -34,7 +34,7 @@ class Simple_Link {
 	 *
 	 * @return void
 	 */
-	public static function register_post_type(){
+	public static function register_post_type() {
 
 		$single = __( 'Link', 'simple-links' );
 		$plural = __( 'Links', 'simple-links' );
@@ -61,15 +61,15 @@ class Simple_Link {
 				'new_item'                   => sprintf( __( 'New %s', 'simple-links' ), $single ),
 				'menu_name'                  => __( 'Simple Links', 'simple-links' ),
 
-				'not_found' => sprintf( __('No %s found.', 'simple-links' ), $plural ),
-				'not_found_in_trash' => sprintf( __('No %s found in Trash.', 'simple-links' ), $plural ),
+				'not_found' => sprintf( __( 'No %s found.', 'simple-links' ), $plural ),
+				'not_found_in_trash' => sprintf( __( 'No %s found in Trash.', 'simple-links' ), $plural ),
 			),
 			'hierarchical'          => false,
 			'supports'              => array(
 				'thumbnail',
 				'title',
 				'page-attributes',
-				'revisions'
+				'revisions',
 			),
 			'publicly_queryable'   => false,
 			'public'               => false,
@@ -80,8 +80,8 @@ class Simple_Link {
 			'exclude_from_search'  => true,
 			'register_meta_box_cb' => array(
 				Simple_Links_Meta_Boxes::get_instance(),
-				'meta_box'
-			)
+				'meta_box',
+			),
 		);
 
 		register_post_type( self::POST_TYPE, apply_filters( 'simple-links-register-post-type', $args ) );

@@ -19,42 +19,54 @@ var SL_locale = window.SL_locale || {
 };
 
 (function( i18n ){
-	tinymce.create( 'tinymce.plugins.simpleLinks', {
-		init : function( ed, url ){
-			ed.addButton( 'simpleLinks', {    //The buttons name and title and icon
-				title : i18n.add_links,
-				image : url + '/../img/mce-icon.png',
-				cmd : 'mceHighlight' //Match the addCommand
-			} );
+	tinymce.create(
+		'tinymce.plugins.simpleLinks',
+		{
+			init : function( ed, url ){
+				ed.addButton(
+					'simpleLinks',
+					{    //The buttons name and title and icon
+						title : i18n.add_links,
+						image : url + '/../img/mce-icon.png',
+						cmd : 'mceHighlight' //Match the addCommand
+					}
+				);
 
-			// Register commands
-			ed.addCommand( 'mceHighlight', function(){
-				ed.windowManager.open( {
-					file : ed.documentBaseUrl.replace( 'wp-admin/', '' ) + '?simple_links_shortcode=form',
-					width : 550 + parseInt( ed.getLang( 'highlight.delta_width', 0 ) ),
-					height : 650 + parseInt( ed.getLang( 'highlight.delta_height', 0 ) ),
-					inline : 1,
-					title : i18n.shortcode
-				}, {
+				// Register commands
+				ed.addCommand(
+					'mceHighlight',
+					function(){
+						ed.windowManager.open(
+							{
+								file : ed.documentBaseUrl.replace( 'wp-admin/', '' ) + '?simple_links_shortcode=form',
+								width : 550 + parseInt( ed.getLang( 'highlight.delta_width', 0 ) ),
+								height : 650 + parseInt( ed.getLang( 'highlight.delta_height', 0 ) ),
+								inline : 1,
+								title : i18n.shortcode
+							},
+							{
 
-					plugin_url : url
+								plugin_url : url
 
-				} );
+							}
+						);
 
-			} );
+					}
+				);
 
-		}, createControl : function( n, cm ){
-			return null;
+			}, createControl : function( n, cm ){
+				return null;
 
-		}, getInfo : function(){  //The plugin Buttons Details
-			return {
-				longname : i18n.shortcode_generator,
-				author : 'Mat Lipe',
-				authorurl : 'https://onpointplugins.com',
-				inforurl : 'https://onpointplugins.com',
-				version : '2.0.1'
-			};
+			}, getInfo : function(){  //The plugin Buttons Details
+				return {
+					longname : i18n.shortcode_generator,
+					author : 'Mat Lipe',
+					authorurl : 'https://onpointplugins.com',
+					inforurl : 'https://onpointplugins.com',
+					version : '2.0.1'
+				};
+			}
 		}
-	} );
+	);
 	tinymce.PluginManager.add( 'simpleLinks', tinymce.plugins.simpleLinks );  //Name it the same as above
 })( SL_locale );

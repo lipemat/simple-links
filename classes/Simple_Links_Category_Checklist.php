@@ -39,7 +39,7 @@ class Simple_Links_Category_Checklist extends Walker_Category_Checklist {
 	 * @param string [$widget] - widget input name
 	 * @param array  [$selected] - selected categories
 	 */
-	function __construct( $widget = null, $selected = array() ){
+	function __construct( $widget = null, $selected = array() ) {
 		$this->widget   = $widget;
 		$this->selected = $selected;
 
@@ -54,11 +54,11 @@ class Simple_Links_Category_Checklist extends Walker_Category_Checklist {
 	 * @see wp_terms_checklist()
 	 *
 	 */
-	function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ){
+	function start_el( &$output, $category, $depth = 0, $args = array(), $id = 0 ) {
 		extract( $args );
 
-		if( ! empty( $this->widget ) ){
-			$name = $this->widget . "[" . $category->term_id . "]";
+		if ( ! empty( $this->widget ) ) {
+			$name = $this->widget . '[' . $category->term_id . ']';
 		} else {
 			$name = '';
 		}
@@ -70,4 +70,4 @@ class Simple_Links_Category_Checklist extends Walker_Category_Checklist {
 
 	}
 }
-	
+

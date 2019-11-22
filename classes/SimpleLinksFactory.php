@@ -98,7 +98,6 @@ class SimpleLinksFactory {
 			$this->args['fields'] = explode( ',', $this->args['fields'] );
 		}
 
-
 		//Add the categories to the query
 		if ( $this->query_args['category'] ) {
 			if ( ! is_array( $this->query_args['category'] ) ) {
@@ -116,7 +115,6 @@ class SimpleLinksFactory {
 				}
 			}
 
-
 			//the categories were invalid so zero will return nothing
 			if ( empty( $all_cats ) ) {
 				$all_cats = 0;
@@ -132,14 +130,11 @@ class SimpleLinksFactory {
 			unset( $this->query_args['category'] );
 		}
 
-
 		$this->query_args = apply_filters( 'simple_links_parsed_query_args', $this->query_args, $this );
 
 		$this->args['type'] = $this->type;
 
-
 		return $this->args = apply_filters( 'simple_links_parsed_args', $this->args, $this );
-
 
 	}
 
@@ -184,8 +179,7 @@ class SimpleLinksFactory {
 		$this->query_args['post_type']              = Simple_Link::POST_TYPE;
 		$this->query_args['posts_per_page']         = $this->query_args['numberposts'];
 		$this->query_args['posts_per_archive_page'] = $this->query_args['numberposts'];
-		$this->query_args['suppress_filters'] = false;
-
+		$this->query_args['suppress_filters']       = false;
 
 		// If we are retrieving a single category and ordering by menu order
 		// we need to use our special retrieval method to maintain order by that category
@@ -202,7 +196,6 @@ class SimpleLinksFactory {
 		}
 
 		$links = apply_filters( 'simple_links_object', $links, $this->args, $this );
-
 
 		//backwards compatible
 		$links = apply_filters( 'simple_links_' . $this->args['type'] . '_links_object', $links, $this->args );
@@ -261,7 +254,7 @@ class SimpleLinksFactory {
 			$link_class = apply_filters( 'simple_links_link_class', 'SimpleLinksTheLink', $this->type, $this->args, $this );
 
 			/** @var SimpleLinksTheLink $link */
-			$link   = new $link_class( $link, $this->args, $this->type );
+			$link    = new $link_class( $link, $this->args, $this->type );
 			$output .= $link->output();
 		}
 
@@ -272,9 +265,7 @@ class SimpleLinksFactory {
 			$output .= '</ul>';
 		}
 
-
 		$output .= '<!-- End .simple-links-list -->';
-
 
 		$output = apply_filters( 'simple_links__output', $output, $this->links, $this->args );
 

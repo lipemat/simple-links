@@ -26,7 +26,6 @@ if ( ! class_exists( 'simple_links' ) ) {
 			add_filter( 'query_vars', array( $this, 'add_shortcode_form_query_var' ) );
 			add_action( 'template_redirect', array( $this, 'load_shortcode_form' ), 1 );
 
-
 			//Add the widgets
 			add_action( 'widgets_init', array( $this, 'add_widgets' ) );
 

@@ -8,12 +8,12 @@
  */
 class Simple_Links_Meta_Boxes {
 	const ADDITIONAL_FIELDS = 'link_additional_value';
-	const NONCE = 'simple-links/meta-box/nonce';
+	const NONCE             = 'simple-links/meta-box/nonce';
 
 	const DESCRIPTION = 'description';
-	const FIELDS = 'additional_fields';
-	const NO_FOLLOW = 'link_target_nofollow';
-	const TARGET = 'target';
+	const FIELDS      = 'additional_fields';
+	const NO_FOLLOW   = 'link_target_nofollow';
+	const TARGET      = 'target';
 	const WEB_ADDRESS = 'web_address';
 
 
@@ -160,27 +160,49 @@ class Simple_Links_Meta_Boxes {
 		// Go through each meta box in the filtered array.
 		foreach ( $meta_fields as $label => $box ) {
 			if ( ( self::FIELDS !== $box ) && ( self::TARGET !== $box ) ) {
-				add_meta_box( $box . '_links_meta_box', $label, [
-					$this,
-					'link_meta_box_output',
-				], $post->type, 'advanced', 'high', [
-					'box' => $box,
-				] );
+				add_meta_box(
+					$box . '_links_meta_box',
+					$label,
+					[
+						$this,
+						'link_meta_box_output',
+					],
+					$post->type,
+					'advanced',
+					'high',
+					[
+						'box' => $box,
+					]
+				);
 			}
 		}
 
 		// The link Target meta box.
 		if ( in_array( self::TARGET, $meta_fields, true ) ) {
-			add_meta_box( 'target_links_meta_box', __( 'Link Target', 'simple-links' ), array(
-				$this,
-				'target_meta_box_output',
-			), $post->type, 'advanced', 'high' );
+			add_meta_box(
+				'target_links_meta_box',
+				__( 'Link Target', 'simple-links' ),
+				array(
+					$this,
+					'target_meta_box_output',
+				),
+				$post->type,
+				'advanced',
+				'high'
+			);
 		}
 		if ( in_array( self::FIELDS, $meta_fields, true ) ) {
-			add_meta_box( 'additional_fields', __( 'Additional Fields', 'simple-links' ), array(
-				$this,
-				'additional_fields_meta_box_output',
-			), $post->type, 'advanced', 'high' );
+			add_meta_box(
+				'additional_fields',
+				__( 'Additional Fields', 'simple-links' ),
+				array(
+					$this,
+					'additional_fields_meta_box_output',
+				),
+				$post->type,
+				'advanced',
+				'high'
+			);
 		}
 
 	}
@@ -229,8 +251,12 @@ class Simple_Links_Meta_Boxes {
 					$values[ $value ] = null;
 				}
 
-				printf( '<p>%s:  <input type="text" name="%s[%s]" value="%s" size="70" class="SL-additonal-input">',
-					esc_html( $value ), esc_attr( self::ADDITIONAL_FIELDS ), esc_attr( $value ), esc_attr( $values[ $value ] )
+				printf(
+					'<p>%s:  <input type="text" name="%s[%s]" value="%s" size="70" class="SL-additonal-input">',
+					esc_html( $value ),
+					esc_attr( self::ADDITIONAL_FIELDS ),
+					esc_attr( $value ),
+					esc_attr( $values[ $value ] )
 				);
 			}
 		}

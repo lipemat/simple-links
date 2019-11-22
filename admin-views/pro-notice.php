@@ -5,6 +5,7 @@
 	<p style="font-size: 14px; margin: 0; padding: 5px">
 		<?php
 		/* translators: <a> link created by placeholders */
-		printf( esc_html__( 'Upgrade to %1$sSimple Links Pro%2$s for Priority Support, Display links assigned to all categories, Display By Category, Import/Export Ability, Links In Search Results, and so much more!', 'simple-links' ), '<a target="blank" href="https://onpointplugins.com/product/simple-links-pro/">', '</a>' ); ?>
+		printf( esc_html__( 'Upgrade to %1$sSimple Links Pro%2$s for Priority Support, Display links assigned to all categories, Display By Category, Import/Export Ability, Links In Search Results, and so much more!', 'simple-links' ), '<a target="blank" href="https://onpointplugins.com/product/simple-links-pro/">', '</a>' );
+		?>
 	<p>
 </fieldset>

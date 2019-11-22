@@ -19,7 +19,7 @@ wp_head();
 <style type="text/css">
 
 	<?php
-	if ( get_bloginfo('version') >= 3.8 ) {
+	if ( get_bloginfo( 'version' ) >= 3.8 ) {
 		?>
 	html {
 		margin-top: 46px important !;
@@ -30,9 +30,9 @@ wp_head();
 		important;
 	}
 
-	<?php
-} else {
-	?>
+		<?php
+	} else {
+		?>
 	html {
 		margin-top: 28px important !;
 	}
@@ -42,9 +42,9 @@ wp_head();
 		important;
 	}
 
-	<?php
-}
-?>
+		<?php
+	}
+	?>
 </style>
 </head>
 
@@ -61,7 +61,7 @@ wp_head();
 	<label><?php esc_html_e( 'Title (optional)', 'simple-links' ); ?>:
 		<br/>
 		<input type="text" id="title"
-		       size="50"/>
+			   size="50"/>
 	</label>
 
 	<fieldset>
@@ -145,8 +145,8 @@ wp_head();
 	<p>
 		<label><?php esc_html_e( 'Include Description Paragraph Format', 'simple-links' ); ?>
 			<input type="checkbox"
-			       id="description-formatting"
-			       value="true"/>
+				   id="description-formatting"
+				   value="true"/>
 		</label>
 	</p>
 
@@ -155,14 +155,14 @@ wp_head();
 	<p>
 		<label><?php esc_html_e( 'Show Image', 'simple-links' ); ?>
 			<input type="checkbox" id="show_image"
-			       value="true"/>
+				   value="true"/>
 		</label>
 	</p>
 
 	<p>
 		<label><?php esc_html_e( 'Display Image Without Title', 'simple-links' ); ?>
 			<input type="checkbox" id="show_image_only"
-			       value="true"/>
+				   value="true"/>
 		</label>
 
 	</p>
@@ -183,8 +183,8 @@ wp_head();
 	<p>
 		<label><?php esc_html_e( 'Remove Line Break Between Image And Link', 'simple-links' ); ?>
 			<input type="checkbox"
-			       id="line_break"
-			       value="1"/>
+				   id="line_break"
+				   value="1"/>
 		</label>
 	</p>
 
@@ -220,9 +220,11 @@ wp_head();
 
 	<?php do_action( 'simple_links_shortcode_form' ); ?>
 
-	<?php if ( get_bloginfo( 'version' ) < 3.8 ) {
+	<?php
+	if ( get_bloginfo( 'version' ) < 3.8 ) {
 		?>
-		<p>$nbsp;</p><?php
+		<p>$nbsp;</p>
+		<?php
 	}
 	?>
 	<p>

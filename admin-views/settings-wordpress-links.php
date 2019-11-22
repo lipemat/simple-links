@@ -17,7 +17,9 @@
 				<?php
 				submit_button( __( 'Import Links', 'simple-links' ), 'secondary', 'sl-import-links', false );
 
-				?>&nbsp;<?php
+				?>
+				&nbsp;
+				<?php
 
 				simple_links_questions( 'SL-import-links' );
 				?>
