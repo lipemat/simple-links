@@ -128,7 +128,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 
 
 		<p>
-			<strong><?php esc_html_e( 'Links Title', 'simple-links' ); ?>:</strong>
+			<strong><?php esc_html_e( 'Title (optional)', 'simple-links' ); ?>:</strong>
 			<input class="simple-links-title widefat" type="text" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 		</p>
 
