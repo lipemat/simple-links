@@ -60,8 +60,7 @@ wp_head();
 
 	<label><?php esc_html_e( 'Title (optional)', 'simple-links' ); ?>:
 		<br/>
-		<input type="text" id="title"
-			   size="50"/>
+		<input type="text" id="title" size="50"/>
 	</label>
 
 	<fieldset>
@@ -114,7 +113,7 @@ wp_head();
 
 
 	<p>
-		<label><?php esc_html_e( 'Order By', 'simple-links' ); ?>:
+		<label><?php esc_html_e( 'Order by', 'simple-links' ); ?>:
 			<select id="orderby">
 				<option value=""><?php esc_html_e( '- select an order by - ', 'simple-links' ); ?></option>
 				<?php
@@ -137,13 +136,13 @@ wp_head();
 	<hr>
 
 	<p>
-		<label><?php esc_html_e( 'Show Description', 'simple-links' ); ?>
+		<label><?php esc_html_e( 'Show description', 'simple-links' ); ?>
 			<input type="checkbox" id="description" value="true"/>
 		</label>
 	</p>
 
 	<p>
-		<label><?php esc_html_e( 'Include Description Paragraph Format', 'simple-links' ); ?>
+		<label><?php esc_html_e( 'Display description as paragraphs', 'simple-links' ); ?>
 			<input type="checkbox"
 				   id="description-formatting"
 				   value="true"/>

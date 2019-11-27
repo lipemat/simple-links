@@ -132,7 +132,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 			<input class="simple-links-title widefat" type="text" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 		</p>
 
-		<strong><?php esc_html_e( 'Order Links By', 'simple-links' ); ?></strong>
+		<strong><?php esc_html_e( 'Order by', 'simple-links' ); ?></strong>
 		<select id="<?php echo esc_attr( $this->get_field_id( 'orderby' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'orderby' ) ); ?>">
 			<?php
 			simple_links::orderby_options( $instance['orderby'] );
@@ -201,7 +201,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 		</select>
 
 		</p>
-		<strong><?php esc_html_e( 'Show Description', 'simple-links' ); ?></strong>
+		<strong><?php esc_html_e( 'Show description', 'simple-links' ); ?></strong>
 		<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>"
 			<?php
 			checked( $instance['description'] );
@@ -213,7 +213,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 
 		<p>
 
-			<strong><?php esc_html_e( 'Include Description Paragraph Format', 'simple-links' ); ?></strong>
+			<strong><?php esc_html_e( 'Display description as paragraphs', 'simple-links' ); ?></strong>
 			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'show_description_formatting' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_description_formatting' ) ); ?>"
 				<?php
 				checked( $instance['show_description_formatting'] );
