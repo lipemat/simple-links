@@ -75,6 +75,7 @@ class Simple_Link {
 			'public'               => false,
 			'show_ui'              => true,
 			'show_in_nav_menus'    => false,
+			'show_in_rest'         => current_user_can( 'edit_posts' ),
 			'has_archive'          => false,
 			'rewrite'              => false,
 			'exclude_from_search'  => true,

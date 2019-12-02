@@ -190,7 +190,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 
 		<p>
 
-		<strong><?php esc_html_e( 'Number Of Links', 'simple-links' ); ?>:</strong>
+		<strong><?php esc_html_e( 'Number of links', 'simple-links' ); ?>:</strong>
 		<select id="<?php echo esc_attr( $this->get_field_id( 'numberposts' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'numberposts' ) ); ?>">
 			<option value="-1">All</option>
 			<?php
