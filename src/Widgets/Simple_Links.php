@@ -49,7 +49,7 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 
 		// Only used in PRO.
 		'display_links_by_category'    => false,
-		'display_category_title'       => false,
+		'display_category_title'       => true,
 		'display_category_description' => false,
 	);
 
