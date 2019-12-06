@@ -13,6 +13,7 @@ fieldset {
 li, p {
 	width : 100%;
 	clear : both;
+	list-style: none;
 }
 
 .sl-categories ul {
@@ -30,6 +31,7 @@ label {
 
 .wrap p {
 	font-size : 18px;
+	margin: 0 0 0.5em;
 }
 
 p {

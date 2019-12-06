@@ -47,6 +47,10 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 		'category'                    => array(),
 		'include_child_categories'    => 0,
 
+		// Only used in PRO.
+		'display_links_by_category'    => false,
+		'display_category_title'       => false,
+		'display_category_description' => false,
 	);
 
 
@@ -107,38 +111,45 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 
 
 	/**
-	 * Form
-	 *
-	 * Outputs the Widget form on the /wp-admin/widgets.php Page
+	 * Outputs the Widget form.
 	 *
 	 * @see WP_Widget::form()
 	 *
-	 * @param array $instance
-	 *
+	 * @param array $instance Current widget settings.
 	 */
 	public function form( $instance ) {
 		global $simple_links;
-
 		$instance = wp_parse_args( $instance, $this->defaults );
 
 		?>
 		<input type="hidden" name="<?php echo esc_attr( $this->get_field_name( 'simple_links_version' ) ); ?>" value="<?php echo esc_attr( SIMPLE_LINKS_VERSION ); ?>"/>
-
-		<em><?php esc_html_e( 'Be sure the see the Help section in the top right corner of the screen for questions!', 'simple-links' ); ?></em>
-
-
 		<p>
-			<strong><?php esc_html_e( 'Title (optional)', 'simple-links' ); ?>:</strong>
+			<strong><?php esc_html_e( 'Title', 'simple-links' ); ?>:</strong>
 			<input class="simple-links-title widefat" type="text" id="<?php echo esc_attr( $this->get_field_id( 'title' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'title' ) ); ?>" value="<?php echo esc_attr( $instance['title'] ); ?>" />
 		</p>
 
+		<p>
+
+			<strong><?php esc_html_e( 'Number of links', 'simple-links' ); ?>:</strong>
+			<select id="<?php echo esc_attr( $this->get_field_id( 'numberposts' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'numberposts' ) ); ?>">
+				<option value="-1">All</option>
+				<?php
+				for ( $i = 1; $i < 200; $i ++ ) {
+					printf( '<option value="%s" %s>%s</option>', (int) $i, selected( $instance['numberposts'], $i ), (int) $i );
+				}
+				?>
+			</select>
+
+		</p>
+
+		<p>
 		<strong><?php esc_html_e( 'Order by', 'simple-links' ); ?></strong>
 		<select id="<?php echo esc_attr( $this->get_field_id( 'orderby' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'orderby' ) ); ?>">
 			<?php
 			simple_links::orderby_options( $instance['orderby'] );
 			?>
 		</select>
-
+		</p>
 		<p>
 		<strong>
 			<?php esc_html_e( 'Order', 'simple-links' ); ?>:
@@ -151,66 +162,15 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 				<?php esc_html_e( 'Descending', 'simple-links' ); ?>
 			</option>
 		</select>
-
 		</p>
-
 		<p>
-			<strong>
-				<?php esc_html_e( 'Categories (optional)', 'simple-links' ); ?>:
-			</strong>
-			<?php
-			$cats = Simple_Links_Categories::get_category_names();
-			if ( ! empty( $cats ) ) {
-				$term_args = array(
-					'walker'        => new Simple_Links_Category_Checklist( $this->get_field_name( 'category' ), $instance['category'] ),
-					'taxonomy'      => Simple_Links_Categories::TAXONOMY,
-					'checked_ontop' => false,
-				);
-				?>
-				<ul class="sl-categories">
-					<?php wp_terms_checklist( 0, $term_args ); ?>
-				</ul>
+			<strong><?php esc_html_e( 'Show description', 'simple-links' ); ?></strong>
+			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>"
 				<?php
-			} else {
-				esc_html_e( 'No link categories have been created yet.', 'simple-links' );
-			}
-			?>
+				checked( $instance['description'] );
+				?>
+				   value="1"/>
 		</p>
-
-		<p>
-			<label>
-				<?php esc_html_e( 'Include links assigned to child categories of selected categories.', 'simple-links' ); ?>
-			</label>
-			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'include_child_categories' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'include_child_categories' ) ); ?>" <?php checked( $instance['include_child_categories'] ); ?> value="1"/>
-		</p>
-
-		<?php do_action( 'simple-links/widget/simple-links/categories-box', $instance, $this ); ?>
-
-		<hr>
-
-		<p>
-
-		<strong><?php esc_html_e( 'Number of links', 'simple-links' ); ?>:</strong>
-		<select id="<?php echo esc_attr( $this->get_field_id( 'numberposts' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'numberposts' ) ); ?>">
-			<option value="-1">All</option>
-			<?php
-			for ( $i = 1; $i < 200; $i ++ ) {
-				printf( '<option value="%s" %s>%s</option>', (int) $i, selected( $instance['numberposts'], $i ), (int) $i );
-			}
-			?>
-		</select>
-
-		</p>
-		<strong><?php esc_html_e( 'Show description', 'simple-links' ); ?></strong>
-		<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'description' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'description' ) ); ?>"
-			<?php
-			checked( $instance['description'] );
-			?>
-			 value="1"/>
-
-
-		<br>
-
 		<p>
 
 			<strong><?php esc_html_e( 'Display description as paragraphs', 'simple-links' ); ?></strong>
@@ -218,46 +178,25 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 				<?php
 				checked( $instance['show_description_formatting'] );
 				?>
-				 value="1"/>
-
-
+				   value="1"/>
 		</p>
+		<hr/>
 
-		<hr>
+
+		<h3><?php esc_html_e( 'Link Images', 'simple-links' ); ?>:</h3>
 
 		<p>
 
-			<strong><?php esc_html_e( 'Show Image', 'simple-links' ); ?></strong>
+			<strong><?php esc_html_e( 'Show images', 'simple-links' ); ?></strong>
 			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'show_image' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_image' ) ); ?>"
 				<?php
 				checked( $instance['show_image'] );
 				?>
 				 value="1"/>
-
-
 		</p>
 
 		<p>
-
-			<strong><?php esc_html_e( 'Remove Line Break Between Image and Link', 'simple-links' ); ?></strong>
-			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'remove_line_break' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'remove_line_break' ) ); ?>"
-				<?php
-				checked( $instance['remove_line_break'] );
-				?>
-				 value="1"/>
-
-
-		</p>
-
-		<strong><?php esc_html_e( 'Display Image Without Title', 'simple-links' ); ?></strong>
-		<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'show_image_only' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'show_image_only' ) ); ?>"
-			<?php
-			checked( $instance['show_image_only'] );
-			?>
-			 value="1"/>
-		<br>
-		<p>
-			<strong><?php esc_html_e( 'Image Size', 'simple-links' ); ?>:</strong>
+			<strong><?php esc_html_e( 'Image size', 'simple-links' ); ?>:</strong>
 			<select id="<?php echo esc_attr( $this->get_field_id( 'image_size' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'image_size' ) ); ?>">
 				<?php
 				foreach ( $simple_links->image_sizes() as $size ) {
@@ -268,41 +207,106 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 
 		</p>
 
-		<hr>
 
-		<br>
-		<strong>
-			<?php esc_html_e( 'Display Additional Fields', 'simple-links' ); ?>:
-		</strong>
-		<br>
+		<p>
+			<strong><?php esc_html_e( 'Hide link title', 'simple-links' ); ?></strong>
+			<input
+				type="checkbox"
+				id="<?php echo esc_attr( $this->get_field_id( 'show_image_only' ) ); ?>"
+				name="<?php echo esc_attr( $this->get_field_name( 'show_image_only' ) ); ?>"
+				value="1"
+				<?php checked( $instance['show_image_only'] ); ?>
+			/>
+		</p>
+
+		<p>
+			<strong><?php esc_html_e( 'Remove line break between image and link', 'simple-links' ); ?></strong>
+			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'remove_line_break' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'remove_line_break' ) ); ?>"
+				<?php
+				checked( $instance['remove_line_break'] );
+				?>
+				   value="1"/>
+		</p>
+		<hr />
+		<h3><?php esc_html_e( 'Additional Fields', 'simple-links' ); ?>:</h3>
+
 		<?php
 		$fields = $simple_links->get_additional_fields();
 		if ( empty( $fields ) ) {
-			echo '<em>' . esc_html__( 'There have been no additional fields added.', 'simple-links' ) . '</em>';
+			echo '<em>' . esc_html__( 'No additional fields have been added to settings.', 'simple-links' ) . '</em>';
 
 		} else {
-			foreach ( $fields as $field ) {
-				if ( ! isset( $instance['fields'][ $field ] ) ) {
-					$instance['fields'][ $field ] = 0;
+			?>
+			<ul>
+				<?php
+				foreach ( $fields as $field ) {
+					?>
+					<li>
+						<label>
+							<input
+								id="<?php echo esc_attr( $this->get_field_id( 'fields' ) ); ?>"
+								name="<?php echo esc_attr( $this->get_field_name( 'fields' ) ); ?>[<?php echo esc_attr( $field ); ?>]"
+								type="checkbox"
+								value="<?php echo esc_attr( $field ); ?>"
+								<?php checked( ! empty( $instance['fields'][ $field ] ) ); ?>
+							/>
+							<?php echo esc_html( $field ); ?>
+						</label>
+					</li>
+					<?php
 				}
-
-				printf( '&nbsp; &nbsp; <input type="checkbox" style="margin: 3px 0" value="%s" name="%s[%s]" %s/> %s <br>', esc_attr( $field ), esc_attr( $this->get_field_name( 'fields' ) ), esc_attr( $field ), checked( $instance['fields'][ $field ], esc_attr( $field ), false ), esc_html( $field ) );
-			}
+				?>
+			</ul>
+			<?php
 		}
 		?>
 
 		<p>
-		<strong><?php esc_html_e( 'Field Separator', 'simple-links' ); ?>:</strong>
-		<br>
-		<em><?php esc_html_e( 'HTML is allowed', 'simple-links' ); ?>: - e.g. '&lt;br&gt;'</em>
-		<br>
+		<strong><?php esc_html_e( 'Field separator', 'simple-links' ); ?>:</strong>
+		<br />
 		<input type="text" id="<?php echo esc_attr( $this->get_field_id( 'separator' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'separator' ) ); ?>" value="<?php echo esc_attr( $instance['separator'] ); ?>" class="widefat"/>
 		</p>
-		<?php
 
-		do_action( 'simple_links_widget_form', $instance, $this );
+		<hr />
+
+		<h3><?php esc_html_e( 'Link Categories', 'simple-links' ); ?>:</h3>
+
+		<?php
+		$cats = Simple_Links_Categories::get_category_names();
+		if ( ! empty( $cats ) ) {
+			$term_args = [
+				'walker'        => new Simple_Links_Category_Checklist( $this->get_field_name( 'category' ), $instance['category'] ),
+				'taxonomy'      => Simple_Links_Categories::TAXONOMY,
+				'checked_ontop' => false,
+			];
+			?>
+			<ul class="sl-categories">
+				<?php wp_terms_checklist( 0, $term_args ); ?>
+			</ul>
+			<?php
+		} else {
+			esc_html_e( 'No link categories have been created yet.', 'simple-links' );
+		}
 		?>
-		<p>&nbsp;</p>
+
+
+		<p>
+			<label>
+				<?php esc_html_e( 'Include links assigned to child categories of selected categories.', 'simple-links' ); ?>
+			</label>
+			<input type="checkbox" id="<?php echo esc_attr( $this->get_field_id( 'include_child_categories' ) ); ?>" name="<?php echo esc_attr( $this->get_field_name( 'include_child_categories' ) ); ?>" <?php checked( $instance['include_child_categories'] ); ?> value="1"/>
+		</p>
+
+		<?php
+		do_action( 'simple-links/widget/simple-links/categories-box', $instance, $this );
+		do_action( 'simple_links_widget_form', $instance, $this );
+
+		?>
+		<p style="text-align: right">
+			<a href="https://onpointplugins.com/simple-links/#widget-options" target="blank">
+				<?php esc_html_e( 'widget documentation', 'simple-links' ); ?>
+			</a>
+		</p>
 		<?php
 
 	}

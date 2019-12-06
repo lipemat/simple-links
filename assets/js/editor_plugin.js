@@ -1,6 +1,6 @@
 /**
  * The MCE plugin to add Simple LInks Shortcodes
- * @author Mat Lipe <support@onpointplugins.com>
+ * @author OnPoint Plugins <support@onpointplugins.com>
  */
 
 /**
@@ -12,9 +12,8 @@
  * @link https://onpointplugins.com/plugin-support/elementor/
  *
  */
-var SL_locale = window.SL_locale || {
-	add_links : "Add Simple Links",
-	shortcode : "Simple Links Shortcode",
+var SL_locale = window.Simple_Links_Config.i18n || {
+	shortcode : "Create [simple-links] shortcode",
 	shortcode_generator : "Simple Links Shortcode Generator"
 };
 
@@ -26,7 +25,7 @@ var SL_locale = window.SL_locale || {
 				ed.addButton(
 					'simpleLinks',
 					{    //The buttons name and title and icon
-						title : i18n.add_links,
+						title : i18n.shortcode,
 						image : url + '/../img/mce-icon.png',
 						cmd : 'mceHighlight' //Match the addCommand
 					}
@@ -60,10 +59,10 @@ var SL_locale = window.SL_locale || {
 			}, getInfo : function(){  //The plugin Buttons Details
 				return {
 					longname : i18n.shortcode_generator,
-					author : 'Mat Lipe',
+					author : 'OnPoint Plugins',
 					authorurl : 'https://onpointplugins.com',
 					inforurl : 'https://onpointplugins.com',
-					version : '2.0.1'
+					version : '2.0.2'
 				};
 			}
 		}

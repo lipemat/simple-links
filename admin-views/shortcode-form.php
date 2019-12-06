@@ -9,9 +9,8 @@
  * @author OnPoint Plugins <support@onpointplugins.com>
  *
  */
-
 ?>
-<title>Add Simple Links</title>
+<title><?php esc_html_e( 'Create [simple-links] shortcode', 'simple-links' ); ?></title>
 <?php
 wp_head();
 ?>
@@ -22,7 +21,7 @@ wp_head();
 	if ( get_bloginfo( 'version' ) >= 3.8 ) {
 		?>
 	html {
-		margin-top: 46px important !;
+		margin-top: 46px !important;
 	}
 
 	body {
@@ -34,7 +33,7 @@ wp_head();
 	} else {
 		?>
 	html {
-		margin-top: 28px important !;
+		margin-top: 28px !important;
 	}
 
 	body {
@@ -50,21 +49,13 @@ wp_head();
 
 <body>
 <div class="wrap">
-
-	<h4><?php esc_html_e( 'This Will Generate the Shortcode to Display Simple Links', 'simple-links' ); ?></h4>
-
-	<p>
-		<em><?php esc_html_e( 'If no links match the options chosen, this will not display anything', 'simple-links' ); ?>
-			.</em>
-	</p>
-
-	<label><?php esc_html_e( 'Title (optional)', 'simple-links' ); ?>:
+	<label><?php esc_html_e( 'Title', 'simple-links' ); ?>:
 		<br/>
 		<input type="text" id="title" size="50"/>
 	</label>
 
 	<fieldset>
-		<legend><?php esc_html_e( 'Categories (optional)', 'simple-links' ); ?></legend>
+		<legend><?php esc_html_e( 'Categories', 'simple-links' ); ?></legend>
 		<ul class="sl-categories">
 			<?php
 			$cats = Simple_Links_Categories::get_category_names();
@@ -152,14 +143,14 @@ wp_head();
 	<hr>
 
 	<p>
-		<label><?php esc_html_e( 'Show Image', 'simple-links' ); ?>
+		<label><?php esc_html_e( 'Show images', 'simple-links' ); ?>
 			<input type="checkbox" id="show_image"
 				   value="true"/>
 		</label>
 	</p>
 
 	<p>
-		<label><?php esc_html_e( 'Display Image Without Title', 'simple-links' ); ?>
+		<label><?php esc_html_e( 'Hide link title', 'simple-links' ); ?>
 			<input type="checkbox" id="show_image_only"
 				   value="true"/>
 		</label>
@@ -168,7 +159,7 @@ wp_head();
 
 	<p>
 		<label>
-			<?php esc_html_e( 'Image Size', 'simple-links' ); ?>
+			<?php esc_html_e( 'Image size', 'simple-links' ); ?>
 			<select id="image-size">
 				<?php
 				foreach ( simple_links()->image_sizes() as $size ) {
@@ -180,7 +171,7 @@ wp_head();
 	</p>
 
 	<p>
-		<label><?php esc_html_e( 'Remove Line Break Between Image And Link', 'simple-links' ); ?>
+		<label><?php esc_html_e( 'Remove line break between image and link', 'simple-links' ); ?>
 			<input type="checkbox"
 				   id="line_break"
 				   value="1"/>
@@ -188,11 +179,12 @@ wp_head();
 	</p>
 
 	<fieldset>
-		<legend><?php esc_html_e( 'Include Additional Fields', 'simple-links' ); ?></legend>
+		<legend><?php esc_html_e( 'Additional fields', 'simple-links' ); ?></legend>
+
 		<?php
 		$fields = simple_links()->get_additional_fields();
 		if ( empty( $fields ) ) {
-			echo '<em>' . esc_html__( 'There have been no additional fields added', 'simple-links' ) . '</em>';
+			echo '<em>' . esc_html__( 'No additional fields have been added to settings.', 'simple-links' ) . '</em>';
 		} else {
 			?>
 			<ul>
@@ -205,35 +197,24 @@ wp_head();
 			<?php
 		}
 		?>
+		<label><?php esc_html_e( 'Field Separator', 'simple-links' ); ?>:
+			<br/>
+			<input type="text" value="-" id="separator" size="50"/>
+		</label>
 	</fieldset>
 
-	<label><?php esc_html_e( 'Field Separator', 'simple-links' ); ?>:
-		<br/>
-		<em>
-			<small><?php esc_html_e( 'HTML is allowed and will show up formatted in the editor', 'simple-links' ); ?>:
-			</small>
-		</em>
-		<br/>
-		<input type="text" value="-" id="separator" size="50"/>
-	</label>
 
 	<?php do_action( 'simple_links_shortcode_form' ); ?>
 
-	<?php
-	if ( get_bloginfo( 'version' ) < 3.8 ) {
-		?>
-		<p>$nbsp;</p>
-		<?php
-	}
-	?>
+	<p style="text-align: right">
+		<a href="https://onpointplugins.com/simple-links/#shortcode" target="blank">
+			<?php esc_html_e( 'shortcode documentation', 'simple-links' ); ?>
+		</a>
+	</p>
+
 	<p>
 		<input type="button" id="generate" class="button-primary" value="Generate">
 	</p>
-
-	<p>
-		&nbsp;
-	</p>
-
 
 </div>
 </body>
