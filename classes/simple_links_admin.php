@@ -36,8 +36,6 @@ class simple_links_admin {
 
 		//Add Contextual help to the necessary screens
 		add_action( 'load-simple_link_page_simple-link-settings', array( $this, 'help' ) );
-		add_action( 'load-post.php', array( $this, 'help' ) );
-		add_action( 'load-widgets.php', array( $this, 'help' ) );
 
 		//Add the shortcode button the MCE editor
 		add_action( 'init', array( $this, 'mce_button' ) );
@@ -205,151 +203,53 @@ class simple_links_admin {
 
 
 	/**
-	 * Help
-	 *
 	 * Generates all contextual help screens for this plugin
-	 *
-	 *
-	 * @uses Called at load by __construct
-	 *
 	 */
 	public function help() {
-		$shortcode_help = array(
-			'id'      => 'simple-links-shortcode',
-			'title'   => 'Simple Links Shortcode',
-			'content' => '<h5>' . __( 'You Can add a Simple Links List  to content using the shortcode', 'simple-links' ) . '[simple-links]</h5>
-                        <p>
-                            <em>' . __( 'Look for the puzzle button on the content editors for a form that generates the shortcode for you', 'simple-links' ) . '</em>
-						</p>
-						<p>
-							' . __( 'You may use a few or many of the options as you would like. To use all defaults just enter [simple-links]', 'simple-links' ) . '
-						</p>
-                        <strong>' . __( 'Supported Options', 'simple-links' ) . ':</strong><br>
-                        category   = "' . __( 'Comma separated list of Link Category Names or Ids - defaults to all', 'simple-links' ) . '"<br>
-                        include_child_categories = "' . __( "true of false - to include links from your selected categories' child categories as well as links from your selected categories - defaults to false", 'simple-links' ) . '"<br>
-                        orderby    = "' . __( 'title, random, or date - defaults to link order', 'simple-links' ) . '"<br>
-                        order      = "' . __( 'DESC or ASC - defaults to ASC', 'simple-links' ) . '"<br>
-                        count      = "' . __( 'Number of links to show', 'simple-links' ) . '"<br>
-                        show_image = "' . __( "true or false - to show the link's image or not", 'simple-links' ) . '"<br>
-                        show_image_only = "' . __( "true or false - to show the link's image without the title under it. If show image is not true this does nothing", 'simple-links' ) . '"<br>
-                        image_size = "' . __( 'Any size built into WordPress or your theme" - default to thumbnail', 'simple-links' ) . '"<br>
-                        remove_line_break =  ' . __( 'true or false - Remove Line Break Between Images and Links - default to false', 'simple-links' ) . ' <br>
-                        fields     = "' . __( "Comma separated list of the Link's Additional Fields to show", 'simple-links' ) . '"<br>
-                        description = "' . __( 'true or false" - to show the description - defaults to false', 'simple-links' ) . '"<br>
-                        show_description_formatting = "' . __( 'true or false - to display paragraphs format to match the editor content - defaults to false', 'simple-links' ) . '"<br>
-                        separator   = "' . __( 'Any characters to display between fields and description - defaults to ', 'simple-links' ) . '\'-\'"<br>
-                        id          = "' . __( 'An optional id for the list', 'simple-links' ) . '"
-                        <p>
-                             e.g. [simple-links show_image="true" image_size="medium" count="12"]
-                        </p>',
-
-		);
-
-		//help for the widgets
-		$widget_help = array(
-			'id'      => 'simple-links-widget',
-			'title'   => 'Simple Links Widget',
-			'content' => '<h5>' . __( 'You May Add as Many Simple Links Widgets as You Would Like to Your Widget Areas', 'simple-links' ) . '</h5>
-                                    <strong>' . __( 'Widget Options', 'simple-links' ) . ':</strong><br>
-                                ' . __( 'Categories', 'simple-links' ) . ' = "' . __( 'Select with link categories to pull from', 'simple-links' ) . '"<br>
-3                               ' . __( 'Include Child Categories Of Selected Categories', 'simple-links' ) . ' = "' . __( "If checked, links from your selected categories' child categories will display as well as links from your selected categories", 'simple-links' ) . '"<br>
-                                ' . __( 'Order Links By', 'simple-links' ) . '   = "' . __( 'The Order in Which the Links will Display - defaults to link order', 'simple-links' ) . '"<br>
-                                ' . __( 'Order', 'simple-links' ) . ' = "' . __( 'The Order in which the links will Display', 'simple-links' ) . '"<br>
-                                ' . __( 'Show Description', 'simple-links' ) . ' = "' . __( "Display the Link's Description", 'simple-links' ) . '<br>
-                                ' . __( 'Show Description Formatting', 'simple-links' ) . ' = "' . __( 'Display paragraphs to match the editor content', 'simple-links' ) . '"<br>
-                                ' . __( 'Number of LInks', 'simple-links' ) . '  = "' . __( 'Number of links to show', 'simple-links' ) . '"<br>
-                                ' . __( 'Show Image', 'simple-links' ) . ' = "' . __( "Check the box to display the Link's Image", 'simple-links' ) . '"<br>
-                                ' . __( 'Display Image Without Title', 'simple-links' ) . '       = "' . __( "Check this box display the Link's Image without the Link's title under it. If Show Image is not checked, this will do nothing", 'simple-links' ) . '"<br>
-                                ' . __( 'Image Size', 'simple-links' ) . ' = "' . __( 'The Size of Image to Show if the previous box is checked', 'simple-links' ) . '"<br>
-                                ' . __( 'Include Additional Fields', 'simple-links' ) . ' = "' . __( "Display values from the Link's Additional Fields", 'simple-links' ) . '"<br>
-                                ' . __( 'Field Separator', 'simple-links' ) . '  = "' . __( 'Characters to display between fields and description - defaults to ', 'simple-links' ) . '\'-\'"<br>',
-		);
-
-		//The screen we are on
 		$screen = get_current_screen();
 
-		if ( empty( $screen->id ) ) {
+		if ( empty( $screen->id ) || ! 'simple_link_page_simple-link-settings' === $screen->id ) {
 			return;
 		}
 
-		//Each page will have different help content
-		switch ( $screen->id ) {
-
-			case 'widgets':
-				$screen->add_help_tab( $widget_help );
-				break;
-
-			//Normal Pages and posts and widgets - The shortcode help
-			case 'page':
-			case 'post':
-				$screen->add_help_tab( $shortcode_help );
-				break;
-
-			//The settings page
-			case 'simple_link_page_simple-link-settings':
-				$screen->add_help_tab(
-					array(
-						'id'      => 'wordpress-links',
-						'title'   => 'WordPress Links',
-						'content' => '<p>' . __( 'WordPress has deprecated the built in links functionality', 'simple-links' ) . '.<br>
+		$screen->add_help_tab(
+			[
+				'id'      => 'wordpress-links',
+				'title'   => 'WordPress Links',
+				'content' => '<p>' . __( 'WordPress has deprecated the built in links functionality', 'simple-links' ) . '.<br>
                                         ' . __( 'These settings take care of cleaning up the old WordPress links', 'simple-links' ) . '<br>
                                         ' . __( 'By Checking "Remove WordPress Built in Links", the old Links menu will disappear along with the add new admin bar link', 'simple-links' ) . '. <br>
                                         ' . __( ' Pressing the "Import Links" button will automatically copy the WordPress Links into Simple Links. Keep in mind if you press this button twice it will copy the links twice and you will have duplicates', 'simple-links' ) . '.</p>',
 
-					)
-				);
+			]
+		);
 
-				$screen->add_help_tab(
-					array(
-						'id'      => 'additional_fields',
-						'title'   => __( 'Additional Fields', 'simple-links' ),
-						'content' => '<p>' . __( 'You have the ability to add an unlimited number of additional fields to the links by click the "Add Another" button', 'simple-links' ) . '. <br>
+		$screen->add_help_tab(
+			[
+				'id'      => 'additional_fields',
+				'title'   => __( 'Additional Fields', 'simple-links' ),
+				'content' => '<p>' . __( 'You have the ability to add an unlimited number of additional fields to the links by click the "Add Another" button', 'simple-links' ) . '. <br>
                                             ' . __( "Once you save your changes, these fields will show up on a each link's editing page", 'simple-links' ) . '. <br>
                                             ' . __( 'You will have the ability to select any of these fields to display using the Simple Links widgets', 'simple-links' ) . '. <br>
                                             ' . __( "Each widget gets it's own list of ALL the additional fields, so you may display different fields in different widget areas", 'simple-links' ) . '. <br>
                                             ' . __( 'These fields will also be available by using the shortcode. For instance, if you wanted to display a field titled "author" and a field titled "notes" you shortcode would look something like this', 'simple-links' ) . '
                                             <br>[simple-links fields="' . __( 'author,notes', 'simple-links' ) . '" ]</p>',
-					)
-				);
+			]
+		);
 
-				$screen->add_help_tab(
-					array(
-						'id'      => 'permissions',
-						'title'   => __( 'Permissions', 'simple-links' ),
-						'content' => '<p><strong>' . __( 'This is where you decide how much access editors will have', 'simple-links' ) . '</strong><br>
+		$screen->add_help_tab(
+			[
+				'id'      => 'permissions',
+				'title'   => __( 'Permissions', 'simple-links' ),
+				'content' => '<p><strong>' . __( 'This is where you decide how much access editors will have', 'simple-links' ) . '</strong><br>
                         ' . __( '"Hide Link Ordering from Editors", will prevent editors from using the drag and drop ordering page. They will still be able to change the order on the individual link editing Pages', 'simple-links' ) . '.<br>
                         ' . __( '"Show Simple Link Settings to Editors" will allow editors to access the screen you are on right now without restriction', 'simple-links' ) . '.</p>',
-					)
-				);
+			]
+		);
 
-				$screen->add_help_tab( $shortcode_help );
-
-				$screen->add_help_tab(
-					array(
-						'id'      => 'crockpot-recipe',
-						'title'   => 'Crock-Pot Recipe',
-						'content' => '<p>For folks out the like me that rarely have time to leave the computer and cook, a Crock-Pot meal is a great way
-                        to have food hot and ready to eat.
-                        </p>
-                        <p><strong>Here is one of my favorites recipes "Carne Rellenos"</strong><br>
-                        1 can (4 ounces) whole green chilies, drained<br>
-                        4 ounces cream cheese, softened<br>
-                        1 flank steak (about 2 pounds)<br>
-                        1.5 cups salsa verde<br>
-                        Slit whole chiles open on one side with sharp knife; stuff with cream cheese. Open steak flat on sheet of waxed paper; score
-                        steak and turn over. Lay stuffed chiles across unscored side of steak. Roll up and tie with kitchen string. Place steak in Crock Pot
-                        ;pour in salsa. Cover; cook on LOW 6 to 8 hours or on HIGH 3 to 4 hours or until done. Remove stead and cut into 6 pieces. Serve
-                        with sauce.</p>',
-					)
-				);
-
-				$screen->set_help_sidebar(
-					'<p>' . __( 'These Sections will give your a brief description of what each group of settings does. Feel free to start a thread on the support forums if you would like additional help items covered in this section', 'simple-links' ) . '</p>'
-				);
-
-				break;
-		}
-
+		$screen->set_help_sidebar(
+			'<p>' . __( 'These Sections will give your a brief description of what each group of settings does. Feel free to start a thread on the support forums if you would like additional help items covered in this section', 'simple-links' ) . '</p>'
+		);
 	}
 
 
@@ -508,19 +408,18 @@ class simple_links_admin {
 
 
 	public function js_config() {
-		$js_config = array(
+		$js_config = [
 			'importLinksURL' => esc_url( wp_nonce_url( admin_url( 'admin-ajax.php?action=simple_links_import_links' ), 'simple_links_import_links' ) ),
-			'i18n'           => array(
+			'i18n'           => [
 				'hide_ordering'       => __( 'This will prevent editors from using the drag and drop ordering.', 'simple-links' ),
 				'show_settings'       => __( 'This will allow editors access to this Settings Page.', 'simple-links' ),
 				'remove_links'        => __( 'This will remove all traces of the Default WordPress Links.', 'simple-links' ),
 				'import_links'        => __( 'This will import all existing WordPress Links into the Simple Links', 'simple-links' ),
 				'default_target'      => __( "This will be the link's target when a new link is created.", 'simple-links' ),
-				'add_links'           => __( 'Add Simple Links', 'simple-links' ),
-				'shortcode'           => __( 'Simple Links Shortcode', 'simple-links' ),
-				'shortcode_generator' => __( 'Simple Links Shortcode Generator', 'simple-links' ),
-			),
-		);
+				'shortcode'           => __( 'Create [simple-links] shortcode', 'simple-links' ),
+				'shortcode_generator' => __( 'Simple Links shortcode generator', 'simple-links' ),
+			],
+		];
 
 		return apply_filters( 'simple-links/js-config', $js_config );
 	}
