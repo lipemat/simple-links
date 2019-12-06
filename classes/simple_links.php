@@ -154,7 +154,7 @@ if ( ! class_exists( 'simple_links' ) ) {
 		 * @return string - the created list based on attributes
 		 *
 		 */
-		public function shortcode( array $attributes ) {
+		public function shortcode( $attributes ) {
 			$attributes = apply_filters( 'simple_links_shortcode_atts', $attributes );
 			if ( isset( $attributes['id'] ) ) {
 				$attributes = apply_filters( 'simple_links_shortcode_atts_' . $attributes['id'], $attributes );

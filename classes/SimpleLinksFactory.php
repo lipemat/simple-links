@@ -47,6 +47,7 @@ class SimpleLinksFactory {
 	 *
 	 * @param        $args = array('title'              => false,
 	 *                     'category'           => false,
+	 *                     'className'         => '', // From Gutenberg block.
 	 *                     'orderby'           => 'menu_order',
 	 *                     'count'             => '-1',
 	 *                     'show_image'        => false,
@@ -158,17 +159,6 @@ class SimpleLinksFactory {
 
 
 	/**
-	 * @deprecated 4.4.2 in favor of SimpleLinksFactory::get_links
-	 */
-	// phpcs:ignore
-	protected function getLinks() {
-		_deprecated_function( 'SimpleLinksFactory::getLinks', '4.4.2', 'SimpleLinksFactory::get_links' );
-
-		return $this->get_links();
-	}
-
-
-	/**
 	 * Retrieve the proper links based on argument set earlier
 	 *
 	 * @return array
@@ -217,14 +207,9 @@ class SimpleLinksFactory {
 
 
 	/**
-	 * Generated the output bases on retrieved links
+	 * Generated the output bases on retrieved links.
 	 *
-	 *
-	 * @uses  may be called normally or by using echo with the class
-	 * @uses  SimpleLinksTheLink
-	 *
-	 * @param bool $echo - defaults to false
-	 *
+	 * @param bool $echo - defaults to false.
 	 *
 	 * @return String
 	 */
@@ -232,16 +217,16 @@ class SimpleLinksFactory {
 		if ( empty( $this->links ) ) {
 			return '';
 		}
-
 		$output = '';
 
-		//if there is a title
-		if ( 'widget' !== $this->type && $this->args['title'] ) {
-			$output .= sprintf( '<h4 class="simple-links-title">%s</h4>', $this->args['title'] );
-
+		if ( ! empty( $this->args['className'] ) ) {
+			$output .= '<div class="simple-links-wrap ' . esc_attr( $this->args['className'] ) . '">';
 		}
 
-		//Start the list
+		if ( 'widget' !== $this->type && $this->args['title'] ) {
+			$output .= sprintf( '<h4 class="simple-links-title">%s</h4>', $this->args['title'] );
+		}
+
 		$markup = apply_filters( 'simple_links_markup', '<ul class="simple-links-list%s" %s>', $this->args, $this );
 		if ( empty( $this->args['id'] ) ) {
 			$output .= sprintf( $markup, '', '' );
@@ -249,7 +234,6 @@ class SimpleLinksFactory {
 			$output .= sprintf( $markup, ' ' . $this->args['id'], 'id="' . $this->args['id'] . '"' );
 		}
 
-		//Add the links to the list
 		foreach ( $this->links as $link ) {
 			$link_class = apply_filters( 'simple_links_link_class', 'SimpleLinksTheLink', $this->type, $this->args, $this );
 
@@ -258,14 +242,18 @@ class SimpleLinksFactory {
 			$output .= $link->output();
 		}
 
-		//end the list
 		if ( has_filter( 'simple_links_markup' ) ) {
 			$output = force_balance_tags( $output );
 		} else {
 			$output .= '</ul>';
 		}
 
+		if ( ! empty( $this->args['className'] ) ) {
+			$output .= '</div>';
+		}
+
 		$output .= '<!-- End .simple-links-list -->';
+
 
 		$output = apply_filters( 'simple_links__output', $output, $this->links, $this->args );
 
