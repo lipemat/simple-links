@@ -102,6 +102,14 @@ Start a support thread and myself or someone from the community can probably hel
 2. The short-code generating form
 
 == Changelog ==
+= 4.7.0 =
+* Added support for PRO version 1.5.0.
+* Greatly improved styles and structure of widgets.
+* Greatly improved styles and structure of shortcode form.
+* Updated translations.
+* Remove legacy help screens.
+* Open REST API to logged in users with editor+ capabilities.
+
 = 4.6.8 =
 * Remove legacy errors for no block editor support.
 * Prevent links from having a target when set to none.
