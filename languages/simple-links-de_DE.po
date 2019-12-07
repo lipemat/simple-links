@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Simple Links\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-10 11:05-0400\n"
-"PO-Revision-Date: 2019-09-10 11:07-0400\n"
+"POT-Creation-Date: 2019-12-07 13:30-0500\n"
+"PO-Revision-Date: 2019-12-07 13:31-0500\n"
 "Last-Translator: Mat Lipe <support@onpointplugins.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: simple-links.php\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
@@ -59,15 +59,15 @@ msgstr ""
 msgid "Follow Me"
 msgstr "Folge mir"
 
-#: admin-views/link-target.php:5 classes/Simple_Links_Settings.php:163
+#: admin-views/link-target.php:5 classes/Simple_Links_Settings.php:162
 msgid "new window or tab"
 msgstr "Link in neuem Fenster oder Tab öffnen"
 
-#: admin-views/link-target.php:12 classes/Simple_Links_Settings.php:172
+#: admin-views/link-target.php:12 classes/Simple_Links_Settings.php:171
 msgid "current window or tab, with no frames"
 msgstr "Link in aktuellem Fenster oder Tab öffnen, ohne Frames"
 
-#: admin-views/link-target.php:19 classes/Simple_Links_Settings.php:180
+#: admin-views/link-target.php:19 classes/Simple_Links_Settings.php:179
 msgid "same window or tab"
 msgstr "Link im aktuellen Fenster oder Tab öffnen"
 
@@ -80,22 +80,6 @@ msgid "rel to this link"
 msgstr ""
 "-Anweisung zu diesem Link hinzufügen, um Suchmaschinen die Verfolgung des "
 "Links zu verbieten"
-
-#: admin-views/pro-notice.php:3
-msgid "Checkout Simple Links Pro!"
-msgstr "Einfache Links!"
-
-#. translators: <a> link created by placeholders
-#: admin-views/pro-notice.php:8
-#, php-format
-msgid ""
-"Upgrade to %1$sSimple Links Pro%2$s for Priority Support, Display links "
-"assigned to all categories, Display By Category, Import/Export Ability, "
-"Links In Search Results, and so much more!"
-msgstr ""
-"Upgrade auf %1$sSimple Links Pro%2$s für Priority Support, Anzeige nach "
-"Kategorie, Import / Export-Fähigkeit, Links in den Suchergebnissen und "
-"vieles mehr!"
 
 #: admin-views/settings-wordpress-links.php:1
 msgid "These settings will effect the default WordPress Links Manager"
@@ -114,109 +98,98 @@ msgstr "Alle Links aus dem WordPress-Linkmanager wurden erfolgreich importiert"
 msgid "Import Links"
 msgstr "Links aus WordPress-Linkmanager importeren"
 
-#: admin-views/shortcode-form.php:54
-msgid "This Will Generate the Shortcode to Display Simple Links"
-msgstr "Dies generiert den Shortcode zum Anzeigen von Simple Links"
+#: admin-views/shortcode-form.php:15 classes/simple_links_admin.php:419
+msgid "Create [simple-links] shortcode"
+msgstr "[simple-links] Shortcode erstellen"
 
-#: admin-views/shortcode-form.php:57
-msgid "If no links match the options chosen, this will not display anything"
-msgstr ""
-"Wenn keine Links nach den gewählten Optionen gefunden werde, wird nichts "
-"angezeigt"
+#: admin-views/shortcode-form.php:53 classes/simple_links.php:78
+#: src/Widgets/Simple_Links.php:127
+msgid "Title"
+msgstr "Titel"
 
-#: admin-views/shortcode-form.php:61
-msgid "Title (optional)"
-msgstr "Titel (optional)"
+#: admin-views/shortcode-form.php:59
+msgid "Categories"
+msgstr "Kategorien"
 
-#: admin-views/shortcode-form.php:68 src/Widgets/Simple_Links.php:160
-msgid "Categories (optional)"
-msgstr "Link-Kategorien (optional)"
-
-#: admin-views/shortcode-form.php:82 src/Widgets/Simple_Links.php:176
+#: admin-views/shortcode-form.php:73 src/Widgets/Simple_Links.php:288
 msgid "No link categories have been created yet."
 msgstr "Es wurden noch keine Link-Kategorien erstellt."
 
-#: admin-views/shortcode-form.php:90 src/Widgets/Simple_Links.php:183
+#: admin-views/shortcode-form.php:81 src/Widgets/Simple_Links.php:295
 msgid "Include links assigned to child categories of selected categories."
 msgstr "Unterkategorien der gewählten Kategorien einbeziehen."
 
-#: admin-views/shortcode-form.php:103 src/Widgets/Simple_Links.php:194
+#: admin-views/shortcode-form.php:94
 msgid "Number Of Links"
 msgstr "Maximale Anzahl Links anzeigen"
 
-#: admin-views/shortcode-form.php:105
-msgid "All"
-msgstr "Alle"
+#: admin-views/shortcode-form.php:96
+msgid "- all -"
+msgstr "- alle -"
 
-#: admin-views/shortcode-form.php:117
-msgid "Order By"
+#: admin-views/shortcode-form.php:108 src/Widgets/Simple_Links.php:146
+msgid "Order by"
 msgstr "Sortieren nach"
 
-#: admin-views/shortcode-form.php:119
+#: admin-views/shortcode-form.php:110
 msgid "- select an order by - "
 msgstr "- Sortierreihenfolge auswählen - "
 
-#: admin-views/shortcode-form.php:128 classes/simple_links_admin.php:257
-#: src/Widgets/Simple_Links.php:145
+#: admin-views/shortcode-form.php:119 src/Widgets/Simple_Links.php:155
 msgid "Order"
 msgstr "Sortierung"
 
-#: admin-views/shortcode-form.php:130
+#: admin-views/shortcode-form.php:121
 msgid "- select an order -"
 msgstr "- Bitte Sortierung wählen -"
 
-#: admin-views/shortcode-form.php:131 src/Widgets/Simple_Links.php:149
+#: admin-views/shortcode-form.php:122 src/Widgets/Simple_Links.php:159
 msgid "Ascending"
 msgstr "Aufsteigend"
 
-#: admin-views/shortcode-form.php:132 src/Widgets/Simple_Links.php:152
+#: admin-views/shortcode-form.php:123 src/Widgets/Simple_Links.php:162
 msgid "Descending"
 msgstr "Absteigend"
 
-#: admin-views/shortcode-form.php:140 classes/simple_links_admin.php:258
-#: src/Widgets/Simple_Links.php:205
-msgid "Show Description"
-msgstr "Beschreibung einblenden"
+#: admin-views/shortcode-form.php:131 src/Widgets/Simple_Links.php:167
+msgid "Show description"
+msgstr "Beschreibung anzeigen"
 
-#: admin-views/shortcode-form.php:146 src/Widgets/Simple_Links.php:215
-msgid "Include Description Paragraph Format"
-msgstr "Format der Linkbeschreibung einbeziehen"
+#: admin-views/shortcode-form.php:137 src/Widgets/Simple_Links.php:176
+msgid "Display description as paragraphs"
+msgstr "Beschreibung als Absätze anzeigen"
 
-#: admin-views/shortcode-form.php:156 classes/simple_links_admin.php:261
-#: src/Widgets/Simple_Links.php:227
-msgid "Show Image"
-msgstr "Bild anzeigen"
+#: admin-views/shortcode-form.php:148 src/Widgets/Simple_Links.php:190
+msgid "Show images"
+msgstr "Bilder anzeigen"
 
-#: admin-views/shortcode-form.php:163 classes/simple_links_admin.php:262
-#: src/Widgets/Simple_Links.php:245
-msgid "Display Image Without Title"
-msgstr "Bild ohne Titel anzeigen"
+#: admin-views/shortcode-form.php:157 src/Widgets/Simple_Links.php:212
+msgid "Hide link title"
+msgstr "Linktitel ausblenden"
 
-#: admin-views/shortcode-form.php:172 classes/simple_links_admin.php:263
-#: src/Widgets/Simple_Links.php:251
-msgid "Image Size"
+#: admin-views/shortcode-form.php:168 src/Widgets/Simple_Links.php:199
+msgid "Image size"
 msgstr "Bildgröße"
 
-#: admin-views/shortcode-form.php:184
-msgid "Remove Line Break Between Image And Link"
+#: admin-views/shortcode-form.php:180 src/Widgets/Simple_Links.php:223
+msgid "Remove line break between image and link"
 msgstr "Zeilenumbruch zwischen Bild und Link entfernen"
 
-#: admin-views/shortcode-form.php:192 classes/simple_links_admin.php:264
-msgid "Include Additional Fields"
-msgstr "Zusätzliche Felder einschliessen"
+#: admin-views/shortcode-form.php:189
+msgid "Additional fields"
+msgstr "Zusätzliche Felder"
 
-#: admin-views/shortcode-form.php:196
-msgid "There have been no additional fields added"
-msgstr "Es wurden keine zusätzlichen Felder hinzugefügt"
+#: admin-views/shortcode-form.php:194 src/Widgets/Simple_Links.php:236
+msgid "No additional fields have been added to settings."
+msgstr "Den Einstellungen wurden keine zusätzlichen Felder hinzugefügt."
 
-#: admin-views/shortcode-form.php:211 classes/simple_links_admin.php:265
-#: src/Widgets/Simple_Links.php:286
+#: admin-views/shortcode-form.php:207
 msgid "Field Separator"
 msgstr "Trennzeichen zwischen Feldern"
 
-#: admin-views/shortcode-form.php:214
-msgid "HTML is allowed and will show up formatted in the editor"
-msgstr "HTML ist erlaubt und wird im Editor formatiert angezeigt"
+#: admin-views/shortcode-form.php:218
+msgid "shortcode documentation"
+msgstr "Shortcode-Dokumentation"
 
 #: classes/Simple_Link.php:39
 msgid "Link"
@@ -315,7 +288,8 @@ msgstr "Kein %s im Papierkorb gefunden."
 msgid "Link Category"
 msgstr "Link-Kategorie"
 
-#: classes/Simple_Links_Categories.php:152 classes/simple_links_admin.php:135
+#: classes/Simple_Links_Categories.php:152 classes/simple_links_admin.php:133
+#: src/Widgets/Simple_Links.php:272
 msgid "Link Categories"
 msgstr "Link-Kategorien"
 
@@ -328,34 +302,34 @@ msgstr "Neue Kategorie hinzufügen"
 msgid "Seperate %s with commas"
 msgstr "Trenne %s mit Kommata"
 
-#: classes/Simple_Links_Meta_Boxes.php:44 classes/simple_links_admin.php:134
+#: classes/Simple_Links_Meta_Boxes.php:43 classes/simple_links_admin.php:132
 msgid "Web Address"
 msgstr "Web-Adresse (URL)"
 
-#: classes/Simple_Links_Meta_Boxes.php:45
+#: classes/Simple_Links_Meta_Boxes.php:44
 msgid "Description"
 msgstr "Beschreibung"
 
-#: classes/Simple_Links_Meta_Boxes.php:46
-#: classes/Simple_Links_Meta_Boxes.php:177
+#: classes/Simple_Links_Meta_Boxes.php:45
+#: classes/Simple_Links_Meta_Boxes.php:184
 msgid "Link Target"
 msgstr "Link-Ziel"
 
-#: classes/Simple_Links_Meta_Boxes.php:47
-#: classes/Simple_Links_Meta_Boxes.php:183 classes/Simple_Links_Settings.php:98
-#: classes/simple_links_admin.php:305
+#: classes/Simple_Links_Meta_Boxes.php:46
+#: classes/Simple_Links_Meta_Boxes.php:197 classes/Simple_Links_Settings.php:98
+#: classes/simple_links_admin.php:230 src/Widgets/Simple_Links.php:231
 msgid "Additional Fields"
 msgstr "Zusätzliche Felder"
 
-#: classes/Simple_Links_Meta_Boxes.php:80
+#: classes/Simple_Links_Meta_Boxes.php:79
 msgid "Example"
 msgstr "Beispiel"
 
-#: classes/Simple_Links_Meta_Boxes.php:80
+#: classes/Simple_Links_Meta_Boxes.php:79
 msgid "DO NOT forget the"
 msgstr "WICHTIG, bitte nicht vergessen"
 
-#: classes/Simple_Links_Meta_Boxes.php:81
+#: classes/Simple_Links_Meta_Boxes.php:80
 msgid ""
 "This will be shown when someone hovers over the link, or optionally below "
 "the link"
@@ -363,25 +337,25 @@ msgstr ""
 "Diese Beschreibung erscheint, wenn jemand mit der Maus über dem Link steht "
 "oder je nach Konfiguration auch unter dem Link"
 
-#: classes/Simple_Links_Meta_Boxes.php:82
+#: classes/Simple_Links_Meta_Boxes.php:81
 msgid "Choose the target frame for your link"
 msgstr "Bitte den Target-Frame für den Link auswählen"
 
-#: classes/Simple_Links_Meta_Boxes.php:83
+#: classes/Simple_Links_Meta_Boxes.php:82
 msgid ""
 "Values entered in these fields will be available for shortcodes and widgets"
 msgstr ""
 "Werte die in diese Felder eingegeben werden, können in Shortcodes und "
 "Widgets angezeigt werden"
 
-#: classes/Simple_Links_Meta_Boxes.php:248
+#: classes/Simple_Links_Meta_Boxes.php:271
 msgid ""
 "You may add additional fields which will be available for all links in the "
 msgstr ""
 "Du kannst zusätzliche Felder hinzufügen, die dann verfügbar sind für alle "
 "Links in der "
 
-#: classes/Simple_Links_Meta_Boxes.php:250
+#: classes/Simple_Links_Meta_Boxes.php:273
 msgid "settings"
 msgstr "Einstellungen"
 
@@ -393,7 +367,7 @@ msgstr "Einstellungen"
 msgid "WordPress Links"
 msgstr "WordPress Link-Manager"
 
-#: classes/Simple_Links_Settings.php:116 classes/simple_links_admin.php:318
+#: classes/Simple_Links_Settings.php:116 classes/simple_links_admin.php:243
 msgid "Permissions"
 msgstr "Zugriffs-Beschränkungen"
 
@@ -401,29 +375,29 @@ msgstr "Zugriffs-Beschränkungen"
 msgid "Defaults"
 msgstr "Standardeinstellungen"
 
-#: classes/Simple_Links_Settings.php:152
+#: classes/Simple_Links_Settings.php:151
 msgid "These settings will effect this plugins defaults"
 msgstr "Diese Einstellungen betreffen die Standardeinstellungen des Plugins"
 
-#: classes/Simple_Links_Settings.php:156
+#: classes/Simple_Links_Settings.php:155
 msgid "Default Link Target"
 msgstr "Standardverbindungsziel"
 
-#: classes/Simple_Links_Settings.php:198
+#: classes/Simple_Links_Settings.php:197
 msgid "These settings will effect access to this plugins features"
 msgstr ""
 "Diese Einstellungen betreffen die Zugriffssteuerung auf einige Funktionen "
 "des Plugins"
 
-#: classes/Simple_Links_Settings.php:200
+#: classes/Simple_Links_Settings.php:199
 msgid "Hide Link Ordering from editors"
 msgstr "\"Links sortieren\" für Redakteure ausblenden"
 
-#: classes/Simple_Links_Settings.php:205
+#: classes/Simple_Links_Settings.php:204
 msgid "Show Simple Link Settings to editors"
 msgstr "Menü \"Simple Links Einstellungen\" für Redakteure anzeigen"
 
-#: classes/Simple_Links_Settings.php:227
+#: classes/Simple_Links_Settings.php:226
 msgid ""
 "These fields will be available on all link's edit screen, widgets, and "
 "shortcodes."
@@ -431,20 +405,20 @@ msgstr ""
 "Diese zusätzlichen Felder können auf allen Bearbeitungs-Seiten, Widgets und "
 "Shortcodes genutzt werden."
 
-#: classes/Simple_Links_Settings.php:235 classes/Simple_Links_Settings.php:246
-#: classes/Simple_Links_Settings.php:254
+#: classes/Simple_Links_Settings.php:234 classes/Simple_Links_Settings.php:245
+#: classes/Simple_Links_Settings.php:253
 msgid "Field Name"
 msgstr "Feld-Name"
 
-#: classes/Simple_Links_Settings.php:263
+#: classes/Simple_Links_Settings.php:262
 msgid "Add Another"
 msgstr "Zusätzliches Feld hinzufügen"
 
-#: classes/Simple_Links_Settings.php:286
+#: classes/Simple_Links_Settings.php:284
 msgid "Simple Links Settings"
 msgstr "Simple Links Einstellungen"
 
-#: classes/Simple_Links_Settings.php:287
+#: classes/Simple_Links_Settings.php:285
 msgid "Be sure to see the help menu for descriptions"
 msgstr ""
 "Weitere Informationen und Erläuterungen im Hilfe-Menü in der oberen rechten "
@@ -454,275 +428,78 @@ msgstr ""
 msgid "Link Ordering"
 msgstr "Links sortieren"
 
-#: classes/simple_links.php:55
+#: classes/simple_links.php:54
 msgid "Non Existent method in simple_links class"
 msgstr "Nicht existierende Methode in der Klasse simple_links"
 
-#: classes/simple_links.php:76
+#: classes/simple_links.php:75
 msgid "Link Order"
 msgstr "Link-Reihenfolge"
 
-#: classes/simple_links.php:79
-msgid "Title"
-msgstr "Titel"
-
-#: classes/simple_links.php:82
+#: classes/simple_links.php:81
 msgid "Random"
 msgstr "Zufällig"
 
-#: classes/simple_links.php:85
+#: classes/simple_links.php:84
 msgid "Date"
 msgstr "Datum"
 
-#: classes/simple_links_admin.php:74 classes/simple_links_admin.php:77
+#: classes/simple_links_admin.php:72 classes/simple_links_admin.php:75
 msgid "Link updated."
 msgstr "Link wurde aktualisiert."
 
-#: classes/simple_links_admin.php:75
+#: classes/simple_links_admin.php:73
 msgid "Custom field updated."
 msgstr "Benutzerdefiniertes Feld wurde aktualisiert."
 
-#: classes/simple_links_admin.php:76
+#: classes/simple_links_admin.php:74
 msgid "Custom field deleted."
 msgstr "Benutzerdefiniertes Feld gelöscht."
 
-#. translators: %s: date and time of the revision
-#: classes/simple_links_admin.php:79
+#: classes/simple_links_admin.php:77
 #, php-format
 msgid "Link restored to revision from %s."
 msgstr "Der Link wurde von %s auf Revision zurückgesetzt."
 
-#: classes/simple_links_admin.php:80
+#: classes/simple_links_admin.php:78
 msgid "Link published."
 msgstr "Link wurde veröffentlicht."
 
-#: classes/simple_links_admin.php:81
+#: classes/simple_links_admin.php:79
 msgid "Link saved."
 msgstr "Link gespeichert."
 
-#: classes/simple_links_admin.php:82
+#: classes/simple_links_admin.php:80
 msgid "Link submitted."
 msgstr "Link gesendet."
 
-#: classes/simple_links_admin.php:84
+#: classes/simple_links_admin.php:82
 #, php-format
 msgid "Link scheduled for: <strong>%1$s</strong>."
 msgstr "Link geplant für: <strong>%1$s</strong>."
 
-#: classes/simple_links_admin.php:84
+#: classes/simple_links_admin.php:82
 msgid "M j, Y @ G:i"
 msgstr "M j, Y @ G:i"
 
-#: classes/simple_links_admin.php:85
+#: classes/simple_links_admin.php:83
 msgid "Link draft updated."
 msgstr "Link-Entwurf wurde aktualisiert."
 
-#. translators: Taxonomy label of Simple Links Category
-#: classes/simple_links_admin.php:191
+#: classes/simple_links_admin.php:189
 #, php-format
 msgid "Show All %s"
 msgstr "Alle %s"
 
-#: classes/simple_links_admin.php:220
-msgid "You Can add a Simple Links List  to content using the shortcode"
-msgstr "Das Einfügen der Links auf Beiträge/Seiten erfolgt mit dem Shortcode"
-
-#: classes/simple_links_admin.php:222
-msgid ""
-"Look for the puzzle button on the content editors for a form that generates "
-"the shortcode for you"
-msgstr ""
-"Schaue im Editor nach der Puzzle-Schaltfläche, um einen Shortcode zu "
-"generieren"
-
-#: classes/simple_links_admin.php:225
-msgid ""
-"You may use a few or many of the options as you would like. To use all "
-"defaults just enter [simple-links]"
-msgstr ""
-"Sie können einige oder viele der Optionen verwenden, wie Sie möchten. Um "
-"alle Standardeinstellungen zu verwenden, geben Sie einfach [simple-links] ein"
-
-#: classes/simple_links_admin.php:227
-msgid "Supported Options"
-msgstr "Unterstützte Optionen"
-
-#: classes/simple_links_admin.php:228
-msgid "Comma separated list of Link Category Names or Ids - defaults to all"
-msgstr ""
-"Mit Kommata getrennte Liste aller Link-Kategorie-Namen oder Ids - "
-"Standardwert für alle"
-
-#: classes/simple_links_admin.php:229
-msgid ""
-"true of false - to include links from your selected categories' child "
-"categories as well as links from your selected categories - defaults to false"
-msgstr ""
-"true of false - um Links aus den untergeordneten Kategorien Ihrer "
-"ausgewählten Kategorien sowie Links aus den ausgewählten Kategorien "
-"einzuschließen, wird standardmäßig false verwendet"
-
-#: classes/simple_links_admin.php:230
-msgid "title, random, or date - defaults to link order"
-msgstr "title, random oder date - standardmäßig wird die Reihenfolge verknüpft"
-
-#: classes/simple_links_admin.php:231
-msgid "DESC or ASC - defaults to ASC"
-msgstr "Absteigend (DESC) oder Aufsteigend (ASC) - Standard ist ASC"
-
-#: classes/simple_links_admin.php:232 classes/simple_links_admin.php:260
-msgid "Number of links to show"
-msgstr "Anzahl der zu zeigenden Links"
-
-#: classes/simple_links_admin.php:233
-msgid "true or false - to show the link's image or not"
-msgstr "true oder false - Link-Bild anzeigen oder nicht"
-
-#: classes/simple_links_admin.php:234
-msgid ""
-"true or false - to show the link's image without the title under it. If show "
-"image is not true this does nothing"
-msgstr ""
-"true/false - nur das Bild ohne den Titel darunter anzuzeigen. Die Option "
-"\"Bild zum Link anzeigen\" muss auf \"true\" gesetzt sein"
-
-#: classes/simple_links_admin.php:235
-msgid "Any size built into WordPress or your theme\" - default to thumbnail"
-msgstr ""
-"Jede Bildgrösse, die WordPress bzw. dein Theme unterstützt - Standard ist "
-"Thumbnail"
-
-#: classes/simple_links_admin.php:236
-msgid ""
-"true or false - Remove Line Break Between Images and Links - default to false"
-msgstr ""
-"true oder false - entfernen Linie brechen zwischen Bildern und Links - "
-"Standard auf false"
-
-#: classes/simple_links_admin.php:237
-msgid "Comma separated list of the Link's Additional Fields to show"
-msgstr ""
-"Es können mehrere Zusatzfelder getrennt durch ein Komma eingegeben werden"
-
-#: classes/simple_links_admin.php:238
-msgid "true or false\" - to show the description - defaults to false"
-msgstr "true oder false - Beschreibung anzeigen? - Standard ist False"
-
-#: classes/simple_links_admin.php:239
-msgid ""
-"true or false - to display paragraphs format to match the editor content - "
-"defaults to false"
-msgstr ""
-"true oder false - Formatierung der Absätze entsprechend dem Editor-Inhalt "
-"anzeigen? Standard ist False"
-
-#: classes/simple_links_admin.php:240
-msgid "Any characters to display between fields and description - defaults to "
-msgstr ""
-"Alle Zeichen die zwischen den Feldern und der Beschreibung angezeigt werden "
-"- Standardmäßig "
-
-#: classes/simple_links_admin.php:241
-msgid "An optional id for the list"
-msgstr "Eine optionale Id für die ausgegebene Liste"
-
-#: classes/simple_links_admin.php:252
-msgid ""
-"You May Add as Many Simple Links Widgets as You Would Like to Your Widget "
-"Areas"
-msgstr ""
-"Füge so viele Simple Links Widgets zu deinem Widget-Bereich hinzu, wie du "
-"möchtest"
-
-#: classes/simple_links_admin.php:253
-msgid "Widget Options"
-msgstr "Widget-Optionen"
-
-#: classes/simple_links_admin.php:254
-msgid "Categories"
-msgstr "Kategorien"
-
-#: classes/simple_links_admin.php:254
-msgid "Select with link categories to pull from"
-msgstr "Wähle, aus welchen Link-Kategorien herausgezogen werden soll"
-
-#: classes/simple_links_admin.php:255
-msgid "Include Child Categories Of Selected Categories"
-msgstr "Unterkategorien der gewählten Kategorien einbeziehen"
-
-#: classes/simple_links_admin.php:255
-msgid ""
-"If checked, links from your selected categories' child categories will "
-"display as well as links from your selected categories"
-msgstr ""
-"Wenn diese Option aktiviert ist, werden Links aus den untergeordneten, "
-"ausgewählten sowie Links aus den ausgewählten Kategorien angezeigt"
-
-#: classes/simple_links_admin.php:256 src/Widgets/Simple_Links.php:136
-msgid "Order Links By"
-msgstr "Links sortieren nach"
-
-#: classes/simple_links_admin.php:256
-msgid "The Order in Which the Links will Display - defaults to link order"
-msgstr ""
-"Die Reihenfolge, in der die Links angezeigt werden - Standard ist die "
-"voreingestellte Reihenfolge"
-
-#: classes/simple_links_admin.php:257
-msgid "The Order in which the links will Display"
-msgstr "Die Reihenfolge, in der die Links angezeigt werden"
-
-#: classes/simple_links_admin.php:258
-msgid "Display the Link's Description"
-msgstr "Zeige die Linkbeschreibungen an"
-
-#: classes/simple_links_admin.php:259
-msgid "Show Description Formatting"
-msgstr "Zeige Formatierung der Beschreibung"
-
-#: classes/simple_links_admin.php:259
-msgid "Display paragraphs to match the editor content"
-msgstr "Absätze entsprechend dem Editor-Inhalt anzeigen"
-
-#: classes/simple_links_admin.php:260
-msgid "Number of LInks"
-msgstr "Maximale Anzahl Links anzeigen"
-
-#: classes/simple_links_admin.php:261
-msgid "Check the box to display the Link's Image"
-msgstr "Aktivieren um das Bild mit anzuzeigen"
-
-#: classes/simple_links_admin.php:262
-msgid ""
-"Check this box display the Link's Image without the Link's title under it. "
-"If Show Image is not checked, this will do nothing"
-msgstr ""
-"Wird diese Option aktiviert, dann wird das Bild ohne den Titel darunter "
-"angezeigt. Dazu muss die Option \"Bild anzeigen\" aktiviert sein"
-
-#: classes/simple_links_admin.php:263
-msgid "The Size of Image to Show if the previous box is checked"
-msgstr "Bestimmt die Größe des Bildes, wenn die vorherige Option aktiviert ist"
-
-#: classes/simple_links_admin.php:264
-msgid "Display values from the Link's Additional Fields"
-msgstr "Zeige die Werte aus den Zusatzfeldern des Links an"
-
-#: classes/simple_links_admin.php:265
-msgid "Characters to display between fields and description - defaults to "
-msgstr ""
-"Zeichen, die zwischen Feldern und Beschreibung angezeigt werden sollen - "
-"standardmäßig auf "
-
-#: classes/simple_links_admin.php:294
+#: classes/simple_links_admin.php:219
 msgid "WordPress has deprecated the built in links functionality"
 msgstr "WordPress hat den eingebauten Linkmanager abgekündigt"
 
-#: classes/simple_links_admin.php:295
+#: classes/simple_links_admin.php:220
 msgid "These settings take care of cleaning up the old WordPress links"
 msgstr "Mit dieser Einstellungen werden die alten WordPress-Links importiert"
 
-#: classes/simple_links_admin.php:296
+#: classes/simple_links_admin.php:221
 msgid ""
 "By Checking \"Remove WordPress Built in Links\", the old Links menu will "
 "disappear along with the add new admin bar link"
@@ -731,7 +508,7 @@ msgstr ""
 "alte Links-Menü zusammen mit dem Link \"Neue Admin-Leiste hinzufügen\" "
 "ausgeblendet"
 
-#: classes/simple_links_admin.php:297
+#: classes/simple_links_admin.php:222
 msgid ""
 " Pressing the \"Import Links\" button will automatically copy the WordPress "
 "Links into Simple Links. Keep in mind if you press this button twice it will "
@@ -741,7 +518,7 @@ msgstr ""
 "vorhandene WordPress-Links automatisch in Simple-Links kopiert. ACHTUNG: Der "
 "Import wird nach jedem Klick erneut durchgeführt"
 
-#: classes/simple_links_admin.php:306
+#: classes/simple_links_admin.php:231
 msgid ""
 "You have the ability to add an unlimited number of additional fields to the "
 "links by click the \"Add Another\" button"
@@ -750,7 +527,7 @@ msgstr ""
 "(benutzerdefinierten) Feldern zu den Links hinzuzufügen, indem du auf \\"
 "\"Weiteres hinzufügen\\\" klickst"
 
-#: classes/simple_links_admin.php:307
+#: classes/simple_links_admin.php:232
 msgid ""
 "Once you save your changes, these fields will show up on a each link's "
 "editing page"
@@ -758,13 +535,13 @@ msgstr ""
 "Sobald die Änderungen gespeichert sind, werden diese Felder auf der "
 "Bearbeitungsseite jedes Links angezeigt"
 
-#: classes/simple_links_admin.php:308
+#: classes/simple_links_admin.php:233
 msgid ""
 "You will have the ability to select any of these fields to display using the "
 "Simple Links widgets"
 msgstr "Die Felder werden im Widget durch entsprechende Auswahl angezeigt"
 
-#: classes/simple_links_admin.php:309
+#: classes/simple_links_admin.php:234
 msgid ""
 "Each widget gets it's own list of ALL the additional fields, so you may "
 "display different fields in different widget areas"
@@ -772,7 +549,7 @@ msgstr ""
 "Jedes Widget arbeitet mit seiner eigenen Liste ALLER zusätzlicher Felder, so "
 "dass du in verschiedenen Widgets auch verschiedene Felder anzeigen kannst"
 
-#: classes/simple_links_admin.php:310
+#: classes/simple_links_admin.php:235
 msgid ""
 "These fields will also be available by using the shortcode. For instance, if "
 "you wanted to display a field titled \"author\" and a field titled \"notes\" "
@@ -781,15 +558,15 @@ msgstr ""
 "Die Felder stehen auch in Shortcodes zur Verfügung und werden mit dem "
 "Parameter fields=\"\" wie"
 
-#: classes/simple_links_admin.php:311
+#: classes/simple_links_admin.php:236
 msgid "author,notes"
 msgstr "instructions for Authors"
 
-#: classes/simple_links_admin.php:319
+#: classes/simple_links_admin.php:244
 msgid "This is where you decide how much access editors will have"
 msgstr "This is where you decide how much access Redakteure will have"
 
-#: classes/simple_links_admin.php:320
+#: classes/simple_links_admin.php:245
 msgid ""
 "\"Hide Link Ordering from Editors\", will prevent editors from using the "
 "drag and drop ordering page. They will still be able to change the order on "
@@ -799,7 +576,7 @@ msgstr ""
 "the drag and drop ordering page. They will still be able to change the order "
 "on the individual link editing Pages"
 
-#: classes/simple_links_admin.php:321
+#: classes/simple_links_admin.php:246
 msgid ""
 "\"Show Simple Link Settings to Editors\" will allow editors to access the "
 "screen you are on right now without restriction"
@@ -807,7 +584,7 @@ msgstr ""
 "\"Show Simple Link Settings to Redakteure \" will allow Redakteure to access "
 "the screen you are on right now without restriction"
 
-#: classes/simple_links_admin.php:347
+#: classes/simple_links_admin.php:251
 msgid ""
 "These Sections will give your a brief description of what each group of "
 "settings does. Feel free to start a thread on the support forums if you "
@@ -817,89 +594,84 @@ msgstr ""
 "bewirken. Bitte wende dich an unser Support-Forum, wenn du weitere Hilfe-"
 "Themen hier aufgeführt haben möchtest"
 
-#: classes/simple_links_admin.php:423
+#: classes/simple_links_admin.php:323
 msgid "Manage your Links here."
 msgstr "Links können hier verwaltet warden."
 
-#: classes/simple_links_admin.php:423
+#: classes/simple_links_admin.php:323
 msgid "Settings, categories, and ordering may also be found under this menu."
 msgstr ""
 "Einstellungen, Kategorien und Reihenfolge finden Sie ebenfalls unter diesem "
 "Menü."
 
-#: classes/simple_links_admin.php:444
+#: classes/simple_links_admin.php:344
 msgid "Simple Links Shortcode Form"
 msgstr "Einfaches Links-Shortcode-Formular"
 
-#: classes/simple_links_admin.php:445
+#: classes/simple_links_admin.php:345
 msgid "Use this icon to generate a Simple Links shortcode"
 msgstr "Verwende dieses Symbold zum Einfügen von Shortcodes"
 
-#: classes/simple_links_admin.php:514
+#: classes/simple_links_admin.php:414
 msgid "This will prevent editors from using the drag and drop ordering."
 msgstr "This will prevent Redakteure from using the drag and drop ordering."
 
-#: classes/simple_links_admin.php:515
+#: classes/simple_links_admin.php:415
 msgid "This will allow editors access to this Settings Page."
 msgstr "This will allow Redakteure access to this Settings Page."
 
-#: classes/simple_links_admin.php:516
+#: classes/simple_links_admin.php:416
 msgid "This will remove all traces of the Default WordPress Links."
 msgstr "Dies entfernt alle Spuren von der Standard-WordPress-Links."
 
-#: classes/simple_links_admin.php:517
+#: classes/simple_links_admin.php:417
 msgid "This will import all existing WordPress Links into the Simple Links"
 msgstr ""
 "Es werden alle vorhandenen WordPress-Links in das Plugin \"Simple Links\" "
 "importiert"
 
-#: classes/simple_links_admin.php:518
+#: classes/simple_links_admin.php:418
 msgid "This will be the link's target when a new link is created."
 msgstr "Dies ist das Ziel des Links, wenn ein neuer Link erstellt wird."
 
-#: classes/simple_links_admin.php:519
-msgid "Add Simple Links"
-msgstr "Fügen Sie einfache Links hinzu"
-
-#: classes/simple_links_admin.php:520
-msgid "Simple Links Shortcode"
-msgstr "Einfache Links Kurzwahl"
-
-#: classes/simple_links_admin.php:521
-msgid "Simple Links Shortcode Generator"
+#: classes/simple_links_admin.php:420
+msgid "Simple Links shortcode generator"
 msgstr "Einfacher Link-Shortcode-Generator"
 
-#: src/Widgets/Simple_Links.php:60
+#: simple-links.php:87 simple-links.php:105
+msgid " Simple Links PRO!"
+msgstr " Simple Links PRO!"
+
+#: simple-links.php:92 simple-links.php:110
+#, php-format
+msgid ""
+"Upgrade to %1$sSimple Links PRO%2$s for priority support, Gutenberg blocks, "
+"display by category, import/export of links, searchable links, and so much "
+"more!"
+msgstr ""
+"Upgrade auf %1$sSimple Links PRO%2$s für Priority Support, Anzeige nach "
+"Kategorie, Import / Export-Fähigkeit, Links in den Suchergebnissen und "
+"vieles mehr!"
+
+#: src/Widgets/Simple_Links.php:64
 msgid "Displays a list of your Simple Links with options."
 msgstr "Zeigt eine konfigurierbare Liste aller Simple Links an."
 
-#: src/Widgets/Simple_Links.php:128
-msgid ""
-"Be sure the see the Help section in the top right corner of the screen for "
-"questions!"
-msgstr ""
-"Weitere Informationen und Erläuterungen im Hilfe-Menü in der oberen rechten "
-"Ecke!"
+#: src/Widgets/Simple_Links.php:133
+msgid "Number of links"
+msgstr "Maximale Anzahl Links anzeigen"
 
-#: src/Widgets/Simple_Links.php:132
-msgid "Links Title"
-msgstr "Widget-Titel"
+#: src/Widgets/Simple_Links.php:186
+msgid "Link Images"
+msgstr "Link Bilder"
 
-#: src/Widgets/Simple_Links.php:237
-msgid "Remove Line Break Between Image and Link"
-msgstr "Zeilenumbruch zwischen Bild und Link entfernen"
+#: src/Widgets/Simple_Links.php:265
+msgid "Field separator"
+msgstr "Felder Trennzeichen"
 
-#: src/Widgets/Simple_Links.php:266
-msgid "Display Additional Fields"
-msgstr "Zusätzliche Felder anzeigen"
-
-#: src/Widgets/Simple_Links.php:272
-msgid "There have been no additional fields added."
-msgstr "Es wurden keine zusätzlichen Felder hinzugefügt."
-
-#: src/Widgets/Simple_Links.php:288
-msgid "HTML is allowed"
-msgstr "HTML ist erlaubt"
+#: src/Widgets/Simple_Links.php:307
+msgid "widget documentation"
+msgstr "Widget-Dokumentation"
 
 #. Plugin URI of the plugin/theme
 msgid "https://onpointplugins.com/simple-links/"
@@ -913,9 +685,236 @@ msgstr ""
 "Funktionen."
 
 #. Author of the plugin/theme
-msgid "Mat Lipe"
-msgstr "Mat Lipe"
+msgid "OnPoint Plugins"
+msgstr "OnPoint Plugins"
 
 #. Author URI of the plugin/theme
 msgid "https://onpointplugins.com/"
 msgstr "https://onpointplugins.com/"
+
+#, fuzzy, php-format
+#~| msgid ""
+#~| "Upgrade to %1$sSimple Links Pro%2$s for Priority Support, Display links "
+#~| "assigned to all categories, Display By Category, Import/Export Ability, "
+#~| "Links In Search Results, and so much more!"
+#~ msgid ""
+#~ "Upgrade to %1$sSimple Links Pro%2$s for priority support, Gutenberg "
+#~ "blocks, display by category, import/export of links, searchable links, "
+#~ "and so much more!"
+#~ msgstr ""
+#~ "Upgrade auf %1$sSimple Links Pro%2$s für Priority Support, Anzeige nach "
+#~ "Kategorie, Import / Export-Fähigkeit, Links in den Suchergebnissen und "
+#~ "vieles mehr!"
+
+#~ msgid "Checkout Simple Links Pro!"
+#~ msgstr "Einfache Links!"
+
+#~ msgid "This Will Generate the Shortcode to Display Simple Links"
+#~ msgstr "Dies generiert den Shortcode zum Anzeigen von Simple Links"
+
+#~ msgid "If no links match the options chosen, this will not display anything"
+#~ msgstr ""
+#~ "Wenn keine Links nach den gewählten Optionen gefunden werde, wird nichts "
+#~ "angezeigt"
+
+#~ msgid "Title (optional)"
+#~ msgstr "Titel (optional)"
+
+#~ msgid "Categories (optional)"
+#~ msgstr "Link-Kategorien (optional)"
+
+#~ msgid "All"
+#~ msgstr "Alle"
+
+#~ msgid "Display Image Without Title"
+#~ msgstr "Bild ohne Titel anzeigen"
+
+#~ msgid "Remove Line Break Between Image And Link"
+#~ msgstr "Zeilenumbruch zwischen Bild und Link entfernen"
+
+#~ msgid "Include Additional Fields"
+#~ msgstr "Zusätzliche Felder einschliessen"
+
+#~ msgid "There have been no additional fields added"
+#~ msgstr "Es wurden keine zusätzlichen Felder hinzugefügt"
+
+#~ msgid "HTML is allowed and will show up formatted in the editor"
+#~ msgstr "HTML ist erlaubt und wird im Editor formatiert angezeigt"
+
+#~ msgid "You Can add a Simple Links List  to content using the shortcode"
+#~ msgstr ""
+#~ "Das Einfügen der Links auf Beiträge/Seiten erfolgt mit dem Shortcode"
+
+#~ msgid ""
+#~ "Look for the puzzle button on the content editors for a form that "
+#~ "generates the shortcode for you"
+#~ msgstr ""
+#~ "Schaue im Editor nach der Puzzle-Schaltfläche, um einen Shortcode zu "
+#~ "generieren"
+
+#~ msgid ""
+#~ "You may use a few or many of the options as you would like. To use all "
+#~ "defaults just enter [simple-links]"
+#~ msgstr ""
+#~ "Sie können einige oder viele der Optionen verwenden, wie Sie möchten. Um "
+#~ "alle Standardeinstellungen zu verwenden, geben Sie einfach [simple-links] "
+#~ "ein"
+
+#~ msgid "Supported Options"
+#~ msgstr "Unterstützte Optionen"
+
+#~ msgid "Comma separated list of Link Category Names or Ids - defaults to all"
+#~ msgstr ""
+#~ "Mit Kommata getrennte Liste aller Link-Kategorie-Namen oder Ids - "
+#~ "Standardwert für alle"
+
+#~ msgid ""
+#~ "true of false - to include links from your selected categories' child "
+#~ "categories as well as links from your selected categories - defaults to "
+#~ "false"
+#~ msgstr ""
+#~ "true of false - um Links aus den untergeordneten Kategorien Ihrer "
+#~ "ausgewählten Kategorien sowie Links aus den ausgewählten Kategorien "
+#~ "einzuschließen, wird standardmäßig false verwendet"
+
+#~ msgid "title, random, or date - defaults to link order"
+#~ msgstr ""
+#~ "title, random oder date - standardmäßig wird die Reihenfolge verknüpft"
+
+#~ msgid "DESC or ASC - defaults to ASC"
+#~ msgstr "Absteigend (DESC) oder Aufsteigend (ASC) - Standard ist ASC"
+
+#~ msgid "Number of links to show"
+#~ msgstr "Anzahl der zu zeigenden Links"
+
+#~ msgid "true or false - to show the link's image or not"
+#~ msgstr "true oder false - Link-Bild anzeigen oder nicht"
+
+#~ msgid ""
+#~ "true or false - to show the link's image without the title under it. If "
+#~ "show image is not true this does nothing"
+#~ msgstr ""
+#~ "true/false - nur das Bild ohne den Titel darunter anzuzeigen. Die Option "
+#~ "\"Bild zum Link anzeigen\" muss auf \"true\" gesetzt sein"
+
+#~ msgid "Any size built into WordPress or your theme\" - default to thumbnail"
+#~ msgstr ""
+#~ "Jede Bildgrösse, die WordPress bzw. dein Theme unterstützt - Standard ist "
+#~ "Thumbnail"
+
+#~ msgid ""
+#~ "true or false - Remove Line Break Between Images and Links - default to "
+#~ "false"
+#~ msgstr ""
+#~ "true oder false - entfernen Linie brechen zwischen Bildern und Links - "
+#~ "Standard auf false"
+
+#~ msgid "Comma separated list of the Link's Additional Fields to show"
+#~ msgstr ""
+#~ "Es können mehrere Zusatzfelder getrennt durch ein Komma eingegeben werden"
+
+#~ msgid "true or false\" - to show the description - defaults to false"
+#~ msgstr "true oder false - Beschreibung anzeigen? - Standard ist False"
+
+#~ msgid ""
+#~ "true or false - to display paragraphs format to match the editor content "
+#~ "- defaults to false"
+#~ msgstr ""
+#~ "true oder false - Formatierung der Absätze entsprechend dem Editor-Inhalt "
+#~ "anzeigen? Standard ist False"
+
+#~ msgid ""
+#~ "Any characters to display between fields and description - defaults to "
+#~ msgstr ""
+#~ "Alle Zeichen die zwischen den Feldern und der Beschreibung angezeigt "
+#~ "werden - Standardmäßig "
+
+#~ msgid "An optional id for the list"
+#~ msgstr "Eine optionale Id für die ausgegebene Liste"
+
+#~ msgid ""
+#~ "You May Add as Many Simple Links Widgets as You Would Like to Your Widget "
+#~ "Areas"
+#~ msgstr ""
+#~ "Füge so viele Simple Links Widgets zu deinem Widget-Bereich hinzu, wie du "
+#~ "möchtest"
+
+#~ msgid "Widget Options"
+#~ msgstr "Widget-Optionen"
+
+#~ msgid "Select with link categories to pull from"
+#~ msgstr "Wähle, aus welchen Link-Kategorien herausgezogen werden soll"
+
+#~ msgid "Include Child Categories Of Selected Categories"
+#~ msgstr "Unterkategorien der gewählten Kategorien einbeziehen"
+
+#~ msgid ""
+#~ "If checked, links from your selected categories' child categories will "
+#~ "display as well as links from your selected categories"
+#~ msgstr ""
+#~ "Wenn diese Option aktiviert ist, werden Links aus den untergeordneten, "
+#~ "ausgewählten sowie Links aus den ausgewählten Kategorien angezeigt"
+
+#~ msgid "Order Links By"
+#~ msgstr "Links sortieren nach"
+
+#~ msgid "The Order in Which the Links will Display - defaults to link order"
+#~ msgstr ""
+#~ "Die Reihenfolge, in der die Links angezeigt werden - Standard ist die "
+#~ "voreingestellte Reihenfolge"
+
+#~ msgid "The Order in which the links will Display"
+#~ msgstr "Die Reihenfolge, in der die Links angezeigt werden"
+
+#~ msgid "Display the Link's Description"
+#~ msgstr "Zeige die Linkbeschreibungen an"
+
+#~ msgid "Show Description Formatting"
+#~ msgstr "Zeige Formatierung der Beschreibung"
+
+#~ msgid "Display paragraphs to match the editor content"
+#~ msgstr "Absätze entsprechend dem Editor-Inhalt anzeigen"
+
+#~ msgid "Check the box to display the Link's Image"
+#~ msgstr "Aktivieren um das Bild mit anzuzeigen"
+
+#~ msgid ""
+#~ "Check this box display the Link's Image without the Link's title under "
+#~ "it. If Show Image is not checked, this will do nothing"
+#~ msgstr ""
+#~ "Wird diese Option aktiviert, dann wird das Bild ohne den Titel darunter "
+#~ "angezeigt. Dazu muss die Option \"Bild anzeigen\" aktiviert sein"
+
+#~ msgid "The Size of Image to Show if the previous box is checked"
+#~ msgstr ""
+#~ "Bestimmt die Größe des Bildes, wenn die vorherige Option aktiviert ist"
+
+#~ msgid "Display values from the Link's Additional Fields"
+#~ msgstr "Zeige die Werte aus den Zusatzfeldern des Links an"
+
+#~ msgid "Characters to display between fields and description - defaults to "
+#~ msgstr ""
+#~ "Zeichen, die zwischen Feldern und Beschreibung angezeigt werden sollen - "
+#~ "standardmäßig auf "
+
+#~ msgid "Add Simple Links"
+#~ msgstr "Fügen Sie einfache Links hinzu"
+
+#~ msgid ""
+#~ "Be sure the see the Help section in the top right corner of the screen "
+#~ "for questions!"
+#~ msgstr ""
+#~ "Weitere Informationen und Erläuterungen im Hilfe-Menü in der oberen "
+#~ "rechten Ecke!"
+
+#~ msgid "Display Additional Fields"
+#~ msgstr "Zusätzliche Felder anzeigen"
+
+#~ msgid "There have been no additional fields added."
+#~ msgstr "Es wurden keine zusätzlichen Felder hinzugefügt."
+
+#~ msgid "HTML is allowed"
+#~ msgstr "HTML ist erlaubt"
+
+#~ msgid "Mat Lipe"
+#~ msgstr "Mat Lipe"

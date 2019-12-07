@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Simple Links\n"
-"POT-Creation-Date: 2019-09-10 11:05-0400\n"
+"POT-Creation-Date: 2019-12-07 13:28-0500\n"
 "PO-Revision-Date: 2017-12-04 12:58-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.3\n"
+"X-Generator: Poedit 2.2.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: simple-links.php\n"
@@ -48,15 +48,15 @@ msgstr ""
 msgid "Follow Me"
 msgstr ""
 
-#: admin-views/link-target.php:5 classes/Simple_Links_Settings.php:163
+#: admin-views/link-target.php:5 classes/Simple_Links_Settings.php:162
 msgid "new window or tab"
 msgstr ""
 
-#: admin-views/link-target.php:12 classes/Simple_Links_Settings.php:172
+#: admin-views/link-target.php:12 classes/Simple_Links_Settings.php:171
 msgid "current window or tab, with no frames"
 msgstr ""
 
-#: admin-views/link-target.php:19 classes/Simple_Links_Settings.php:180
+#: admin-views/link-target.php:19 classes/Simple_Links_Settings.php:179
 msgid "same window or tab"
 msgstr ""
 
@@ -68,17 +68,17 @@ msgstr ""
 msgid "rel to this link"
 msgstr ""
 
-#: admin-views/pro-notice.php:3
-msgid "Checkout Simple Links Pro!"
+#: admin-views/pro-notice.php:3 simple-links.php:87 simple-links.php:105
+msgid " Simple Links PRO!"
 msgstr ""
 
 #. translators: <a> link created by placeholders
 #: admin-views/pro-notice.php:8
 #, php-format
 msgid ""
-"Upgrade to %1$sSimple Links Pro%2$s for Priority Support, Display links "
-"assigned to all categories, Display By Category, Import/Export Ability, "
-"Links In Search Results, and so much more!"
+"Upgrade to %1$sSimple Links Pro%2$s for priority support, Gutenberg blocks, "
+"display by category, import/export of links, searchable links, and so much "
+"more!"
 msgstr ""
 
 #: admin-views/settings-wordpress-links.php:1
@@ -97,106 +97,97 @@ msgstr ""
 msgid "Import Links"
 msgstr ""
 
-#: admin-views/shortcode-form.php:54
-msgid "This Will Generate the Shortcode to Display Simple Links"
+#: admin-views/shortcode-form.php:15 classes/simple_links_admin.php:419
+msgid "Create [simple-links] shortcode"
 msgstr ""
 
-#: admin-views/shortcode-form.php:57
-msgid "If no links match the options chosen, this will not display anything"
+#: admin-views/shortcode-form.php:53 classes/simple_links.php:78
+#: src/Widgets/Simple_Links.php:127
+msgid "Title"
 msgstr ""
 
-#: admin-views/shortcode-form.php:61
-msgid "Title (optional)"
+#: admin-views/shortcode-form.php:59
+msgid "Categories"
 msgstr ""
 
-#: admin-views/shortcode-form.php:68 src/Widgets/Simple_Links.php:160
-msgid "Categories (optional)"
-msgstr ""
-
-#: admin-views/shortcode-form.php:82 src/Widgets/Simple_Links.php:176
+#: admin-views/shortcode-form.php:73 src/Widgets/Simple_Links.php:288
 msgid "No link categories have been created yet."
 msgstr ""
 
-#: admin-views/shortcode-form.php:90 src/Widgets/Simple_Links.php:183
+#: admin-views/shortcode-form.php:81 src/Widgets/Simple_Links.php:295
 msgid "Include links assigned to child categories of selected categories."
 msgstr ""
 
-#: admin-views/shortcode-form.php:103 src/Widgets/Simple_Links.php:194
+#: admin-views/shortcode-form.php:94
 msgid "Number Of Links"
 msgstr ""
 
-#: admin-views/shortcode-form.php:105
-msgid "All"
+#: admin-views/shortcode-form.php:96
+msgid "- all -"
 msgstr ""
 
-#: admin-views/shortcode-form.php:117
-msgid "Order By"
+#: admin-views/shortcode-form.php:108 src/Widgets/Simple_Links.php:146
+msgid "Order by"
 msgstr ""
 
-#: admin-views/shortcode-form.php:119
+#: admin-views/shortcode-form.php:110
 msgid "- select an order by - "
 msgstr ""
 
-#: admin-views/shortcode-form.php:128 classes/simple_links_admin.php:257
-#: src/Widgets/Simple_Links.php:145
+#: admin-views/shortcode-form.php:119 src/Widgets/Simple_Links.php:155
 msgid "Order"
 msgstr ""
 
-#: admin-views/shortcode-form.php:130
+#: admin-views/shortcode-form.php:121
 msgid "- select an order -"
 msgstr ""
 
-#: admin-views/shortcode-form.php:131 src/Widgets/Simple_Links.php:149
+#: admin-views/shortcode-form.php:122 src/Widgets/Simple_Links.php:159
 msgid "Ascending"
 msgstr ""
 
-#: admin-views/shortcode-form.php:132 src/Widgets/Simple_Links.php:152
+#: admin-views/shortcode-form.php:123 src/Widgets/Simple_Links.php:162
 msgid "Descending"
 msgstr ""
 
-#: admin-views/shortcode-form.php:140 classes/simple_links_admin.php:258
-#: src/Widgets/Simple_Links.php:205
-msgid "Show Description"
+#: admin-views/shortcode-form.php:131 src/Widgets/Simple_Links.php:167
+msgid "Show description"
 msgstr ""
 
-#: admin-views/shortcode-form.php:146 src/Widgets/Simple_Links.php:215
-msgid "Include Description Paragraph Format"
+#: admin-views/shortcode-form.php:137 src/Widgets/Simple_Links.php:176
+msgid "Display description as paragraphs"
 msgstr ""
 
-#: admin-views/shortcode-form.php:156 classes/simple_links_admin.php:261
-#: src/Widgets/Simple_Links.php:227
-msgid "Show Image"
+#: admin-views/shortcode-form.php:148 src/Widgets/Simple_Links.php:190
+msgid "Show images"
 msgstr ""
 
-#: admin-views/shortcode-form.php:163 classes/simple_links_admin.php:262
-#: src/Widgets/Simple_Links.php:245
-msgid "Display Image Without Title"
+#: admin-views/shortcode-form.php:157 src/Widgets/Simple_Links.php:212
+msgid "Hide link title"
 msgstr ""
 
-#: admin-views/shortcode-form.php:172 classes/simple_links_admin.php:263
-#: src/Widgets/Simple_Links.php:251
-msgid "Image Size"
+#: admin-views/shortcode-form.php:168 src/Widgets/Simple_Links.php:199
+msgid "Image size"
 msgstr ""
 
-#: admin-views/shortcode-form.php:184
-msgid "Remove Line Break Between Image And Link"
+#: admin-views/shortcode-form.php:180 src/Widgets/Simple_Links.php:223
+msgid "Remove line break between image and link"
 msgstr ""
 
-#: admin-views/shortcode-form.php:192 classes/simple_links_admin.php:264
-msgid "Include Additional Fields"
+#: admin-views/shortcode-form.php:189
+msgid "Additional fields"
 msgstr ""
 
-#: admin-views/shortcode-form.php:196
-msgid "There have been no additional fields added"
+#: admin-views/shortcode-form.php:194 src/Widgets/Simple_Links.php:236
+msgid "No additional fields have been added to settings."
 msgstr ""
 
-#: admin-views/shortcode-form.php:211 classes/simple_links_admin.php:265
-#: src/Widgets/Simple_Links.php:286
+#: admin-views/shortcode-form.php:207
 msgid "Field Separator"
 msgstr ""
 
-#: admin-views/shortcode-form.php:214
-msgid "HTML is allowed and will show up formatted in the editor"
+#: admin-views/shortcode-form.php:218
+msgid "shortcode documentation"
 msgstr ""
 
 #: classes/Simple_Link.php:39
@@ -296,7 +287,8 @@ msgstr ""
 msgid "Link Category"
 msgstr ""
 
-#: classes/Simple_Links_Categories.php:152 classes/simple_links_admin.php:135
+#: classes/Simple_Links_Categories.php:152 classes/simple_links_admin.php:133
+#: src/Widgets/Simple_Links.php:272
 msgid "Link Categories"
 msgstr ""
 
@@ -309,54 +301,54 @@ msgstr ""
 msgid "Seperate %s with commas"
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:44 classes/simple_links_admin.php:134
+#: classes/Simple_Links_Meta_Boxes.php:43 classes/simple_links_admin.php:132
 msgid "Web Address"
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:45
+#: classes/Simple_Links_Meta_Boxes.php:44
 msgid "Description"
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:46
-#: classes/Simple_Links_Meta_Boxes.php:177
+#: classes/Simple_Links_Meta_Boxes.php:45
+#: classes/Simple_Links_Meta_Boxes.php:184
 msgid "Link Target"
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:47
-#: classes/Simple_Links_Meta_Boxes.php:183 classes/Simple_Links_Settings.php:98
-#: classes/simple_links_admin.php:305
+#: classes/Simple_Links_Meta_Boxes.php:46
+#: classes/Simple_Links_Meta_Boxes.php:197 classes/Simple_Links_Settings.php:98
+#: classes/simple_links_admin.php:230 src/Widgets/Simple_Links.php:231
 msgid "Additional Fields"
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:80
+#: classes/Simple_Links_Meta_Boxes.php:79
 msgid "Example"
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:80
+#: classes/Simple_Links_Meta_Boxes.php:79
 msgid "DO NOT forget the"
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:81
+#: classes/Simple_Links_Meta_Boxes.php:80
 msgid ""
 "This will be shown when someone hovers over the link, or optionally below "
 "the link"
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:82
+#: classes/Simple_Links_Meta_Boxes.php:81
 msgid "Choose the target frame for your link"
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:83
+#: classes/Simple_Links_Meta_Boxes.php:82
 msgid ""
 "Values entered in these fields will be available for shortcodes and widgets"
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:248
+#: classes/Simple_Links_Meta_Boxes.php:271
 msgid ""
 "You may add additional fields which will be available for all links in the "
 msgstr ""
 
-#: classes/Simple_Links_Meta_Boxes.php:250
+#: classes/Simple_Links_Meta_Boxes.php:273
 msgid "settings"
 msgstr ""
 
@@ -368,7 +360,7 @@ msgstr ""
 msgid "WordPress Links"
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:116 classes/simple_links_admin.php:318
+#: classes/Simple_Links_Settings.php:116 classes/simple_links_admin.php:243
 msgid "Permissions"
 msgstr ""
 
@@ -376,46 +368,46 @@ msgstr ""
 msgid "Defaults"
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:152
+#: classes/Simple_Links_Settings.php:151
 msgid "These settings will effect this plugins defaults"
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:156
+#: classes/Simple_Links_Settings.php:155
 msgid "Default Link Target"
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:198
+#: classes/Simple_Links_Settings.php:197
 msgid "These settings will effect access to this plugins features"
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:200
+#: classes/Simple_Links_Settings.php:199
 msgid "Hide Link Ordering from editors"
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:205
+#: classes/Simple_Links_Settings.php:204
 msgid "Show Simple Link Settings to editors"
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:227
+#: classes/Simple_Links_Settings.php:226
 msgid ""
 "These fields will be available on all link's edit screen, widgets, and "
 "shortcodes."
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:235 classes/Simple_Links_Settings.php:246
-#: classes/Simple_Links_Settings.php:254
+#: classes/Simple_Links_Settings.php:234 classes/Simple_Links_Settings.php:245
+#: classes/Simple_Links_Settings.php:253
 msgid "Field Name"
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:263
+#: classes/Simple_Links_Settings.php:262
 msgid "Add Another"
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:286
+#: classes/Simple_Links_Settings.php:284
 msgid "Simple Links Settings"
 msgstr ""
 
-#: classes/Simple_Links_Settings.php:287
+#: classes/Simple_Links_Settings.php:285
 msgid "Be sure to see the help menu for descriptions"
 msgstr ""
 
@@ -423,392 +415,218 @@ msgstr ""
 msgid "Link Ordering"
 msgstr ""
 
-#: classes/simple_links.php:55
+#: classes/simple_links.php:54
 msgid "Non Existent method in simple_links class"
 msgstr ""
 
-#: classes/simple_links.php:76
+#: classes/simple_links.php:75
 msgid "Link Order"
 msgstr ""
 
-#: classes/simple_links.php:79
-msgid "Title"
-msgstr ""
-
-#: classes/simple_links.php:82
+#: classes/simple_links.php:81
 msgid "Random"
 msgstr ""
 
-#: classes/simple_links.php:85
+#: classes/simple_links.php:84
 msgid "Date"
 msgstr ""
 
-#: classes/simple_links_admin.php:74 classes/simple_links_admin.php:77
+#: classes/simple_links_admin.php:72 classes/simple_links_admin.php:75
 msgid "Link updated."
 msgstr ""
 
-#: classes/simple_links_admin.php:75
+#: classes/simple_links_admin.php:73
 msgid "Custom field updated."
 msgstr ""
 
-#: classes/simple_links_admin.php:76
+#: classes/simple_links_admin.php:74
 msgid "Custom field deleted."
 msgstr ""
 
 #. translators: %s: date and time of the revision
-#: classes/simple_links_admin.php:79
+#: classes/simple_links_admin.php:77
 #, php-format
 msgid "Link restored to revision from %s."
 msgstr ""
 
-#: classes/simple_links_admin.php:80
+#: classes/simple_links_admin.php:78
 msgid "Link published."
 msgstr ""
 
-#: classes/simple_links_admin.php:81
+#: classes/simple_links_admin.php:79
 msgid "Link saved."
 msgstr ""
 
-#: classes/simple_links_admin.php:82
+#: classes/simple_links_admin.php:80
 msgid "Link submitted."
 msgstr ""
 
-#: classes/simple_links_admin.php:84
+#: classes/simple_links_admin.php:82
 #, php-format
 msgid "Link scheduled for: <strong>%1$s</strong>."
 msgstr ""
 
-#: classes/simple_links_admin.php:84
+#: classes/simple_links_admin.php:82
 msgid "M j, Y @ G:i"
 msgstr ""
 
-#: classes/simple_links_admin.php:85
+#: classes/simple_links_admin.php:83
 msgid "Link draft updated."
 msgstr ""
 
 #. translators: Taxonomy label of Simple Links Category
-#: classes/simple_links_admin.php:191
+#: classes/simple_links_admin.php:189
 #, php-format
 msgid "Show All %s"
 msgstr ""
 
-#: classes/simple_links_admin.php:220
-msgid "You Can add a Simple Links List  to content using the shortcode"
-msgstr ""
-
-#: classes/simple_links_admin.php:222
-msgid ""
-"Look for the puzzle button on the content editors for a form that generates "
-"the shortcode for you"
-msgstr ""
-
-#: classes/simple_links_admin.php:225
-msgid ""
-"You may use a few or many of the options as you would like. To use all "
-"defaults just enter [simple-links]"
-msgstr ""
-
-#: classes/simple_links_admin.php:227
-msgid "Supported Options"
-msgstr ""
-
-#: classes/simple_links_admin.php:228
-msgid "Comma separated list of Link Category Names or Ids - defaults to all"
-msgstr ""
-
-#: classes/simple_links_admin.php:229
-msgid ""
-"true of false - to include links from your selected categories' child "
-"categories as well as links from your selected categories - defaults to false"
-msgstr ""
-
-#: classes/simple_links_admin.php:230
-msgid "title, random, or date - defaults to link order"
-msgstr ""
-
-#: classes/simple_links_admin.php:231
-msgid "DESC or ASC - defaults to ASC"
-msgstr ""
-
-#: classes/simple_links_admin.php:232 classes/simple_links_admin.php:260
-msgid "Number of links to show"
-msgstr ""
-
-#: classes/simple_links_admin.php:233
-msgid "true or false - to show the link's image or not"
-msgstr ""
-
-#: classes/simple_links_admin.php:234
-msgid ""
-"true or false - to show the link's image without the title under it. If show "
-"image is not true this does nothing"
-msgstr ""
-
-#: classes/simple_links_admin.php:235
-msgid "Any size built into WordPress or your theme\" - default to thumbnail"
-msgstr ""
-
-#: classes/simple_links_admin.php:236
-msgid ""
-"true or false - Remove Line Break Between Images and Links - default to false"
-msgstr ""
-
-#: classes/simple_links_admin.php:237
-msgid "Comma separated list of the Link's Additional Fields to show"
-msgstr ""
-
-#: classes/simple_links_admin.php:238
-msgid "true or false\" - to show the description - defaults to false"
-msgstr ""
-
-#: classes/simple_links_admin.php:239
-msgid ""
-"true or false - to display paragraphs format to match the editor content - "
-"defaults to false"
-msgstr ""
-
-#: classes/simple_links_admin.php:240
-msgid "Any characters to display between fields and description - defaults to "
-msgstr ""
-
-#: classes/simple_links_admin.php:241
-msgid "An optional id for the list"
-msgstr ""
-
-#: classes/simple_links_admin.php:252
-msgid ""
-"You May Add as Many Simple Links Widgets as You Would Like to Your Widget "
-"Areas"
-msgstr ""
-
-#: classes/simple_links_admin.php:253
-msgid "Widget Options"
-msgstr ""
-
-#: classes/simple_links_admin.php:254
-msgid "Categories"
-msgstr ""
-
-#: classes/simple_links_admin.php:254
-msgid "Select with link categories to pull from"
-msgstr ""
-
-#: classes/simple_links_admin.php:255
-msgid "Include Child Categories Of Selected Categories"
-msgstr ""
-
-#: classes/simple_links_admin.php:255
-msgid ""
-"If checked, links from your selected categories' child categories will "
-"display as well as links from your selected categories"
-msgstr ""
-
-#: classes/simple_links_admin.php:256 src/Widgets/Simple_Links.php:136
-msgid "Order Links By"
-msgstr ""
-
-#: classes/simple_links_admin.php:256
-msgid "The Order in Which the Links will Display - defaults to link order"
-msgstr ""
-
-#: classes/simple_links_admin.php:257
-msgid "The Order in which the links will Display"
-msgstr ""
-
-#: classes/simple_links_admin.php:258
-msgid "Display the Link's Description"
-msgstr ""
-
-#: classes/simple_links_admin.php:259
-msgid "Show Description Formatting"
-msgstr ""
-
-#: classes/simple_links_admin.php:259
-msgid "Display paragraphs to match the editor content"
-msgstr ""
-
-#: classes/simple_links_admin.php:260
-msgid "Number of LInks"
-msgstr ""
-
-#: classes/simple_links_admin.php:261
-msgid "Check the box to display the Link's Image"
-msgstr ""
-
-#: classes/simple_links_admin.php:262
-msgid ""
-"Check this box display the Link's Image without the Link's title under it. "
-"If Show Image is not checked, this will do nothing"
-msgstr ""
-
-#: classes/simple_links_admin.php:263
-msgid "The Size of Image to Show if the previous box is checked"
-msgstr ""
-
-#: classes/simple_links_admin.php:264
-msgid "Display values from the Link's Additional Fields"
-msgstr ""
-
-#: classes/simple_links_admin.php:265
-msgid "Characters to display between fields and description - defaults to "
-msgstr ""
-
-#: classes/simple_links_admin.php:294
+#: classes/simple_links_admin.php:219
 msgid "WordPress has deprecated the built in links functionality"
 msgstr ""
 
-#: classes/simple_links_admin.php:295
+#: classes/simple_links_admin.php:220
 msgid "These settings take care of cleaning up the old WordPress links"
 msgstr ""
 
-#: classes/simple_links_admin.php:296
+#: classes/simple_links_admin.php:221
 msgid ""
 "By Checking \"Remove WordPress Built in Links\", the old Links menu will "
 "disappear along with the add new admin bar link"
 msgstr ""
 
-#: classes/simple_links_admin.php:297
+#: classes/simple_links_admin.php:222
 msgid ""
 " Pressing the \"Import Links\" button will automatically copy the WordPress "
 "Links into Simple Links. Keep in mind if you press this button twice it will "
 "copy the links twice and you will have duplicates"
 msgstr ""
 
-#: classes/simple_links_admin.php:306
+#: classes/simple_links_admin.php:231
 msgid ""
 "You have the ability to add an unlimited number of additional fields to the "
 "links by click the \"Add Another\" button"
 msgstr ""
 
-#: classes/simple_links_admin.php:307
+#: classes/simple_links_admin.php:232
 msgid ""
 "Once you save your changes, these fields will show up on a each link's "
 "editing page"
 msgstr ""
 
-#: classes/simple_links_admin.php:308
+#: classes/simple_links_admin.php:233
 msgid ""
 "You will have the ability to select any of these fields to display using the "
 "Simple Links widgets"
 msgstr ""
 
-#: classes/simple_links_admin.php:309
+#: classes/simple_links_admin.php:234
 msgid ""
 "Each widget gets it's own list of ALL the additional fields, so you may "
 "display different fields in different widget areas"
 msgstr ""
 
-#: classes/simple_links_admin.php:310
+#: classes/simple_links_admin.php:235
 msgid ""
 "These fields will also be available by using the shortcode. For instance, if "
 "you wanted to display a field titled \"author\" and a field titled \"notes\" "
 "you shortcode would look something like this"
 msgstr ""
 
-#: classes/simple_links_admin.php:311
+#: classes/simple_links_admin.php:236
 msgid "author,notes"
 msgstr ""
 
-#: classes/simple_links_admin.php:319
+#: classes/simple_links_admin.php:244
 msgid "This is where you decide how much access editors will have"
 msgstr ""
 
-#: classes/simple_links_admin.php:320
+#: classes/simple_links_admin.php:245
 msgid ""
 "\"Hide Link Ordering from Editors\", will prevent editors from using the "
 "drag and drop ordering page. They will still be able to change the order on "
 "the individual link editing Pages"
 msgstr ""
 
-#: classes/simple_links_admin.php:321
+#: classes/simple_links_admin.php:246
 msgid ""
 "\"Show Simple Link Settings to Editors\" will allow editors to access the "
 "screen you are on right now without restriction"
 msgstr ""
 
-#: classes/simple_links_admin.php:347
+#: classes/simple_links_admin.php:251
 msgid ""
 "These Sections will give your a brief description of what each group of "
 "settings does. Feel free to start a thread on the support forums if you "
 "would like additional help items covered in this section"
 msgstr ""
 
-#: classes/simple_links_admin.php:423
+#: classes/simple_links_admin.php:323
 msgid "Manage your Links here."
 msgstr ""
 
-#: classes/simple_links_admin.php:423
+#: classes/simple_links_admin.php:323
 msgid "Settings, categories, and ordering may also be found under this menu."
 msgstr ""
 
-#: classes/simple_links_admin.php:444
+#: classes/simple_links_admin.php:344
 msgid "Simple Links Shortcode Form"
 msgstr ""
 
-#: classes/simple_links_admin.php:445
+#: classes/simple_links_admin.php:345
 msgid "Use this icon to generate a Simple Links shortcode"
 msgstr ""
 
-#: classes/simple_links_admin.php:514
+#: classes/simple_links_admin.php:414
 msgid "This will prevent editors from using the drag and drop ordering."
 msgstr ""
 
-#: classes/simple_links_admin.php:515
+#: classes/simple_links_admin.php:415
 msgid "This will allow editors access to this Settings Page."
 msgstr ""
 
-#: classes/simple_links_admin.php:516
+#: classes/simple_links_admin.php:416
 msgid "This will remove all traces of the Default WordPress Links."
 msgstr ""
 
-#: classes/simple_links_admin.php:517
+#: classes/simple_links_admin.php:417
 msgid "This will import all existing WordPress Links into the Simple Links"
 msgstr ""
 
-#: classes/simple_links_admin.php:518
+#: classes/simple_links_admin.php:418
 msgid "This will be the link's target when a new link is created."
 msgstr ""
 
-#: classes/simple_links_admin.php:519
-msgid "Add Simple Links"
+#: classes/simple_links_admin.php:420
+msgid "Simple Links shortcode generator"
 msgstr ""
 
-#: classes/simple_links_admin.php:520
-msgid "Simple Links Shortcode"
+#. translators: <a> link created by placeholders
+#: simple-links.php:92 simple-links.php:110
+#, php-format
+msgid ""
+"Upgrade to %1$sSimple Links PRO%2$s for priority support, Gutenberg blocks, "
+"display by category, import/export of links, searchable links, and so much "
+"more!"
 msgstr ""
 
-#: classes/simple_links_admin.php:521
-msgid "Simple Links Shortcode Generator"
-msgstr ""
-
-#: src/Widgets/Simple_Links.php:60
+#: src/Widgets/Simple_Links.php:64
 msgid "Displays a list of your Simple Links with options."
 msgstr ""
 
-#: src/Widgets/Simple_Links.php:128
-msgid ""
-"Be sure the see the Help section in the top right corner of the screen for "
-"questions!"
+#: src/Widgets/Simple_Links.php:133
+msgid "Number of links"
 msgstr ""
 
-#: src/Widgets/Simple_Links.php:132
-msgid "Links Title"
+#: src/Widgets/Simple_Links.php:186
+msgid "Link Images"
 msgstr ""
 
-#: src/Widgets/Simple_Links.php:237
-msgid "Remove Line Break Between Image and Link"
+#: src/Widgets/Simple_Links.php:265
+msgid "Field separator"
 msgstr ""
 
-#: src/Widgets/Simple_Links.php:266
-msgid "Display Additional Fields"
-msgstr ""
-
-#: src/Widgets/Simple_Links.php:272
-msgid "There have been no additional fields added."
-msgstr ""
-
-#: src/Widgets/Simple_Links.php:288
-msgid "HTML is allowed"
+#: src/Widgets/Simple_Links.php:307
+msgid "widget documentation"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
@@ -821,7 +639,7 @@ msgid ""
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Mat Lipe"
+msgid "OnPoint Plugins"
 msgstr ""
 
 #. Author URI of the plugin/theme
