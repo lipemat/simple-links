@@ -105,6 +105,10 @@ li input[type='checkbox'] {
 	width  : 20px;
 }
 
+input[type="button"] {
+	color: #fff !important;
+}
+
 a {
 	text-decoration: underline !important;
 }
