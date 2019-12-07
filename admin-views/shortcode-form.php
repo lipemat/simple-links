@@ -8,7 +8,9 @@
  *
  * @author OnPoint Plugins <support@onpointplugins.com>
  *
+ * @package simple-links-pro
  */
+
 ?>
 <title><?php esc_html_e( 'Create [simple-links] shortcode', 'simple-links' ); ?></title>
 <?php
@@ -45,7 +47,6 @@ wp_head();
 	}
 	?>
 </style>
-</head>
 
 <body>
 <div class="wrap">
@@ -92,10 +93,10 @@ wp_head();
 	<p>
 		<label><?php esc_html_e( 'Number Of Links', 'simple-links' ); ?>:
 			<select id="count">
-				<option value=""><?php esc_html_e( 'All', 'simple-links' ); ?></option>
+				<option value=""><?php esc_html_e( '- all -', 'simple-links' ); ?></option>
 				<?php
 				for ( $i = 1; $i < 200; $i ++ ) {
-					printf( '<option value="%s">%s</option>', $i, $i );
+					printf( '<option value="%s">%s</option>', esc_attr( $i ), esc_html( $i ) );
 				}
 				?>
 			</select>
@@ -134,9 +135,10 @@ wp_head();
 
 	<p>
 		<label><?php esc_html_e( 'Display description as paragraphs', 'simple-links' ); ?>
-			<input type="checkbox"
-				   id="description-formatting"
-				   value="true"/>
+			<input
+				type="checkbox"
+				id="description-formatting"
+				value="true"/>
 		</label>
 	</p>
 
@@ -144,15 +146,19 @@ wp_head();
 
 	<p>
 		<label><?php esc_html_e( 'Show images', 'simple-links' ); ?>
-			<input type="checkbox" id="show_image"
-				   value="true"/>
+			<input
+				type="checkbox"
+				id="show_image"
+				value="true"/>
 		</label>
 	</p>
 
 	<p>
 		<label><?php esc_html_e( 'Hide link title', 'simple-links' ); ?>
-			<input type="checkbox" id="show_image_only"
-				   value="true"/>
+			<input
+				type="checkbox"
+				id="show_image_only"
+				value="true"/>
 		</label>
 
 	</p>
@@ -172,9 +178,10 @@ wp_head();
 
 	<p>
 		<label><?php esc_html_e( 'Remove line break between image and link', 'simple-links' ); ?>
-			<input type="checkbox"
-				   id="line_break"
-				   value="1"/>
+			<input
+				type="checkbox"
+				id="line_break"
+				value="1"/>
 		</label>
 	</p>
 
