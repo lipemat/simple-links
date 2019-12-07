@@ -21,6 +21,9 @@
     <rule ref="PHPCompatibility"/>
 
 	<rule ref="WordPress">
+		<exclude name="PEAR.Functions.FunctionCallSignature" />
+		<exclude name="PEAR.NamingConventions.ValidClassName" />
+
 		<exclude name="WordPress.Files.FileName.InvalidClassFileName" />
 		<exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
 		<exclude name="WordPress.Arrays.MultipleStatementAlignment.LongIndexSpaceBeforeDoubleArrow" />

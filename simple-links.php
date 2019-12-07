@@ -77,20 +77,41 @@ function simple_links_load() {
 
 add_action( 'plugins_loaded', 'simple_links_load' );
 
-
-add_action( 'simple_links_widget_form', 'simple_links_pro_notice' );
-add_action( 'simple_links_shortcode_form', 'simple_links_pro_notice' );
-/**
- * Add notice about pro version
- *
- * @return void
- */
-function simple_links_pro_notice() {
+add_action( 'simple_links_widget_form', function () {
 	if ( defined( 'SIMPLE_LINKS_PRO_VERSION' ) ) {
 		return;
 	}
-	require SIMPLE_LINKS_DIR . 'admin-views/pro-notice.php';
-}
+	?>
+	<hr/>
+	<h3>
+		<?php esc_html_e( ' Simple Links PRO!', 'simple-links' ); ?>
+	</h3>
+	<p>
+		<?php
+		/* translators: <a> link created by placeholders */
+		printf( esc_html__( 'Upgrade to %1$sSimple Links PRO%2$s for priority support, Gutenberg blocks, display by category, import/export of links, searchable links, and so much more!', 'simple-links' ), '<a target="blank" href="https://onpointplugins.com/product/simple-links-pro/">', '</a>' );
+		?>
+	<p>
+	<?php
 
+} );
+add_action( 'simple_links_shortcode_form', function () {
+	if ( defined( 'SIMPLE_LINKS_PRO_VERSION' ) ) {
+		return;
+	}
+	?>
+	<fieldset>
+		<legend>
+			<?php esc_html_e( ' Simple Links PRO!', 'simple-links' ); ?>
+		</legend>
+	<p>
+		<?php
+		/* translators: <a> link created by placeholders */
+		printf( esc_html__( 'Upgrade to %1$sSimple Links PRO%2$s for priority support, Gutenberg blocks, display by category, import/export of links, searchable links, and so much more!', 'simple-links' ), '<a target="blank" href="https://onpointplugins.com/product/simple-links-pro/">', '</a>' );
+		?>
+	</p>
+	</fieldset>
+	<?php
+} );
 
 

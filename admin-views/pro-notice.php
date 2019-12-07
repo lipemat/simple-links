@@ -1,11 +1,11 @@
-<fieldset style="border: 1px solid black; border-radius: 10px; padding: 0 10px; margin: 10px 0 0 0;">
-	<legend style="font-size: 14px; font-weight: bold;">
-		<?php esc_html_e( 'Checkout Simple Links Pro!', 'simple-links' ); ?>
-	</legend>
-	<p style="font-size: 14px; margin: 0; padding: 5px">
+<fieldset>
+	<h3>
+		<?php esc_html_e( ' Simple Links PRO!', 'simple-links' ); ?>
+	</h3>
+	<p>
 		<?php
 		/* translators: <a> link created by placeholders */
-		printf( esc_html__( 'Upgrade to %1$sSimple Links Pro%2$s for Priority Support, display links assigned to all categories, display by category, import/export ability, links in search results, and so much more!', 'simple-links' ), '<a target="blank" href="https://onpointplugins.com/product/simple-links-pro/">', '</a>' );
+		printf( esc_html__( 'Upgrade to %1$sSimple Links Pro%2$s for priority support, Gutenberg blocks, display by category, import/export of links, searchable links, and so much more!', 'simple-links' ), '<a target="blank" href="https://onpointplugins.com/product/simple-links-pro/">', '</a>' );
 		?>
 	<p>
 </fieldset>
