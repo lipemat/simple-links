@@ -1,19 +1,21 @@
 <?php
-/*
-Plugin Name: Simple Links
-Plugin URI: https://onpointplugins.com/simple-links/
-Description: Replacement for the old WordPress Links Manager with many added features.
-Version: 4.7.0
-Author: OnPoint Plugins
-Author URI: https://onpointplugins.com/
-Contributors: OnPoint Plugins
-Text Domain: simple-links
-*/
+/**
+ * Plugin Name: Simple Links
+ * Plugin URI: https://onpointplugins.com/simple-links/
+ * Description: Links Manager with many features. Makes managing links simple and robust.
+ * Version: 4.7.1
+ * Author: OnPoint Plugins
+ * Author URI: https://onpointplugins.com/
+ * Contributors: OnPoint Plugins
+ * Text Domain: simple-links
+ *
+ * @package simple-links
+ */
 
 if ( defined( 'SIMPLE_LINKS_VERSION' ) ) {
 	return;
 }
-define( 'SIMPLE_LINKS_VERSION', '4.7.0' );
+define( 'SIMPLE_LINKS_VERSION', '4.7.1' );
 
 define( 'SIMPLE_LINKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SIMPLE_LINKS_URL', plugin_dir_url( __FILE__ ) );

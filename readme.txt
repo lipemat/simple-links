@@ -3,9 +3,9 @@ Contributors: Mat Lipe, onpointplugins
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40onpointplugins%2ecom&lc=US&item_name=Simple%20Links%20&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Tags: link manager, link organizations, links
 Requires at least: 5.1.0
-Tested up to: 5.3.1
+Tested up to: 5.4.1
 Requires PHP: 5.6.0
-Stable tag: 4.7.0
+Stable tag: 4.7.1
 License: GPLv2
 
 Links Manager with many features. Makes managing links simple and robust.
@@ -102,6 +102,11 @@ Start a support thread and myself or someone from the community can probably hel
 2. The short-code generating form
 
 == Changelog ==
+= 4.7.1 =
+* Support PHP 7.4.
+* Support WordPress version 5.4.0.
+* Improve some internal styling.
+
 = 4.7.0 =
 * Added support for PRO version 1.5.0.
 * Greatly improved styles and structure of widgets.
