@@ -23,7 +23,7 @@ This plugin is now the standard for managing links in WordPress.
 <blockquote><a href="https://onpointplugins.com/product/simple-links-pro/" target="_blank">Pro version 1.5.0</a> is now available with a Gutenberg block!</blockquote>
 
 
-<h4>Features</h4>
+<h3>Features</h3>
 * Drag and drop link ordering
 * Optional link images
 * Shortcode support with a shortcode generating form
@@ -33,7 +33,7 @@ This plugin is now the standard for managing links in WordPress.
 * Options to remove the old WordPress Links Manager from the admin
 * Flexible permissions
 
-<h4>Pro Features</h4>
+<h3>Pro Features</h3>
 * Priority support.
 * Links will show up in search results.
 * Links in search results point to the link's url.
@@ -49,16 +49,16 @@ This plugin is now the standard for managing links in WordPress.
 * Gutenberg block with support for all widget options and real time previews. **NEW**
 * Access to members only support area.
 
-<h4>Currently ships with the following languages</h4>
+<h3>Currently ships with the following languages</h3>
 * English (US)
 * German (de_DE)   
 * French (fr_FR)
 * Farsi (fa_IR)
 
-<h4>Developers</h4>
+<h3>Developers</h3>
 Developer docs may be found <a target="_blank" href="https://onpointplugins.com/simple-links/simple-links-developer-docs/">here</a>.
 
-<h4>Contribute</h4>
+<h3>Contribute</h3>
 Send pull requests via the <a href="https://github.com/lipemat/simple-links/">Github Repo</a>
 
 
