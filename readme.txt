@@ -102,6 +102,10 @@ Start a support thread and myself or someone from the community can probably hel
 2. The short-code generating form
 
 == Changelog ==
+= 4.7.2 =
+* Support WordPress version 5.5.0
+* Improve readme.txt
+
 = 4.7.1 =
 * Support PHP 7.4.
 * Support WordPress version 5.4.0.
