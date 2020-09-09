@@ -20,7 +20,7 @@ This plugin is now the standard for managing links in WordPress.
 
 <strong>Check out <a href="https://onpointplugins.com/product/simple-links-pro/">Simple Links Pro</a> for priority support, Gutenberg blocks, display by category, import/export of links, searchable links, and so much more!!</strong>
 
-<blockquote><a href="https://onpointplugins.com/product/simple-links-pro/" target="_blank">Pro version 1.5.0</a> is now available with a Gutenberg block!</blockquote>
+<blockquote><a href="https://onpointplugins.com/product/simple-links-pro/" target="_blank">Pro version 1.5.2</a> is now available with a Gutenberg block!</blockquote>
 
 
 <h3>Features</h3>
