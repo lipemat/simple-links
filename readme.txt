@@ -12,6 +12,8 @@ Links Manager with many features. Makes managing links simple and robust.
 
 == Description ==
 
+<div class="plugin-notice notice notice-warning notice-alt"><p>This plugin has been discontinued and is no longer supported. If you wish to adopt this plugin, <a href="https://onpointplugins.com/about/contact/" target="_blank">let us know</a>.</p></div>
+
 A rebooted concept of the obsolete <a rel="noreferrer noopener" aria-label="Links Manager (opens in a new tab)" href="https://codex.wordpress.org/Links_Manager" target="_blank">Links Manager</a> with many great enhancements and features. Manage and display links in your theme's style. Fully extendable for developers who want to customize the functionality and output. Simple Links takes care of the back-end to let you focus on user experience.
 
 
@@ -76,6 +78,10 @@ Start a support thread and myself or someone from the community can probably hel
 2. The short-code generating form
 
 == Changelog ==
+= 4.7.3 =
+* Final supported version from OnPoint Plugins.
+* Officially discontinue plugin.
+
 = 4.7.2 =
 * Support WordPress version 5.5.0
 * Improve readme.txt
