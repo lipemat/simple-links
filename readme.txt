@@ -18,11 +18,6 @@ A rebooted concept of the obsolete <a rel="noreferrer noopener" aria-label="Link
 This plugin is now the standard for managing links in WordPress.
 
 
-<strong>Check out <a href="https://onpointplugins.com/product/simple-links-pro/">Simple Links Pro</a> for priority support, Gutenberg blocks, display by category, import/export of links, searchable links, and so much more!!</strong>
-
-<blockquote><a href="https://onpointplugins.com/product/simple-links-pro/" target="_blank">Pro version 1.5.2</a> is now available with a Gutenberg block!</blockquote>
-
-
 <h3>Features</h3>
 * Drag and drop link ordering
 * Optional link images
@@ -32,22 +27,6 @@ This plugin is now the standard for managing links in WordPress.
 * Ability to import links from the old WordPress Links manager
 * Options to remove the old WordPress Links Manager from the admin
 * Flexible permissions
-
-<h3>Pro Features</h3>
-* Priority support.
-* Links will show up in search results.
-* Links in search results point to the link's url.
-* Use the Simple Links posts as a public post type.
-* Ability to import/export links via a csv file.
-* Available csv template for adding new links.
-* Visual shortcodes.
-* Ability to display the links in sections by category.
-* Ability to display the category’s title above sections.
-* Ability to display the category’s description above sections.
-* Display multiple categories on a single page and order each one individually.
-* Option to only include links assigned to all selected categories.
-* Gutenberg block with support for all widget options and real time previews. **NEW**
-* Access to members only support area.
 
 <h3>Currently ships with the following languages</h3>
 * English (US)
@@ -63,11 +42,6 @@ Send pull requests via the <a href="https://github.com/lipemat/simple-links/">Gi
 
 
 == Upgrade Notice ===
-= 4.7.0 =
-* Update to support PRO version 1.5.0
-
-= 4.4.4 =
-* Support PRO version 1.2.0
 
 = 4.4.3 =
 * Fix field values turning into Array with Gutenberg active

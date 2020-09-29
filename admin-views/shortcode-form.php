@@ -8,7 +8,6 @@
  *
  * @author OnPoint Plugins <support@onpointplugins.com>
  *
- * @package simple-links-pro
  */
 
 ?>
