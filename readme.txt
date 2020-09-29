@@ -5,7 +5,7 @@ Tags: link manager, link organizations, links
 Requires at least: 5.1.0
 Tested up to: 5.5.1
 Requires PHP: 5.6.0
-Stable tag: 4.7.2
+Stable tag: 4.7.3
 License: GPLv2
 
 Links Manager with many features. Makes managing links simple and robust.
