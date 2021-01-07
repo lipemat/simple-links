@@ -3,7 +3,7 @@
  * Plugin Name: Simple Links
  * Plugin URI: https://wordpress.org/plugins/simple-links/
  * Description: Links Manager with many features. Makes managing links simple and robust.
- * Version: 4.7.3
+ * Version: 4.7.4
  * Author: Mat Lipe
  * Author URI: https://profiles.wordpress.org/mat-lipe/
  * Text Domain: simple-links
@@ -14,7 +14,7 @@
 if ( defined( 'SIMPLE_LINKS_VERSION' ) ) {
 	return;
 }
-define( 'SIMPLE_LINKS_VERSION', '4.7.3' );
+define( 'SIMPLE_LINKS_VERSION', '4.7.4' );
 
 define( 'SIMPLE_LINKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SIMPLE_LINKS_URL', plugin_dir_url( __FILE__ ) );
