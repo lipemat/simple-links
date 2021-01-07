@@ -1,5 +1,5 @@
 === Simple Links ===
-Contributors: Mat Lipe, onpointplugins
+Contributors: Mat Lipe
 Donate link:https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=paypal%40onpointplugins%2ecom&lc=US&item_name=Simple%20Links%20&no_note=0&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHostedGuest
 Tags: link manager, link organizations, links
 Requires at least: 5.1.0
@@ -12,7 +12,7 @@ Links Manager with many features. Makes managing links simple and robust.
 
 == Description ==
 
-<blockquote>This plugin has been discontinued and is no longer supported. If you wish to adopt this plugin, <a href="https://onpointplugins.com/about/contact/" target="_blank">let us know</a>.</blockquote>
+<blockquote>This plugin has been discontinued and is no longer supported. If you wish to adopt this plugin, <a href="https://wordpress.org/support/plugin/simple-links/" target="_blank">let us know</a>.</blockquote>
 
 A rebooted concept of the obsolete <a rel="noreferrer noopener" aria-label="Links Manager (opens in a new tab)" href="https://codex.wordpress.org/Links_Manager" target="_blank">Links Manager</a> with many great enhancements and features. Manage and display links in your theme's style. Fully extendable for developers who want to customize the functionality and output. Simple Links takes care of the back-end to let you focus on user experience.
 
@@ -36,13 +36,6 @@ This plugin is now the standard for managing links in WordPress.
 * French (fr_FR)
 * Farsi (fa_IR)
 
-<h3>Developers</h3>
-Developer docs may be found <a target="_blank" href="https://onpointplugins.com/simple-links/simple-links-developer-docs/">here</a>.
-
-<h3>Contribute</h3>
-Send pull requests via the <a href="https://github.com/lipemat/simple-links/">Github Repo</a>
-
-
 == Upgrade Notice ===
 
 = 4.4.3 =
@@ -60,18 +53,6 @@ Send pull requests via the <a href="https://github.com/lipemat/simple-links/">Gi
 = 4.0.2 =
 * Upgrade to fix but with count of sorted by category links
 
-
-== Frequently Asked Questions ==
-
-= The full documentation can be found here =
-<a href="https://onpointplugins.com/simple-links/">https://onpointplugins.com/simple-links/</a> which is the same as the plugin link.
-
-= For Developers Docs See =
-<a href="https://onpointplugins.com/simple-links/simple-links-developer-docs/">http://onpointplugins.com/simple-links/simple-links-developer-docs/</a>
-
-= For all other questions =
-Start a support thread and myself or someone from the community can probably help you out. 
-
 == Screenshots ==
 1. The widget options
 
@@ -79,7 +60,6 @@ Start a support thread and myself or someone from the community can probably hel
 
 == Changelog ==
 = 4.7.3 =
-* Final supported version from OnPoint Plugins.
 * Officially discontinue plugin.
 
 = 4.7.2 =

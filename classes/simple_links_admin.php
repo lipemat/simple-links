@@ -2,12 +2,7 @@
 /**
  * Methods for the Admin Area of Simple Links
  *
- *
- * @author OnPoint Plugins <support@onpointplugins.com>
- *
  * @uses   called by simple-links.php
- *
- *
  *
  */
 if ( class_exists( 'simple_links_admin' ) ) {

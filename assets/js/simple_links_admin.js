@@ -1,7 +1,6 @@
 /**
  * Admin js for Simple Links Plugin
  *
- * @author Mat Lipe <support@onpointplugins.com>
  * @type {Simple_Links|*|{}}
  */
 var Simple_Links = window.Simple_Links || {};

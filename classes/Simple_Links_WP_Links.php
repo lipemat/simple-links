@@ -2,9 +2,7 @@
 /**
  * Simple_Links_WP_Links
  *
- * @author OnPoint Plugins
  * @since 4.0.3
- *
  */
 class Simple_Links_WP_Links {
 

@@ -1,13 +1,6 @@
 <?php
 
 /**
- * Misc Functions for the Simple Links Plugin
- *
- * @author OnPoint Plugins <support@onpointplugins.com>
- *
- */
-
-/**
  * simple_links_admin
  *
  *

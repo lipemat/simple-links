@@ -4,7 +4,6 @@
  *
  * @TODO Cleanup the code and turn it into an array of checkboxes and values
  *
- * @author Mat Lipe <support@onpointplugins.com>
  */
 var SimpleLinksShortcodeObj = {
 	filters: [],

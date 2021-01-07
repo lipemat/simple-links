@@ -1,12 +1,11 @@
 <?php
 /**
  * Plugin Name: Simple Links
- * Plugin URI: https://onpointplugins.com/simple-links/
+ * Plugin URI: https://wordpress.org/plugins/simple-links/
  * Description: Links Manager with many features. Makes managing links simple and robust.
  * Version: 4.7.3
- * Author: OnPoint Plugins
- * Author URI: https://onpointplugins.com/
- * Contributors: OnPoint Plugins
+ * Author: Mat Lipe
+ * Author URI: https://profiles.wordpress.org/mat-lipe/
  * Text Domain: simple-links
  *
  * @package simple-links

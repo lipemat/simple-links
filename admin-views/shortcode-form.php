@@ -6,8 +6,6 @@
  * @see    simple_links->load_shortcode_form();
  * @see    js/editor_plugin.js
  *
- * @author OnPoint Plugins <support@onpointplugins.com>
- *
  */
 
 ?>
@@ -211,12 +209,6 @@ wp_head();
 
 
 	<?php do_action( 'simple_links_shortcode_form' ); ?>
-
-	<p style="text-align: right">
-		<a href="https://onpointplugins.com/simple-links/#shortcode" target="blank">
-			<?php esc_html_e( 'shortcode documentation', 'simple-links' ); ?>
-		</a>
-	</p>
 
 	<p>
 		<input type="button" id="generate" class="button-primary" value="Generate">

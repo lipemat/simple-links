@@ -3,7 +3,6 @@
 /**
  * Creates the main widget for the simple links plugin
  *
- * @author OnPoint Plugins
  * @uses   registered by init
  * @uses   the output can be filtered by using the 'simple_links_widget_output' filter
  *         *   apply_filters( 'simple_links_widget_output', $output, $args );
@@ -301,14 +300,6 @@ class Simple_Links__Widgets__Simple_Links extends WP_Widget {
 		<?php
 		do_action( 'simple-links/widget/simple-links/categories-box', $instance, $this );
 		do_action( 'simple_links_widget_form', $instance, $this );
-
-		?>
-		<p style="text-align: right">
-			<a href="https://onpointplugins.com/simple-links/#widget-options" target="blank">
-				<?php esc_html_e( 'widget documentation', 'simple-links' ); ?>
-			</a>
-		</p>
-		<?php
 
 	}
 

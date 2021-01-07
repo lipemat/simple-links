@@ -1,6 +1,5 @@
 /**
  * The MCE plugin to add Simple LInks Shortcodes
- * @author OnPoint Plugins <support@onpointplugins.com>
  */
 
 /**
@@ -59,9 +58,6 @@ var SL_locale = window.Simple_Links_Config.i18n || {
 			}, getInfo : function(){  //The plugin Buttons Details
 				return {
 					longname : i18n.shortcode_generator,
-					author : 'OnPoint Plugins',
-					authorurl : 'https://onpointplugins.com',
-					inforurl : 'https://onpointplugins.com',
 					version : '2.0.2'
 				};
 			}

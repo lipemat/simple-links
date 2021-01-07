@@ -3,9 +3,7 @@
 /**
  * Factory class for generating the links list for the widget and shortcode
  *
- * @author  OnPoint Plugins <support@onpointplugins.com>
  * @since   2.0
- *
  *
  * @uses    May be constructed with $args then $this->output() will output the links list
  *

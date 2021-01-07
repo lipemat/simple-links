@@ -4,7 +4,6 @@
  *
  * Handle all the link sorting requirements
  *
- * @author OnPoint Plugins
  *
  * @since 4/15/2015 - ( 4.0 maybe )
  *

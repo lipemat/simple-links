@@ -3,7 +3,6 @@
 /**
  * Simple_Links_Meta_Boxes
  *
- * @author OnPoint Plugins
  * @since  3.0.1
  */
 class Simple_Links_Meta_Boxes {

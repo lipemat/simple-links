@@ -3,12 +3,6 @@
     "description": "Simple Links WordPress Plugin",
     "type": "wordpress-plugin",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "lipemat",
-            "email": "support@onpointplugins.com"
-        }
-    ],
     "minimum-stability": "dev",
     "require": {}
 }
